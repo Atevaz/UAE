@@ -1,20 +1,12 @@
 import 'package:flutter/material.dart';
 
 class AppColor {
-  static Color red = HexColor.fromHex('#CE1126');
-  static Color white = HexColor.fromHex('FFFFFF');
-  static Color black = HexColor.fromHex('000000');
-  static Color grey = HexColor.fromHex('2D2D2D');
-  static Color dropShadow = HexColor.fromHex('606470');
+  static const Color teal = Color(0xFF1F747E);
+  static const Color white =Color(0xFFFFFFFF);
+  static const Color black =Color(0xFF000000);
+  static const Color grey = Color(0xFF2D2D2D);
+  static const Color blueGrey= Color(0xFFA9C9CD);
+  static const Color red = Color(0xFFFB0505);
+  static const Color green = Color(0xFF3FA007);
 }
 
-extension HexColor on Color {
-  static Color fromHex(String hexColorString) {
-    hexColorString = hexColorString.replaceAll('#', '');
-    //* * to check the opacity of the color
-    if (hexColorString.length == 6) {
-      hexColorString = "FF" + hexColorString;
-    }
-    return Color(int.parse(hexColorString, radix: 16));
-  }
-}
