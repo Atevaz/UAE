@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:h_m/presentation/widget/icon.dart';
-import 'constants/assets_manager.dart';
+import 'package:h_m/presentation/widget/default_form_field.dart';
+
 
 class Component extends StatelessWidget {
   Component({Key? key}) : super(key: key);
@@ -9,13 +9,11 @@ class Component extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue,
-        body: Center(
-          child: IconComponent(
-            containerHeight: 55,
-            containerWidth: 55,
-            imageName: AssetsManager.arrow,
-            color: Colors.blue,
+
+        body: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Center(
+            child: DefaultNumFormField(),
           ),
         ),
       ),
