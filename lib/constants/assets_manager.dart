@@ -11,4 +11,13 @@ class AssetsManager {
   static const String arrow = "$imagePath/arrow.png";
   static const String apple = "$imagePath/Apple.png";
   static const String gmail = "$imagePath/Gmail.png";
+  static const String fruit = "$imagePath/fruit.png";
+  static const String clothes = "$imagePath/clothes.png";
+  static const String vegetables = "$imagePath/vegetables.png";
+  static const String beans = "$imagePath/beans.png";
+  static const String drinks = "$imagePath/drinks.png";
+  static const String refund = "$imagePath/Refund.png";
+  static const String charge = "$imagePath/charge.png";
+  static const String gift = "$imagePath/gift.png";
+  static const String grape = "$imagePath/grape.png";
 }
