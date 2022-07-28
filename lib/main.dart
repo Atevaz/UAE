@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -18,7 +17,7 @@ Future<void> main() async {
   await EasyLocalization.ensureInitialized();
 
   BlocOverrides.runZoned(
-        () async {
+    () async {
       await CacheHelper.init();
       await EasyLocalization.ensureInitialized();
       // TODO add localization here
@@ -59,7 +58,8 @@ class _MyAppState extends State<MyApp> {
             builder: (context, orientation, deviceType) {
               return LayoutBuilder(builder: (context, constraints) {
                 return ScreenUtilInit(
-                  builder: (context,child) {
+                  designSize: Size(390, 844),
+                  builder: (context, child) {
                     return MaterialApp(
                       debugShowCheckedModeBanner: false,
                       title: "H\$M",
