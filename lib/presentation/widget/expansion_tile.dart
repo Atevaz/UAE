@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/presentation/widget/headline_text.dart';
 import 'package:h_m/presentation/widget/regular_text.dart';
 
@@ -10,7 +11,7 @@ Widget ExpansionTitleComponent({
   required String answerTxt,
 }) =>
     Container(
-      width: 350,
+      width: 350.w,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -28,7 +29,7 @@ Widget ExpansionTitleComponent({
           /// question text
           title: HeadLineText(
             text: questionTxt,
-            fontSize: 15,
+            fontSize: 15.sp,
             overflow: TextOverflow.visible,
           ),
 
@@ -38,7 +39,7 @@ Widget ExpansionTitleComponent({
               padding: EdgeInsets.only(right: 70, bottom: 10),
               child: ListTile(
                   title: RegularText(
-                fontSize: 12,
+                fontSize: 12.sp,
                 maxLines: 6,
                 textAlign: TextAlign.justify,
                 overflow: TextOverflow.visible,
