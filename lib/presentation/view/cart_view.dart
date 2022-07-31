@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/assets_manager.dart';
 import '../styles/colors.dart';
@@ -46,10 +47,10 @@ class CartView extends StatelessWidget {
                             children: [
                               HeadLineText(
                                 text: 'Name : ',
-                                fontSize: 14,
+                                fontSize: 14.sp,
                               ),
                               RegularText(
-                                fontSize: 12,
+                                fontSize: 12.sp,
                                 text: productName,
                                 color: AppColor.teal,
                               )
@@ -61,10 +62,10 @@ class CartView extends StatelessWidget {
                             children: [
                               HeadLineText(
                                 text: 'Quantities : ',
-                                fontSize: 14,
+                                fontSize: 14.sp,
                               ),
                               RegularText(
-                                fontSize: 12,
+                                fontSize: 12.sp,
                                 text: '$quantity cartoons',
                                 color: AppColor.teal,
                               )
@@ -79,7 +80,7 @@ class CartView extends StatelessWidget {
                                 fontSize: 14,
                               ),
                               RegularText(
-                                fontSize: 12,
+                                fontSize: 12.sp,
                                 text: '$price LE',
                                 color: AppColor.teal,
                               ),
@@ -121,7 +122,7 @@ class CartView extends StatelessWidget {
                         text: quantity.toString(),
                         textAlign: TextAlign.center,
                         color: AppColor.white,
-                        fontSize: 14,
+                        fontSize: 14.sp,
                       )),
                       Expanded(
                           child: IconButton(
@@ -129,7 +130,7 @@ class CartView extends StatelessWidget {
                         onPressed: () {
                           quantity = quantity! + 1;
                         },
-                        iconSize: 14,
+                        iconSize: 14.sp,
                         color: AppColor.white,
                         icon: Icon(
                           Icons.add,
