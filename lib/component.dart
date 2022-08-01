@@ -6,9 +6,7 @@ class Component extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Center(
-          child: Container(),
-        ),
+        body: Container(),
       ),
     );
   }
