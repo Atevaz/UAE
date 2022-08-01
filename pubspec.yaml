@@ -110,5 +110,8 @@ flutter:
     - family: Italianno
       fonts:
         - asset: assets/font/Italianno-Regular.otf
+    - family: Roboto
+      fonts:
+        - asset: assets/font/Roboto-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
