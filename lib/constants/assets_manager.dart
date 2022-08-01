@@ -22,4 +22,5 @@ class AssetsManager {
   static const String grape = "$imagePath/grape.png";
   static const String splashLogo = "$imagePath/splashlogo.png";
   static const String shopDialogPic = "$imagePath/shopDialogPic.png";
+  static const String grapes = "$imagePath/grapes.png";
 }
