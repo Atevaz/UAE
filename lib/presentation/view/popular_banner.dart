@@ -14,8 +14,8 @@ class PopularBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.antiAliasWithSaveLayer,
-      width: 168,
-      height: 229,
+      width: 168.w,
+      height: 229.h,
       decoration: BoxDecoration(
         color: Color(0x26c06c7f),
         borderRadius: BorderRadius.circular(6),
