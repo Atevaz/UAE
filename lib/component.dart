@@ -7,6 +7,7 @@ class Component extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Container(),
+
       ),
     );
   }
