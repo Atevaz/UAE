@@ -27,12 +27,6 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
       elevation: 0,
       selectedFontSize: 16.sp,
       unselectedFontSize: 16.sp,
-      selectedIconTheme: IconThemeData(
-          size: 23.w
-      ),
-      unselectedIconTheme: IconThemeData(
-          size: 23.w
-      ),
       items: [
         BottomNavigationBarItem(icon: Icon(Icons.home_rounded),label:'Home'),
         BottomNavigationBarItem(icon: Icon(Icons.favorite),label:'Fav'),
