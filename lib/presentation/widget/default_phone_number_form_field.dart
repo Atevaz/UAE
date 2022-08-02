@@ -6,8 +6,8 @@ import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 class DefaultPhoneNumFormField extends StatelessWidget {
   final TextEditingController controller;
   var formKey = GlobalKey<FormState>();
-
-  DefaultPhoneNumFormField({required this.controller,});
+  String label;
+  DefaultPhoneNumFormField({required this.controller,required this.label});
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -25,12 +25,13 @@ class DefaultPhoneNumFormField extends StatelessWidget {
           },
           textStyle: TextStyle(
 
-            fontSize: 18,
+            fontSize: 16.sp,
+              color: Colors.grey,
           ),
           selectorConfig: SelectorConfig(
             setSelectorButtonAsPrefixIcon: true,
             selectorType: PhoneInputSelectorType.BOTTOM_SHEET,
-            leadingPadding: 10,
+            leadingPadding: 10.r,
             trailingSpace: false,
           ),
           ignoreBlank: false,
@@ -43,7 +44,7 @@ class DefaultPhoneNumFormField extends StatelessWidget {
             isDense: true,
             hintText: '00000',
             label: Text(
-              'Number',
+              label,
             ),
             labelStyle: TextStyle(
                 color: Colors.black,

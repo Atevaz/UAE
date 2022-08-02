@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:h_m/presentation/screens/user/edit_profile.dart';
 import 'presentation/view/notification_item.dart';
 
 
@@ -16,7 +17,7 @@ class Component extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: NotificationItem(),
+        child: EditProfile(),
       ),
     );
   }

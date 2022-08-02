@@ -85,27 +85,27 @@ class DefaultFormField extends StatelessWidget {
           controller: controller,
           decoration: InputDecoration(
             enabled: true,
-            contentPadding: EdgeInsets.zero,
+            contentPadding: EdgeInsets.all(15.r),
             filled: true,
             fillColor: fillColor ?? Colors.white,
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(color: focusedBorderColor ?? Colors.black),
-              borderRadius: BorderRadius.circular(19),
+              borderRadius: BorderRadius.circular(19.r),
             ),
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: borderColor ?? Colors.black),
-              borderRadius: BorderRadius.circular(19),
+              borderRadius: BorderRadius.circular(19.r),
             ),
             errorBorder: OutlineInputBorder(
               borderSide: BorderSide(color: errorBorderColor ?? Colors.red),
-              borderRadius: BorderRadius.circular(19),
+              borderRadius: BorderRadius.circular(19.r),
             ),
             errorStyle: errorStyle,
             labelText: label,
             labelStyle: labelStyle ??
                 TextStyle(
                   color: Colors.black,
-                  fontSize: 20,
+                  fontSize: 20.sp,
                   fontWeight: FontWeight.bold,
                 ),
             prefixStyle: TextStyle(color: Colors.black),
@@ -117,6 +117,7 @@ class DefaultFormField extends StatelessWidget {
             hintText: hintText,
             hintStyle: hintStyle ??
                 TextStyle(
+                  fontSize: 16.sp,
                   color: Colors.grey,
                 ),
           ),

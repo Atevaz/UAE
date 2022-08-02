@@ -23,13 +23,13 @@ class DefaultButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 5),
+      padding:  EdgeInsets.symmetric(horizontal: 5.r),
       width: isExpanded ? 350.w : width.w,
       height: height.h,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: color,
-        borderRadius: BorderRadius.circular(25),
+        borderRadius: BorderRadius.circular(25.r),
       ),
       child: MaterialButton(
         minWidth: 0,
