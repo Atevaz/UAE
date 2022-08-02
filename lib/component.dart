@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:h_m/presentation/view/filter_bottom_sheet.dart';
 import 'package:h_m/presentation/widget/chat_message.dart';
 import 'package:h_m/presentation/widget/icon.dart';
 import 'constants/assets_manager.dart';
@@ -12,9 +13,9 @@ class Component extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.white,
           body: Center(
-            child: SwitchButton(),
+            child: FilterBottomSheet(),
           )),
     );
   }

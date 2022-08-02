@@ -8,5 +8,6 @@ class AppColor {
   static const Color blueGrey = Color(0xFFA9C9CD);
   static const Color red = Color(0xFFFB0505);
   static const Color green = Color(0xFF3FA007);
-  static const Color  offWhite= Color(0xFFF4F4F4);
+  static const Color offWhite = Color(0xFFF4F4F4);
+  static Color fillTextField = Color.fromRGBO(217, 217, 217, 0.4);
 }
