@@ -17,7 +17,7 @@ class DefaultFormField extends StatelessWidget {
   Color? cursorColor;
   Color? fillColor;
   Color? focusedBorderColor;
-  Color? BorderColor;
+  Color? borderColor;
   Color? errorBorderColor;
   String? validateText;
   VoidCallback? onChanged;
@@ -42,7 +42,7 @@ class DefaultFormField extends StatelessWidget {
     this.cursorColor,
     this.fillColor,
     this.focusedBorderColor,
-    this.BorderColor,
+    this.borderColor,
     this.errorBorderColor,
     this.validateText,
     this.onChanged,
@@ -93,7 +93,7 @@ class DefaultFormField extends StatelessWidget {
               borderRadius: BorderRadius.circular(19),
             ),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: BorderColor ?? Colors.black),
+              borderSide: BorderSide(color: borderColor ?? Colors.black),
               borderRadius: BorderRadius.circular(19),
             ),
             errorBorder: OutlineInputBorder(
