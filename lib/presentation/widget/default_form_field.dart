@@ -7,8 +7,8 @@ class DefaultFormField extends StatelessWidget {
   String? label;
   String? hintText;
   final TextInputType keyboard;
-  IconData? prefixIcon;
-  IconData? suffixIcon;
+  Icon? prefixIcon;
+  Icon? suffixIcon;
   VoidCallback? suffixPressed;
   TextStyle? labelStyle;
   TextStyle? hintStyle;
@@ -109,15 +109,9 @@ class DefaultFormField extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
             prefixStyle: TextStyle(color: Colors.black),
-            prefixIcon: Icon(
-              prefixIcon,
-              color: Colors.black,
-            ),
+            prefixIcon: prefixIcon,
             suffixIcon: IconButton(
-              icon: Icon(
-                suffixIcon,
-                color: Colors.black,
-              ),
+              icon: suffixIcon ?? SizedBox(),
               onPressed: suffixPressed,
             ),
             hintText: hintText,
