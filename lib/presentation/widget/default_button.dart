@@ -1,25 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/presentation/styles/colors.dart';
+import 'package:h_m/presentation/widget/medium_text.dart';
 
-Widget defaultButton(
-    {required String label,
-      required Function onPressed,
-      required double fontSize,
-      required context,
-      required bool isExpanded,
-      double? width,
-      double? height,
-      Color? color,
+class DefaultButton extends StatelessWidget {
+  final String label;
+  final Function onPressed;
+  final double height;
+  final double width;
+  final bool isExpanded;
+  final Color color;
 
-    }) =>
-    Container(
+  DefaultButton({
+    required this.label,
+    required this.onPressed,
+    required this.isExpanded,
+    this.height = 65,
+    this.width = 202,
+    this.color = AppColor.teal,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
       padding: const EdgeInsets.symmetric(horizontal: 5),
-      width: isExpanded ? 350.w: width ?? 202.w,
-      height: height ?? 65.h,
+      width: isExpanded ? 350.w : width.w,
+      height: height.h,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-        color: color?? AppColor.teal,
+        color: color,
         borderRadius: BorderRadius.circular(25),
       ),
       child: MaterialButton(
@@ -28,14 +37,12 @@ Widget defaultButton(
         onPressed: () {
           onPressed();
         },
-        child: Text(
-          label,
-          style:  TextStyle(
-            fontSize: fontSize,
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
-          textAlign: TextAlign.center,
+        child: MediumText(
+          text: label,
+          color: AppColor.white,
+          fontWeight: FontWeight.bold,
         ),
       ),
     );
+  }
+}
