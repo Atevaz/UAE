@@ -71,6 +71,7 @@ class _MyAppState extends State<MyApp> {
                       initialRoute: AppRouterNames.rSplashRoute,
                       theme: AppTheme.appTheme,
                       home: HomeLayout(),
+
                     );
                   },
                 );
