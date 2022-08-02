@@ -23,14 +23,34 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                // Todo filter form field
-                Spacer(),
-                FilterButton(),
-              ],
+            Container(
+              height: 43.h,
+              child: Row(
+                children: [
+                  Expanded(
+                      flex: 15,
+                      child: DefaultFormField(
+                        controller: TextEditingController(),
+                        keyboard: TextInputType.text,
+                        prefixIcon: Icons.search,
+                        suffixIcon: Icons.photo_camera_outlined,
+                        BorderColor: AppColor.white,
+                        focusedBorderColor: AppColor.white,
+                        hintText: 'Search',
+                        fillColor: AppColor.containerBG,
+                      )),
+                  Spacer(),
+                  Expanded(flex: 2, child: FilterButton()),
+                ],
+              ),
             ),
-            MediumText(text: 'All Category',fontSize: 16.sp,),
+            SizedBox(
+              height: 10.h,
+            ),
+            MediumText(
+              text: 'All Category',
+              fontSize: 16.sp,
+            ),
             SizedBox(
               height: 10.h,
             ),
@@ -74,12 +94,13 @@ class HomeScreen extends StatelessWidget {
                         imageName: 'assets/images/clothes.png')),
               ],
             ),
-
             CarouselView(),
-
             Row(
               children: [
-                MediumText(text: 'Popular',fontSize: 16.sp,),
+                MediumText(
+                  text: 'Popular',
+                  fontSize: 16.sp,
+                ),
                 Spacer(),
                 TextButton(
                     onPressed: () {},
@@ -102,7 +123,7 @@ class HomeScreen extends StatelessWidget {
               height: 10.h,
             ),
             Container(
-              height: 230.h,
+              height: 200.h,
               child: ListView.separated(
                 physics: BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
@@ -118,7 +139,10 @@ class HomeScreen extends StatelessWidget {
             ),
             Row(
               children: [
-                MediumText(text: 'Popular Brands',fontSize: 16.sp,),
+                MediumText(
+                  text: 'Popular Brands',
+                  fontSize: 16.sp,
+                ),
                 Spacer(),
                 TextButton(
                     onPressed: () {},
