@@ -9,29 +9,28 @@ class HeadLineText extends StatelessWidget {
   final double fontSize;
   final int maxLines;
   final TextOverflow overflow;
-
-
-  HeadLineText({
-    required this.text,
-    this.color = AppColor.black,
-    this.fontSize = 25,
-    this.maxLines = 1,
-    this.overflow = TextOverflow.ellipsis,
-
-  });
+  final String? fontFamily;
+  final FontWeight? fontWeight;
+  HeadLineText(
+      {required this.text,
+      this.color = AppColor.black,
+      this.fontSize = 25,
+      this.maxLines = 1,
+      this.overflow = TextOverflow.ellipsis,
+      this.fontFamily = 'SemiBold',
+      this.fontWeight});
 
   @override
   Widget build(BuildContext context) {
     return Text(
-        text,
+      text,
       style: TextStyle(
-        color: color,
-        fontFamily: 'SemiBold',
-        fontSize: fontSize.sp,
-          overflow: overflow
-
-      ),
-      maxLines:maxLines ,
+          fontWeight: fontWeight,
+          color: color,
+          fontFamily: fontFamily,
+          fontSize: fontSize.sp,
+          overflow: overflow),
+      maxLines: maxLines,
     );
   }
 }
