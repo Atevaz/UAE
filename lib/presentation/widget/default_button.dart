@@ -10,7 +10,8 @@ Widget defaultButton(
       required bool isExpanded,
       double? width,
       double? height,
-      Color? color
+      Color? color,
+
     }) =>
     Container(
       padding: const EdgeInsets.symmetric(horizontal: 5),
