@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../styles/colors.dart';
 import 'medium_text.dart';
 
 Widget mainCategory(
-        {required double? containerHeight,
-        required double? containerWidth,
+        {
+
         required String categoryText,
         required String imageName}) =>
     Container(
-        padding: EdgeInsets.all(10),
-        height: containerHeight,
-        width: containerWidth,
+        padding: EdgeInsets.all(10.r),
+        height: 65.h,
         decoration: BoxDecoration(
             color: AppColor.blueGrey.withOpacity(.3),
             borderRadius: BorderRadius.circular(20)),
