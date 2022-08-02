@@ -30,7 +30,7 @@ class Otp extends StatelessWidget {
             last: false,
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.only(start: 10, end: 5),
+            padding: EdgeInsetsDirectional.only(start: 10.r, end: 5.r),
             child: OtpField(
                 controller: controller2,
               first: false,
@@ -38,7 +38,7 @@ class Otp extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.only(start: 5, end: 10),
+            padding: EdgeInsetsDirectional.only(start: 5.r, end: 10.r),
             child: OtpField(
                 controller: controller3,
               first: false,
@@ -92,20 +92,20 @@ class OtpField extends StatelessWidget {
         textAlign: TextAlign.center,
         textAlignVertical: TextAlignVertical.center,
         style: TextStyle(
-          fontSize: 20,
+          fontSize: 20.sp,
           fontWeight: FontWeight.bold,
         ),
         keyboardType: TextInputType.number,
         maxLength: 1,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.all(10),
+          contentPadding: EdgeInsets.all(10.r),
           counter: Offstage(),
           enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.black),
-              borderRadius: BorderRadius.circular(8)),
+              borderRadius: BorderRadius.circular(8.r)),
           focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.black),
-              borderRadius: BorderRadius.circular(8)),
+              borderRadius: BorderRadius.circular(8.r)),
         ),
       ),
     );
