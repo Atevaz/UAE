@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/presentation/styles/colors.dart';
 import 'package:h_m/presentation/view/carousel_view.dart';
+import 'package:h_m/presentation/view/popular_banner.dart';
 import 'package:h_m/presentation/widget/brand_componant.dart';
 import 'package:h_m/presentation/widget/filtter_button.dart';
 import 'package:h_m/presentation/widget/main_category.dart';
@@ -100,7 +101,18 @@ class HomeScreen extends StatelessWidget {
             SizedBox(
               height: 10.h,
             ),
-            //todo popular view
+            Container(
+              height: 230.h,
+              child: ListView.separated(
+                physics: BouncingScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) => PopularBanner(),
+                separatorBuilder: (context, index) => SizedBox(
+                  width: 5.w,
+                ),
+                itemCount: 10,
+              ),
+            ),
             SizedBox(
               height: 10.h,
             ),
