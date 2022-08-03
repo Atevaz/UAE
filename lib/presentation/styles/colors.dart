@@ -12,4 +12,5 @@ class AppColor {
   static const Color grey = Colors.grey;
   static const Color containerBG = Color(0xFFD9D9D9);
   static const Color yellow = Color(0xFFFFC122);
+  static const Color surface = Color(0xFFF9F9F9);
 }

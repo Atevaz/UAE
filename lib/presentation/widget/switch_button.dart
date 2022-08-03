@@ -8,10 +8,37 @@ import 'package:h_m/presentation/styles/colors.dart';
 
 class SwitchButton extends StatefulWidget {
   final String text;
+  final int textSize;
+  final Color textColor;
+  final bool icon;
   const SwitchButton({
     Key? key,
     required this.text,
+    this.textSize = 20,
+    this.textColor = AppColor.black,
+    this.icon = true,
   }) : super(key: key);
+  factory SwitchButton.withoutText({
+    Key? key,
+  }) =>
+      SwitchButton(
+        key: key,
+        text: '',
+        icon: false,
+      );
+  factory SwitchButton.withoutIcon({
+    Key? key,
+    String? text,
+    int? textSize,
+    Color? textColor,
+  }) =>
+      SwitchButton(
+        key: key,
+        textColor: textColor ?? AppColor.black,
+        textSize: textSize ?? 12,
+        text: text ?? '',
+        icon: false,
+      );
 
   @override
   State<SwitchButton> createState() => _SwitchButtonState();
@@ -25,16 +52,21 @@ class _SwitchButtonState extends State<SwitchButton> {
       padding: EdgeInsets.symmetric(horizontal: 20.w),
       child: Row(
         children: [
-          Icon(Icons.check,
-              color: _isSelected ? AppColor.green : AppColor.grey, size: 30.w),
+          widget.icon
+              ? Icon(Icons.check,
+                  color: _isSelected ? AppColor.green : AppColor.grey,
+                  size: 30.w)
+              : Container(),
           SizedBox(width: 10.w),
-          Text(
-            widget.text,
-            style: TextStyle(
-              fontSize: 18.sp,
-              color: Colors.black,
-            ),
-          ),
+          widget.text == ''
+              ? Container()
+              : Text(
+                  widget.text,
+                  style: TextStyle(
+                    fontSize: widget.textSize.sp,
+                    color: widget.textColor,
+                  ),
+                ),
           Expanded(child: Container()),
           Container(
             decoration: BoxDecoration(
