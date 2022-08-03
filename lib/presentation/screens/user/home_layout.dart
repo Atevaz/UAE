@@ -21,7 +21,10 @@ class HomeLayout extends StatelessWidget {
               Icon(Icons.arrow_drop_down_rounded,color: AppColor.black,),
             ],
           ),
-          trailingIcon: Icons.notifications_active_sharp,
+          trailingWidget:IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.notifications_active_sharp),
+          ) ,
         ),
         body: HomeScreen(),
         bottomNavigationBar: BottomNavBarView(),
