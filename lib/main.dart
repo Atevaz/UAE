@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+<<<<<<< HEAD
 import 'package:h_m/presentation/screens/user/home_layout.dart';
+=======
+import 'package:sizer/sizer.dart';
+>>>>>>> 5d25360982ade41b92de18f13bd5867ba7cbe578
 
 import 'business_logic/bloc_observer.dart';
 import 'business_logic/global_cubit/global_cubit.dart';
