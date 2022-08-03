@@ -1,11 +1,11 @@
-class CartModel {
-  CartModel(
+class OldOrderModel {
+  OldOrderModel(
       {required this.quantity,
       required this.price,
       required this.productName,
-      required this.imageName});
+      required this.priceAfterDiscount});
   int? quantity;
   int? price;
   String productName;
-  String imageName;
+  double priceAfterDiscount;
 }

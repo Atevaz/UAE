@@ -12,16 +12,18 @@ class HomeLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-
         appBar: CustomAppBar(
           centerWidget: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               MediumText(text: 'Location'),
-              Icon(Icons.arrow_drop_down_rounded,color: AppColor.black,),
+              Icon(
+                Icons.arrow_drop_down_rounded,
+                color: AppColor.black,
+              ),
             ],
           ),
-          trailingIcon: Icons.notifications_active_sharp,
+          trailingWidget: Icon(Icons.notifications_active_sharp),
         ),
         body: HomeScreen(),
         bottomNavigationBar: BottomNavBarView(),

@@ -14,7 +14,7 @@ class DefaultButton extends StatelessWidget {
   BuildContext context;
   FontWeight? fontWeight;
   String? fontFamily;
-  int? borderRadius;
+  double? borderRadius;
 
   DefaultButton(
       {required this.label,
