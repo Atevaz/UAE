@@ -14,8 +14,8 @@ import '../../../data/models/cart_model.dart';
 /// promo code text field controller
 TextEditingController? controller;
 
-class Component extends StatelessWidget {
-  Component({Key? key}) : super(key: key);
+class CartScreen extends StatelessWidget {
+  CartScreen({Key? key}) : super(key: key);
   final List<CartModel> cartList = [
     CartModel(
         quantity: 100,
@@ -68,10 +68,13 @@ class Component extends StatelessWidget {
                                     background: Row(
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: <Widget>[
-                                        Icon(
-                                          size: 40,
-                                          Icons.delete,
-                                          color: AppColor.red,
+                                        Material(
+                                          elevation: 5,
+                                          child: Icon(
+                                            size: 40,
+                                            Icons.delete,
+                                            color: AppColor.red,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -130,7 +133,7 @@ class Component extends StatelessWidget {
                     bottom: 20,
                   ),
                   child: DefaultButton(
-                      height: 60.h,
+                      height: 50.h,
                       label: 'Check out',
                       onPressed: () {},
                       fontSize: 20,
