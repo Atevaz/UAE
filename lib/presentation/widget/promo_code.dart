@@ -26,7 +26,7 @@ class PromoCode extends StatelessWidget {
                 labelStyle: TextStyle(
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w400,
-                    fontSize: 15,
+                    fontSize: 15.sp,
                     color: AppColor.black.withOpacity(.38))),
             controller: controller,
           )),
@@ -41,7 +41,7 @@ class PromoCode extends StatelessWidget {
               color: AppColor.teal,
               fontWeight: FontWeight.w500,
               fontFamily: 'Roboto',
-              borderRadius: 12),
+              borderRadius: 12.r),
         ],
       ),
     );

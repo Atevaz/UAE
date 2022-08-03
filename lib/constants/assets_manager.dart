@@ -27,7 +27,7 @@ class AssetsManager {
   static const String sidePic = "$imagePath/sidePic.png";
   static const String sidePic2 = "$imagePath/sidePic2.png";
 
-  static const String sidePic = "$imagePath/sidePicTop.png";
+  static const String sidePicTop = "$imagePath/sidePicTop.png";
 
   static const String notification = "$imagePath/notification.png";
 }
