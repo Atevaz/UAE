@@ -9,6 +9,7 @@ class MediumText extends StatelessWidget {
   final int maxLines;
   final TextOverflow overflow;
   TextAlign? textAlign;
+  final FontWeight fontWeight;
 
 
   MediumText({
@@ -18,6 +19,7 @@ class MediumText extends StatelessWidget {
     this.maxLines = 3,
     this.overflow = TextOverflow.ellipsis,
     this.textAlign,
+    this.fontWeight = FontWeight.normal,
 
 
   });
@@ -30,7 +32,8 @@ class MediumText extends StatelessWidget {
         color: color,
         fontFamily: 'Medium',
         fontSize: fontSize.sp,
-        overflow: overflow
+        overflow: overflow,
+        fontWeight: fontWeight
       ),
       maxLines:maxLines ,
       textAlign:textAlign ,
