@@ -8,16 +8,22 @@ import '../widget/medium_text.dart';
 import '../widget/regular_text.dart';
 
 class CartView extends StatelessWidget {
-  int? quantity = 5;
-  int? price = 100;
-  String productName = 'Red Grapes';
+  CartView(
+      {this.quantity = 5,
+      this.price = 100,
+      this.productName = 'Red Grapes',
+      this.imageName = AssetsManager.grape});
+  int? quantity;
+  int? price;
+  String productName;
+  String imageName;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(20),
+      padding: EdgeInsets.symmetric(vertical: 5),
       child: Container(
-        height: 108,
-        width: 350,
+        height: 108.h,
+        width: 350.w,
         decoration: BoxDecoration(
             color: Colors.grey.withOpacity(.1),
             borderRadius: BorderRadius.circular(10)),
@@ -30,7 +36,7 @@ class CartView extends StatelessWidget {
                 Expanded(
                   flex: 1,
                   child: Image(
-                    image: AssetImage(AssetsManager.grape),
+                    image: AssetImage(imageName),
                   ),
                 ),
 
@@ -47,12 +53,16 @@ class CartView extends StatelessWidget {
                             children: [
                               HeadLineText(
                                 text: 'Name : ',
-                                fontSize: 14.sp,
+                                fontSize: 15.sp,
+                                fontFamily: 'Roboto',
+                                fontWeight: FontWeight.w600,
                               ),
                               RegularText(
-                                fontSize: 12.sp,
                                 text: productName,
+                                fontSize: 14.sp,
                                 color: AppColor.teal,
+                                fontFamily: 'Roboto',
+                                fontWeight: FontWeight.w400,
                               )
                             ],
                           ),
@@ -62,12 +72,16 @@ class CartView extends StatelessWidget {
                             children: [
                               HeadLineText(
                                 text: 'Quantities : ',
-                                fontSize: 14.sp,
+                                fontSize: 15.sp,
+                                fontFamily: 'Roboto',
+                                fontWeight: FontWeight.w600,
                               ),
                               RegularText(
-                                fontSize: 12.sp,
                                 text: '$quantity cartoons',
+                                fontSize: 14.sp,
                                 color: AppColor.teal,
+                                fontFamily: 'Roboto',
+                                fontWeight: FontWeight.w400,
                               )
                             ],
                           ),
@@ -77,12 +91,16 @@ class CartView extends StatelessWidget {
                             children: [
                               HeadLineText(
                                 text: 'Price : ',
-                                fontSize: 14,
+                                fontSize: 15.sp,
+                                fontFamily: 'Roboto',
+                                fontWeight: FontWeight.w600,
                               ),
                               RegularText(
-                                fontSize: 12.sp,
                                 text: '$price LE',
+                                fontSize: 14.sp,
                                 color: AppColor.teal,
+                                fontFamily: 'Roboto',
+                                fontWeight: FontWeight.w400,
                               ),
                             ],
                           ),

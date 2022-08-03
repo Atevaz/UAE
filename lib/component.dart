@@ -7,7 +7,7 @@ import 'presentation/widget/switch_button.dart';
 import 'presentation/widget/switch_tab_bar.dart';
 
 class Component extends StatelessWidget {
-  Component({Key? key}) : super(key: key);
+  const Component({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../styles/colors.dart';
-import 'medium_text.dart';
 
 PreferredSizeWidget? CustomAppBar({
   IconData? leadingIcon,
