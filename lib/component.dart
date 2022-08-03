@@ -17,22 +17,6 @@ class HomeWidget extends StatefulWidget {
 class _HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppBar(
-        leadingIcon: Icons.arrow_back_ios_new_rounded,
-        centerWidget: RegularText(
-          text: 'Notification',
-          fontWeight: FontWeight.w600,
-          fontSize: 20,
-          fontFamily: 'Roboto',
-          color: AppColor.black,
-        ),
-      ),
-      body: ListView.builder(
-        itemBuilder: (context, index) => NotificationItem(),
-        itemCount: 5,
-      ),
-      bottomNavigationBar: BottomNavBarView(),
-    );
+    return Container();
   }
 }

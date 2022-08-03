@@ -23,5 +23,6 @@ class AssetsManager {
   static const String splashLogo = "$imagePath/splashlogo.png";
   static const String shopDialogPic = "$imagePath/shopDialogPic.png";
   static const String grapes = "$imagePath/grapes.png";
+  static const String sidePic = "$imagePath/sidePic.png";
   static const String notification = "$imagePath/notification.png";
 }
