@@ -9,7 +9,9 @@ class AppColor {
   static const Color green = Color(0xFF3FA007);
   static const Color offWhite = Color(0xFFF4F4F4);
   static Color fillTextField = Color.fromRGBO(217, 217, 217, 0.4);
+  static Color blue = Color.fromRGBO(31, 116, 126, 1);
   static const Color grey = Colors.grey;
   static const Color containerBG = Color(0xFFD9D9D9);
   static const Color yellow = Color(0xFFFFC122);
+  static const Color surface = Color(0xFFF9F9F9);
 }
