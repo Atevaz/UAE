@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:h_m/presentation/screens/user/edit_profile.dart';
+import 'package:h_m/presentation/screens/user/home_layout.dart';
 import 'package:h_m/presentation/styles/colors.dart';
 import 'package:h_m/presentation/view/buttom_nav_bar_view.dart';
 import 'package:h_m/presentation/widget/custom_app_bar.dart';
@@ -11,6 +13,6 @@ class Component extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return EditProfile();
   }
 }
