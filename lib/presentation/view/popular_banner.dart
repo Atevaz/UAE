@@ -6,10 +6,12 @@ import '../styles/colors.dart';
 import '../widget/regular_text.dart';
 
 class PopularBanner extends StatelessWidget {
-  const PopularBanner({
+  PopularBanner({
     Key? key,
+    this.isOffer = false ,
   }) : super(key: key);
 
+  final bool isOffer;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -43,7 +45,7 @@ class PopularBanner extends StatelessWidget {
                   )
                 ],
               ),
-              Image.asset(AssetsManager.grapes),
+              Image.asset(AssetsManager.grapes,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -93,7 +95,8 @@ class PopularBanner extends StatelessWidget {
               ),
             ],
           ),
-          Stack(
+          if(isOffer)
+            Stack(
             children: [
               Transform.translate(
                 offset: Offset.fromDirection(45,-100),
