@@ -4,10 +4,6 @@ class Component extends StatelessWidget {
   Component({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Container(),
-      ),
-    );
+    return Container();
   }
 }
