@@ -10,20 +10,29 @@ class DefaultButton extends StatelessWidget {
   final double width;
   final bool isExpanded;
   final Color color;
+  double fontSize;
+  BuildContext context;
+  FontWeight? fontWeight;
+  String? fontFamily;
+  int? borderRadius;
 
-  DefaultButton({
-    required this.label,
-    required this.onPressed,
-    required this.isExpanded,
-    this.height = 65,
-    this.width = 202,
-    this.color = AppColor.teal,
-  });
+  DefaultButton(
+      {required this.label,
+      required this.onPressed,
+      required this.isExpanded,
+      this.height = 65,
+      this.width = 202,
+      this.color = AppColor.teal,
+      required this.context,
+      this.fontFamily = 'Roboto',
+      this.fontWeight,
+      this.borderRadius,
+      this.fontSize = 20});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding:  EdgeInsets.symmetric(horizontal: 5.r),
+      padding: EdgeInsets.symmetric(horizontal: 5.r),
       width: isExpanded ? 350.w : width.w,
       height: height.h,
       clipBehavior: Clip.antiAlias,
@@ -39,6 +48,7 @@ class DefaultButton extends StatelessWidget {
         },
         child: MediumText(
           text: label,
+          fontSize: fontSize,
           color: AppColor.white,
           fontWeight: FontWeight.bold,
         ),

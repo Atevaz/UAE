@@ -60,7 +60,6 @@ class EditProfile extends StatelessWidget {
                       child: DefaultPhoneNumFormField(
                         label: 'Number 2',
                         controller: number2Controller,
-
                       ),
                     ),
                     Padding(
@@ -90,8 +89,9 @@ class EditProfile extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 10.r),
                       child: DefaultButton(
+                        context: context,
                         label: 'Update',
-                        onPressed: (){},
+                        onPressed: () {},
                         isExpanded: false,
                       ),
                     ),
