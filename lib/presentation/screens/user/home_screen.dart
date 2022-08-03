@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                 Icon(Icons.arrow_drop_down_rounded,color: AppColor.black,),
               ],
             ),
-            trailingIcon: Icons.notifications_active_sharp,
+            trailingWidget: Icon(Icons.notifications_active_sharp,),
           ),
           body:  SingleChildScrollView(
             physics: BouncingScrollPhysics(),

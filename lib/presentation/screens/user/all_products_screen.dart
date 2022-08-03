@@ -19,8 +19,7 @@ class AllProductsScreen extends StatelessWidget {
       appBar: CustomAppBar(
         leadingIcon: Icons.arrow_back_ios,
         leadingIconOnPressed: () {},
-        trailingIcon: Icons.notifications_active_sharp,
-        trailingIconOnPressed: () {},
+        trailingWidget: Icon(Icons.notifications_active_sharp),
         centerWidget: HeadLineText(text: 'Fruits'),
       ),
       body: SingleChildScrollView(
