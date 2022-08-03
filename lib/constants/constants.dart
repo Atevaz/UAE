@@ -51,17 +51,16 @@ int currentPageIndex = 0;
 List<dynamic> Screens = [
   HomeScreen(),
   FavoriteScreen(),
-  CartScreen(),
+  CartScreen(showAppBar: false, showSideImage: false),
   OffersScreen(),
   MoreScreen(),
 ];
 
 List<String> itemNames = [
-  'Berries' ,
-  'Citrus Fruits' ,
-  'Core' ,
-  'Pits' ,
-  'Tropical Fruits' ,
-  'Melons' ,
-
+  'Berries',
+  'Citrus Fruits',
+  'Core',
+  'Pits',
+  'Tropical Fruits',
+  'Melons',
 ];

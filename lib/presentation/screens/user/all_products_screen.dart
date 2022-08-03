@@ -49,19 +49,24 @@ class AllProductsScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 10.h,),
+              SizedBox(
+                height: 10.h,
+              ),
               Container(
                 height: 55.h,
                 child: ListView.separated(
-                  physics: BouncingScrollPhysics(),
-                  scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => itemName(title:itemNames[index]),
+                    physics: BouncingScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) =>
+                        itemName(title: itemNames[index]),
                     separatorBuilder: (context, index) => SizedBox(
                           width: 10.w,
                         ),
                     itemCount: 6),
               ),
-              SizedBox(height: 10.h,),
+              SizedBox(
+                height: 10.h,
+              ),
               GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,

@@ -20,19 +20,24 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      children:[
+      children: [
         Scaffold(
           appBar: CustomAppBar(
             centerWidget: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MediumText(text: 'Location'),
-                Icon(Icons.arrow_drop_down_rounded,color: AppColor.black,),
+                Icon(
+                  Icons.arrow_drop_down_rounded,
+                  color: AppColor.black,
+                ),
               ],
             ),
-            trailingWidget: Icon(Icons.notifications_active_sharp,),
+
+            trailingWidget: Icon(Icons.notifications_active_sharp),
+
           ),
-          body:  SingleChildScrollView(
+          body: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             child: Padding(
               padding: EdgeInsets.all(18.r),
@@ -146,7 +151,8 @@ class HomeScreen extends StatelessWidget {
                     child: ListView.separated(
                       physics: BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) => PopularBanner(isOffer: true),
+                      itemBuilder: (context, index) =>
+                          PopularBanner(isOffer: true),
                       separatorBuilder: (context, index) => SizedBox(
                         width: 5.w,
                       ),

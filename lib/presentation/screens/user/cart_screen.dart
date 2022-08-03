@@ -15,7 +15,12 @@ import '../../../data/models/cart_model.dart';
 TextEditingController? controller;
 
 class CartScreen extends StatelessWidget {
-  CartScreen({Key? key}) : super(key: key);
+  CartScreen({Key? key, required this.showAppBar, required this.showSideImage})
+      : super(key: key);
+
+  bool showAppBar = false;
+  bool showSideImage = false;
+
   final List<CartModel> cartList = [
     CartModel(
         quantity: 100,
@@ -33,16 +38,18 @@ class CartScreen extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
-          appBar: CustomAppBar(
-              leadingIcon: Icons.arrow_back_ios,
-              centerWidget: HeadLineText(
-                text: 'Cart',
-                fontFamily: 'Roboto',
-                fontWeight: FontWeight.w600,
-                fontSize: 20,
-              )),
+          appBar: showAppBar
+              ? CustomAppBar(
+                  leadingIcon: Icons.arrow_back_ios,
+                  centerWidget: HeadLineText(
+                    text: 'Cart',
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 20,
+                  ))
+              : null,
           body: Container(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             height: MediaQuery.of(context).size.height,
             child: Column(
               children: [
@@ -54,7 +61,8 @@ class CartScreen extends StatelessWidget {
                         children: [
                           /// cart items list with dismissible
                           Padding(
-                            padding: const EdgeInsets.only(bottom: 20),
+                            padding:
+                                const EdgeInsets.only(bottom: 20, left: 10),
                             child: ListView.builder(
                                 itemCount: cartList.length,
                                 shrinkWrap: true,
@@ -146,7 +154,10 @@ class CartScreen extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(child: Image.asset(AssetsManager.sidePic), right: 0),
+
+        /// top side image
+        if (showSideImage)
+          Positioned(child: Image.asset(AssetsManager.sidePic), right: 0),
       ],
     );
   }
