@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:h_m/presentation/screens/user/home_layout.dart';
 import 'package:sizer/sizer.dart';
 
 import 'business_logic/bloc_observer.dart';
@@ -70,6 +69,7 @@ class _MyAppState extends State<MyApp> {
                       onGenerateRoute: widget.appRouter.onGenerateRoute,
                       initialRoute: AppRouterNames.rSplashRoute,
                       theme: AppTheme.appTheme,
+
                       home: Component(),
 
                     );
