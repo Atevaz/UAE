@@ -5,8 +5,7 @@ PreferredSizeWidget? CustomAppBar({
   IconData? leadingIcon,
   void Function()? leadingIconOnPressed,
   Widget? centerWidget,
-  IconData? trailingIcon,
-  void Function()? trailingIconOnPressed,
+  Widget? trailingWidget,
 }) =>
     AppBar(
       elevation: 0.0,
@@ -28,12 +27,7 @@ PreferredSizeWidget? CustomAppBar({
       actions: [
         Padding(
           padding: const EdgeInsets.only(right: 10),
-          child: IconButton(
-              onPressed: trailingIconOnPressed,
-              icon: Icon(
-                trailingIcon,
-                color: AppColor.teal,
-              )),
+          child: trailingWidget,
         )
       ],
     );
