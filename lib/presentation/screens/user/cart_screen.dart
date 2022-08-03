@@ -68,10 +68,13 @@ class CartScreen extends StatelessWidget {
                                     background: Row(
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: <Widget>[
-                                        Icon(
-                                          size: 40,
-                                          Icons.delete,
-                                          color: AppColor.red,
+                                        Material(
+                                          elevation: 5,
+                                          child: Icon(
+                                            size: 40,
+                                            Icons.delete,
+                                            color: AppColor.red,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -130,7 +133,7 @@ class CartScreen extends StatelessWidget {
                     bottom: 20,
                   ),
                   child: DefaultButton(
-                      height: 60.h,
+                      height: 50.h,
                       label: 'Check out',
                       onPressed: () {},
                       fontSize: 20,
