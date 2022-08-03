@@ -30,7 +30,7 @@ class PromoCode extends StatelessWidget {
                     color: AppColor.black.withOpacity(.38))),
             controller: controller,
           )),
-          defaultButton(
+          DefaultButton(
               label: 'Send',
               width: 102.w,
               height: 48.h,

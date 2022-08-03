@@ -32,9 +32,9 @@ class HomeScreen extends StatelessWidget {
                       child: DefaultFormField(
                         controller: TextEditingController(),
                         keyboard: TextInputType.text,
-                        prefixIcon: Icons.search,
-                        suffixIcon: Icons.photo_camera_outlined,
-                        BorderColor: AppColor.white,
+                        prefixIcon: Icon(Icons.search),
+                        suffixIcon: Icon(Icons.photo_camera_outlined),
+                        borderColor: AppColor.white,
                         focusedBorderColor: AppColor.white,
                         hintText: 'Search',
                         fillColor: AppColor.containerBG,

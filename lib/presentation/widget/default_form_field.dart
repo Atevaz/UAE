@@ -64,15 +64,11 @@ class DefaultFormField extends StatelessWidget {
           style: formFieldStyle ?? TextStyle(color: Colors.black),
           cursorColor: cursorColor ?? Colors.black,
           onChanged: (value) {
-
-              return onChanged ?? print('no changed Function');
-
-
+            return onChanged ?? print('no changed Function');
           },
           onFieldSubmitted: (value) {
             if (formKey!.currentState!.validate()) {
               return onSubmitted ?? print('no Submitted Function');
-
             }
           },
           readOnly: noInput ?? false,

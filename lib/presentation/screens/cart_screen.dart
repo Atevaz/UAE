@@ -129,7 +129,7 @@ class Component extends StatelessWidget {
                     top: 10,
                     bottom: 20,
                   ),
-                  child: defaultButton(
+                  child: DefaultButton(
                       height: 60.h,
                       label: 'Check out',
                       onPressed: () {},

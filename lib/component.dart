@@ -6,15 +6,9 @@ import 'package:h_m/presentation/widget/regular_text.dart';
 
 import 'presentation/view/notification_item.dart';
 
+class Component extends StatelessWidget {
+  const Component({Key? key}) : super(key: key);
 
-class HomeWidget extends StatefulWidget {
-  HomeWidget({Key? key}) : super(key: key);
-
-  @override
-  State<HomeWidget> createState() => _HomeWidgetState();
-}
-
-class _HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
     return Container();
