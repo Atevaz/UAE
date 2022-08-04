@@ -157,7 +157,7 @@ class CartScreen extends StatelessWidget {
 
         /// top side image
         if (showSideImage)
-          Positioned(child: Image.asset(AssetsManager.sidePic), right: 0),
+          Positioned(child: Image.asset(AssetsManager.sidePicTop), right: 0),
       ],
     );
   }

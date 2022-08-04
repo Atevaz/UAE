@@ -5,7 +5,7 @@ import 'package:h_m/presentation/widget/regular_text.dart';
 import 'headline_text.dart';
 import 'medium_text.dart';
 
-Widget BallanceDetailsComponent({
+Widget BalanceDetailsComponent({
   required String imageName,
   required String notificationBoldTxt,
   required String notificationLightTxt,
