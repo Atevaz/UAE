@@ -9,6 +9,7 @@ class CarouselView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
+
       carouselController: controller,
       items: carouselSliderImages
           .map(
@@ -33,7 +34,9 @@ class CarouselView extends StatelessWidget {
             /* setState(() {
               _current = index;
             });*/
-          }),
+          },
+
+          ),
     );
   }
 }
