@@ -32,4 +32,6 @@ class AssetsManager {
   static const String notification = "$imagePath/notification.png";
   static const String girlCircle = "$imagePath/girlCircle.png";
   static const String sadGirl = "$imagePath/sadGirl.png";
+  static const String sadGirlSignUp = "$imagePath/sadGirlSignUp.png";
+  static const String signupCircle = "$imagePath/signupCircle.png";
 }

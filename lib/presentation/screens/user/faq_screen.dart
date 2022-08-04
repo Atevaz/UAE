@@ -8,8 +8,8 @@ import 'package:h_m/presentation/widget/regular_text.dart';
 
 import '../../../constants/assets_manager.dart';
 
-class FAQ extends StatelessWidget {
-  FAQ({Key? key}) : super(key: key);
+class FAQScreen extends StatelessWidget {
+  FAQScreen({Key? key}) : super(key: key);
   List<FaqModel> faqList = [
     FaqModel(
         question: 'How to make an order ?',

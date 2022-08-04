@@ -107,8 +107,8 @@ class LogInScreen extends StatelessWidget {
               ],
             ),
             Positioned(
-              right: MediaQuery.of(context).size.width / 3,
-              top: MediaQuery.of(context).size.height / 7,
+              right: MediaQuery.of(context).size.width / 3.w,
+              top: MediaQuery.of(context).size.height / 7.h,
               child: Image(image: AssetImage(AssetsManager.sadGirl)),
             )
           ],
