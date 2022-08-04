@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:h_m/presentation/router/app_router_names.dart';
 import 'package:h_m/presentation/styles/colors.dart';
 import 'package:h_m/presentation/view/buttom_nav_bar_view.dart';
 import 'package:h_m/presentation/view/carousel_view.dart';
@@ -24,18 +25,25 @@ class HomeScreen extends StatelessWidget {
       children: [
         Scaffold(
           appBar: CustomAppBar(
-            centerWidget: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MediumText(text: 'Location'),
-                Icon(
-                  Icons.arrow_drop_down_rounded,
-                  color: AppColor.black,
-                ),
-              ],
+            centerWidget: InkWell(
+              onTap: (){
+                Navigator.pushNamed(context, AppRouterNames.rLocationRoute);
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  MediumText(text: 'Location'),
+                  Icon(
+                    Icons.arrow_drop_down_rounded,
+                    color: AppColor.black,
+                  ),
+                ],
+              ),
             ),
 
-            trailingWidget: Icon(Icons.notifications_active_sharp),
+            trailingWidget: IconButton(icon: Icon(Icons.notifications_active_sharp,color: AppColor.teal,) , onPressed: (){
+              Navigator.pushNamed(context, AppRouterNames.rNotificationRoute);
+            }),
 
           ),
           body: SingleChildScrollView(
@@ -59,7 +67,7 @@ class HomeScreen extends StatelessWidget {
                               borderColor: AppColor.white,
                               focusedBorderColor: AppColor.white,
                               hintText: 'Search',
-                              fillColor: AppColor.containerBG,
+                              fillColor: AppColor.offWhite,
                             )),
                         Spacer(),
                         Expanded(flex: 2, child: FilterBottomSheet()),
@@ -128,7 +136,9 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Spacer(),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, AppRouterNames.rAllProductRoute);
+                          },
                           child: Row(
                             children: [
                               RegularText(
@@ -171,7 +181,9 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Spacer(),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, AppRouterNames.rAllBrandsRoute);
+                          },
                           child: Row(
                             children: [
                               RegularText(
@@ -206,7 +218,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          bottomNavigationBar: BottomNavBarView(),
+          bottomNavigationBar: BottomNavBarView(index: 0),
         ),
         Positioned(child: Image.asset(AssetsManager.sidePic2), left: 0),
       ],

@@ -31,7 +31,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         itemBuilder: (context, index) => NotificationItem(),
         itemCount: 5,
       ),
-      bottomNavigationBar: BottomNavBarView(),
+      bottomNavigationBar: BottomNavBarView(index: 0),
     );
   }
 }

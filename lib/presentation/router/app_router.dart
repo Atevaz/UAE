@@ -13,6 +13,7 @@ import 'package:h_m/presentation/screens/user/notifications.dart';
 import 'package:h_m/presentation/screens/user/offers_screen.dart';
 import 'package:h_m/presentation/screens/user/payment_screen.dart';
 import 'package:h_m/presentation/screens/user/signup_screen.dart';
+import 'package:h_m/presentation/screens/user/verification_screen.dart';
 
 import '../../component.dart';
 import 'app_router_names.dart';
@@ -22,7 +23,7 @@ class AppRouter {
     switch (settings.name) {
       case AppRouterNames.rSplashRoute:
         return MaterialPageRoute(
-          builder: (_) => SplashScreen(),
+          builder: (_) => HomeScreen(),
         );
       case AppRouterNames.rLocationRoute:
         return MaterialPageRoute(
@@ -38,8 +39,7 @@ class AppRouter {
         );
       case AppRouterNames.rVerificationRoute:
         return MaterialPageRoute(
-          // todo verifications screen
-          builder: (_) => SplashScreen(),
+          builder: (_) => VerificationScreen(),
         );
       case AppRouterNames.rHomeRoute:
         return MaterialPageRoute(
