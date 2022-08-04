@@ -81,10 +81,13 @@ class _StackOverState extends State<StackOver>
                   child: TabBarView(
                     controller: _tabController,
                     children: [
+                      /// cart screen tab bar
                       Center(
                         child:
                             CartScreen(showAppBar: false, showSideImage: false),
                       ),
+
+                      /// old orders tab bar
                       Center(
                         child:
                             OldOrders(showSideImage: false, showAppBar: false),
