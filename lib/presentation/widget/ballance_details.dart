@@ -30,21 +30,33 @@ Widget BalanceDetailsComponent({
 
               /// bold text
               Padding(
-                padding: const EdgeInsets.only(left: 5),
+                padding: const EdgeInsets.only(left: 5, right: 5),
                 child: HeadLineText(
                   text: notificationBoldTxt,
-                  fontSize: 20.sp,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w700,
+                  fontSize: 18.sp,
                 ),
               ),
 
               /// light text
-              MediumText(text: notificationLightTxt),
+              HeadLineText(
+                text: notificationLightTxt,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w400,
+                fontSize: 18.sp,
+              ),
               Spacer()
             ],
           ),
         ),
 
         /// time text
-        RegularText(text: timeTxt),
+        HeadLineText(
+          text: timeTxt,
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.w300,
+          fontSize: 14.sp,
+        ),
       ],
     );

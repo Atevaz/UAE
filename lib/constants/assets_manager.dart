@@ -34,4 +34,13 @@ class AssetsManager {
   static const String sadGirl = "$imagePath/sadGirl.png";
   static const String sadGirlSignUp = "$imagePath/sadGirlSignUp.png";
   static const String signupCircle = "$imagePath/signupCircle.png";
+  static const String orangeGirl = "$imagePath/orangeGirl.png";
+  static const String sidePicBottom = "$imagePath/sidePicBottom.png";
+  static const String creditCard = "$imagePath/creditCard.png";
+  static const String brand1 = "$imagePath/brand1.png";
+  static const String brand2 = "$imagePath/brand2.png";
+  static const String brand3 = "$imagePath/brand3.png";
+  static const String brand4 = "$imagePath/brand4.png";
+  static const String brand5 = "$imagePath/brand5.png";
+  static const String brand6 = "$imagePath/brand6.png";
 }
