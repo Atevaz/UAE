@@ -55,6 +55,7 @@ class _MyAppState extends State<MyApp> {
       child: BlocConsumer<GlobalCubit, GlobalState>(
         listener: (context, state) {},
         builder: (context, state) {
+
           return LayoutBuilder(builder: (context, constraints) {
             return ScreenUtilInit(
               designSize: Size(390, 844),
@@ -73,6 +74,7 @@ class _MyAppState extends State<MyApp> {
 
             );
           },
+
           );
         },
       ),
