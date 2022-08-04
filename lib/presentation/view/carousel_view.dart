@@ -12,13 +12,16 @@ class CarouselView extends StatelessWidget {
       carouselController: controller,
       items: carouselSliderImages
           .map(
-            (e) => Image.asset(e),
+            (e) => Card(
+                clipBehavior: Clip.antiAliasWithSaveLayer,shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.r),
+            ),child: Image.asset(e,fit: BoxFit.cover,width: double.infinity,)),
           )
           .toList(),
       options: CarouselOptions(
-        aspectRatio: .95,
-          height: 150.h,
+          height: 170.h,
           enlargeCenterPage: true,
+          viewportFraction: 1,
           enableInfiniteScroll: true,
           reverse: false,
           autoPlay: true,
