@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/constants/assets_manager.dart';
+import 'package:h_m/presentation/router/app_router_names.dart';
 import 'package:h_m/presentation/styles/colors.dart';
 import 'package:h_m/presentation/widget/default_button.dart';
 import 'package:h_m/presentation/widget/default_phone_number_form_field.dart';
@@ -51,7 +52,9 @@ class LogInScreen extends StatelessWidget {
                                     label: 'Login',
                                     fontWeight: FontWeight.w700,
                                     fontSize: 22,
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.pushReplacementNamed(context, AppRouterNames.rVerificationRoute);
+                                    },
                                     isExpanded: false,
                                     context: context),
                                 Row(
@@ -64,7 +67,9 @@ class LogInScreen extends StatelessWidget {
                                       fontFamily: 'Roboto',
                                     ),
                                     TextButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.pushReplacementNamed(context, AppRouterNames.rRegisterRoute);
+                                        },
                                         child: RegularText(
                                           text: 'Sign up',
                                           fontSize: 16.sp,

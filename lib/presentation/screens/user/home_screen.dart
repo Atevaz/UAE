@@ -12,6 +12,7 @@ import 'package:h_m/presentation/widget/medium_text.dart';
 import 'package:h_m/presentation/widget/regular_text.dart';
 
 import '../../../constants/assets_manager.dart';
+import '../../view/filter_bottom_sheet.dart';
 import '../../widget/default_form_field.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -61,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                               fillColor: AppColor.containerBG,
                             )),
                         Spacer(),
-                        Expanded(flex: 2, child: FilterButton()),
+                        Expanded(flex: 2, child: FilterBottomSheet()),
                       ],
                     ),
                   ),
