@@ -33,7 +33,9 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
+
             trailingWidget: Icon(Icons.notifications_active_sharp),
+
           ),
           body: SingleChildScrollView(
             physics: BouncingScrollPhysics(),

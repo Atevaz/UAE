@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
 class DefaultFormField extends StatelessWidget {
-  final TextEditingController controller;
+  final TextEditingController? controller;
   String? label;
   String? hintText;
-  final TextInputType keyboard;
+  final TextInputType? keyboard;
   Icon? prefixIcon;
   Icon? suffixIcon;
   VoidCallback? suffixPressed;

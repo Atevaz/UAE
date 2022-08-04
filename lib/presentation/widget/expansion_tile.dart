@@ -29,7 +29,8 @@ Widget ExpansionTitleComponent({
           /// question text
           title: HeadLineText(
             text: questionTxt,
-            fontSize: 15.sp,
+            fontSize: 18.sp,
+            fontWeight: FontWeight.w500,
             overflow: TextOverflow.visible,
           ),
 
@@ -39,11 +40,13 @@ Widget ExpansionTitleComponent({
               padding: EdgeInsets.only(right: 70, bottom: 10),
               child: ListTile(
                   title: RegularText(
-                fontSize: 12.sp,
+                fontSize: 14.sp,
                 maxLines: 6,
+                fontWeight: FontWeight.w400,
                 textAlign: TextAlign.justify,
                 overflow: TextOverflow.visible,
-                color: Colors.black,
+                fontFamily: 'Roboto',
+                color: AppColor.black,
                 text: answerTxt,
               )),
             ),
