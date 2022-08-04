@@ -3,6 +3,14 @@ PODS:
   - fluttertoast (0.0.2):
     - Flutter
     - Toast
+  - google_maps_flutter (0.0.1):
+    - Flutter
+    - GoogleMaps
+  - GoogleMaps (6.2.1):
+    - GoogleMaps/Maps (= 6.2.1)
+  - GoogleMaps/Base (6.2.1)
+  - GoogleMaps/Maps (6.2.1):
+    - GoogleMaps/Base
   - libphonenumber (0.0.1):
     - Flutter
     - libPhoneNumber-iOS
@@ -18,12 +26,14 @@ PODS:
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
+  - google_maps_flutter (from `.symlinks/plugins/google_maps_flutter/ios`)
   - libphonenumber (from `.symlinks/plugins/libphonenumber/ios`)
   - libphonenumber_plugin (from `.symlinks/plugins/libphonenumber_plugin/ios`)
   - shared_preferences_ios (from `.symlinks/plugins/shared_preferences_ios/ios`)
 
 SPEC REPOS:
   trunk:
+    - GoogleMaps
     - libPhoneNumber-iOS
     - Toast
 
@@ -32,6 +42,8 @@ EXTERNAL SOURCES:
     :path: Flutter
   fluttertoast:
     :path: ".symlinks/plugins/fluttertoast/ios"
+  google_maps_flutter:
+    :path: ".symlinks/plugins/google_maps_flutter/ios"
   libphonenumber:
     :path: ".symlinks/plugins/libphonenumber/ios"
   libphonenumber_plugin:
@@ -42,6 +54,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
   fluttertoast: 16fbe6039d06a763f3533670197d01fc73459037
+  google_maps_flutter: c59fc576c0d0c7f4dc4bd63832c862d22d5a7c6d
+  GoogleMaps: 20d7b12be49a14287f797e88e0e31bc4156aaeb4
   libphonenumber: bd14d5abfc5939ab0b0767234e2d8e2593af258e
   libPhoneNumber-iOS: 0a32a9525cf8744fe02c5206eb30d571e38f7d75
   libphonenumber_plugin: 7cf755ad1656145935d6c208173a476bd3f12898
