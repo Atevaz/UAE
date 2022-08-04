@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
 class DefaultPhoneNumFormField extends StatelessWidget {
-  final TextEditingController controller;
+  final TextEditingController? controller;
   var formKey = GlobalKey<FormState>();
   String label;
-  DefaultPhoneNumFormField({required this.controller,required this.label});
+  DefaultPhoneNumFormField({required this.controller, required this.label});
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -15,7 +15,6 @@ class DefaultPhoneNumFormField extends StatelessWidget {
         height: 60.h,
         width: 350.w,
         child: InternationalPhoneNumberInput(
-
           onInputChanged: (PhoneNumber number) {
             print(number.phoneNumber);
           },
@@ -23,9 +22,8 @@ class DefaultPhoneNumFormField extends StatelessWidget {
             print(value);
           },
           textStyle: TextStyle(
-
             fontSize: 16.sp,
-              color: Colors.grey,
+            color: Colors.grey,
           ),
           selectorConfig: SelectorConfig(
             setSelectorButtonAsPrefixIcon: true,
@@ -35,7 +33,10 @@ class DefaultPhoneNumFormField extends StatelessWidget {
           ),
           ignoreBlank: false,
           autoValidateMode: AutovalidateMode.disabled,
-          selectorTextStyle: TextStyle(color: Colors.black,fontSize: 18,),
+          selectorTextStyle: TextStyle(
+            color: Colors.black,
+            fontSize: 18,
+          ),
           initialValue: PhoneNumber(isoCode: 'EG'),
           textFieldController: controller,
           formatInput: false,
@@ -45,10 +46,8 @@ class DefaultPhoneNumFormField extends StatelessWidget {
             label: Text(
               label,
             ),
-            labelStyle: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold
-            ),
+            labelStyle:
+                TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
             enabled: true,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(19),
@@ -59,7 +58,7 @@ class DefaultPhoneNumFormField extends StatelessWidget {
             ),
           ),
           keyboardType:
-          TextInputType.numberWithOptions(signed: true, decimal: true),
+              TextInputType.numberWithOptions(signed: true, decimal: true),
           onSaved: (PhoneNumber number) {
             print('On Saved: $number');
           },
