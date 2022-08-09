@@ -3,8 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:h_m/presentation/screens/user/home_layout.dart';
-
 import 'business_logic/bloc_observer.dart';
 import 'business_logic/global_cubit/global_cubit.dart';
 import 'component.dart';
@@ -55,7 +53,6 @@ class _MyAppState extends State<MyApp> {
       child: BlocConsumer<GlobalCubit, GlobalState>(
         listener: (context, state) {},
         builder: (context, state) {
-
           return LayoutBuilder(builder: (context, constraints) {
             return ScreenUtilInit(
               designSize: Size(390, 844),
@@ -69,13 +66,11 @@ class _MyAppState extends State<MyApp> {
                   onGenerateRoute: widget.appRouter.onGenerateRoute,
                   initialRoute: AppRouterNames.rSplashRoute,
                   theme: AppTheme.appTheme,
+                  home: Component(),
                 );
               },
-
             );
-          },
-
-          );
+          });
         },
       ),
     );

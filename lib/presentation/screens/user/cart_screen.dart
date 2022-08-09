@@ -38,6 +38,16 @@ class CartScreen extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
+          appBar: showAppBar
+              ? CustomAppBar(
+                  leadingIcon: Icons.arrow_back_ios,
+                  centerWidget: HeadLineText(
+                    text: 'Cart',
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 20.sp,
+                  ))
+              : null,
           body: Container(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             height: MediaQuery.of(context).size.height,
@@ -134,7 +144,7 @@ class CartScreen extends StatelessWidget {
                       height: 50.h,
                       label: 'Check out',
                       onPressed: () {},
-                      fontSize: 20,
+                      fontSize: 20.sp,
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w700,
                       context: context,
