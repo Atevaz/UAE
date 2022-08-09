@@ -8,7 +8,12 @@ import 'headline_text.dart';
 
 class ProductDescription extends StatelessWidget {
   final String productName;
-  const ProductDescription({Key? key, required this.productName}) : super(key: key);
+  final int productPrice;
+  final String productDescription;
+  final int orderCount;
+  final int numOfReview;
+  final int starReviewCount;
+  const ProductDescription({Key? key, required this.productName, required this.productPrice, required this.productDescription, required this.orderCount, required this.numOfReview, required this.starReviewCount}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +24,7 @@ class ProductDescription extends StatelessWidget {
             Expanded(
               flex: 10,
               child: HeadLineText(
-                text: "Carton of Fresh red Grapes",
+                text: productName,
                 fontWeight: FontWeight.w700,
                 color: AppColor.black,
                 fontSize: 20,
@@ -30,7 +35,7 @@ class ProductDescription extends StatelessWidget {
             ),
             const Spacer(),
             RegularText(
-              text: "240 LE",
+              text: "$productPrice",
               fontSize: 19,
               fontWeight: FontWeight.w700,
               color: AppColor.teal,
@@ -51,7 +56,7 @@ class ProductDescription extends StatelessWidget {
                     flex: 10,
                     child: RegularText(
                       text:
-                      "Every Carton has 15 k of red grabes. You can order more about the available quantity , whether A, B, or C class.",
+                      productDescription,
                       maxLines: 6,
                       fontWeight: FontWeight.w400,
                     ),
@@ -59,7 +64,7 @@ class ProductDescription extends StatelessWidget {
                   const SizedBox(width: 10),
                   Row(
                     children: [
-                      defaultButton(
+                      DefaultButton(
                         label: "-",
                         onPressed: () {},
                         fontSize: 18,
@@ -86,7 +91,7 @@ class ProductDescription extends StatelessWidget {
                             padding:
                             const EdgeInsets.symmetric(horizontal: 3.0),
                             child: Text(
-                              "100",
+                              "$orderCount",
                               style: TextStyle(
                                 fontSize: 20.sp,
                                 fontFamily: "Roboto",
@@ -98,7 +103,7 @@ class ProductDescription extends StatelessWidget {
                       const SizedBox(
                         width: 3,
                       ),
-                      defaultButton(
+                      DefaultButton(
                         label: "+",
                         onPressed: () {},
                         fontSize: 18,
@@ -129,7 +134,7 @@ class ProductDescription extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return Icon(
                         Icons.star,
-                        color: 3 > index
+                        color: starReviewCount > index
                             ? AppColor.yellow
                             : AppColor.grey,
                         size: 18,
@@ -139,7 +144,7 @@ class ProductDescription extends StatelessWidget {
               Expanded(
                 flex: 5,
                 child: RegularText(
-                  text: '500 LE',
+                  text: '$numOfReview',
                   color: AppColor.teal,
                   fontFamily: 'Roboto',
                   fontWeight: FontWeight.w500,

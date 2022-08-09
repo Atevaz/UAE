@@ -15,6 +15,7 @@ import '../../widget/default_form_field.dart';
 import '../../widget/filtter_button.dart';
 
 class OffersScreen extends StatelessWidget {
+
   const OffersScreen({Key? key}) : super(key: key);
 
   @override
