@@ -59,7 +59,7 @@ class ProductDescription extends StatelessWidget {
                   const SizedBox(width: 10),
                   Row(
                     children: [
-                      defaultButton(
+                      DefaultButton(
                         label: "-",
                         onPressed: () {},
                         fontSize: 18,
@@ -98,7 +98,7 @@ class ProductDescription extends StatelessWidget {
                       const SizedBox(
                         width: 3,
                       ),
-                      defaultButton(
+                      DefaultButton(
                         label: "+",
                         onPressed: () {},
                         fontSize: 18,
