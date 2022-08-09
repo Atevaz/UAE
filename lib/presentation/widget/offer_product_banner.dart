@@ -78,20 +78,18 @@ class OffersProductsBanner extends StatelessWidget {
                   ),
                   Align(
                     alignment: AlignmentDirectional.bottomEnd,
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.only(top: 5.r,end: 10),
-                      child: SizedBox(
-                        width: 30.w,
-                        height: 25.h,
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: RegularText(
-                            text: 'Get',
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w700,
-                            color: AppColor.blue,
-                          ),
-                          padding: EdgeInsets.zero,
+                    child: SizedBox(
+                      height: 30.h,
+                      width: 50.w,
+                      child: MaterialButton(
+                        onPressed: () {},
+                        minWidth: 1,
+                        padding: EdgeInsets.zero,
+                        child: RegularText(
+                          text: 'Get',
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                          color: AppColor.blue,
                         ),
                       ),
                     ),
