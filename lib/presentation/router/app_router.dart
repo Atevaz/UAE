@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:h_m/presentation/router/app_animation.dart';
 import 'package:h_m/presentation/screens/shared/splash_screen.dart';
 import 'package:h_m/presentation/screens/user/all_products_screen.dart';
 import 'package:h_m/presentation/screens/user/brands_screen.dart';
@@ -27,56 +28,56 @@ class AppRouter {
   Route? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRouterNames.rSplashRoute:
-        return MaterialPageRoute(
-          builder: (_) => HomeScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: HomeScreen(),
         );
       case AppRouterNames.rLocationRoute:
-        return MaterialPageRoute(
-          builder: (_) => LocationScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: LocationScreen(),
         );
       case AppRouterNames.rLoginRoute:
-        return MaterialPageRoute(
-          builder: (_) => LogInScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: LogInScreen(),
         );
       case AppRouterNames.rRegisterRoute:
-        return MaterialPageRoute(
-          builder: (_) => SignUpScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: SignUpScreen(),
         );
       case AppRouterNames.rVerificationRoute:
-        return MaterialPageRoute(
-          builder: (_) => VerificationScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: VerificationScreen(),
         );
       case AppRouterNames.rHomeRoute:
-        return MaterialPageRoute(
-          builder: (_) => HomeScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: HomeScreen(),
         );
       case AppRouterNames.rAllProductRoute:
-        return MaterialPageRoute(
-          builder: (_) => AllProductsScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: AllProductsScreen(),
         );
       case AppRouterNames.rAllBrandsRoute:
-        return MaterialPageRoute(
-          builder: (_) => BrandsScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: BrandsScreen(),
         );
       case AppRouterNames.rFavoriteRoute:
-        return MaterialPageRoute(
-          builder: (_) => FavoriteScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: FavoriteScreen(),
         );
       case AppRouterNames.rCartRoute:
         return MaterialPageRoute(
           builder: (_) => CartScreen(showAppBar: true, showSideImage: true),
         );
       case AppRouterNames.rOfferRoute:
-        return MaterialPageRoute(
-          builder: (_) => OffersScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: OffersScreen(),
         );
       case AppRouterNames.rMoreRoute:
-        return MaterialPageRoute(
-          builder: (_) => MoreScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: MoreScreen(),
         );
       case AppRouterNames.rNotificationRoute:
-        return MaterialPageRoute(
-          builder: (_) => NotificationsScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: NotificationsScreen(),
         );
       case AppRouterNames.rProductDetailsRoute:
         return MaterialPageRoute(
@@ -84,49 +85,47 @@ class AppRouter {
           builder: (_) => SplashScreen(),
         );
       case AppRouterNames.rPaymentRoute:
-        return MaterialPageRoute(
-          builder: (_) => PaymentScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: PaymentScreen(),
         );
       case AppRouterNames.rEditProfileRoute:
-        return MaterialPageRoute(
-          builder: (_) => EditProfile(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: EditProfile(),
         );
       case AppRouterNames.rPaymentMethodRoute:
-        return MaterialPageRoute(
-          builder: (_) => PaymentMethodScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: PaymentMethodScreen(),
         );
       case AppRouterNames.rBalanceDetailsRoute:
-        return MaterialPageRoute(
-          builder: (_) => BalanceDetailsScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: BalanceDetailsScreen(),
         );
       case AppRouterNames.rCreditRoute:
         // todo credit screen
-        return MaterialPageRoute(
-          builder: (_) => SplashScreen(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: SplashScreen(),
         );
       case AppRouterNames.rSettingsRoute:
-        return MaterialPageRoute(
-          // todo settings screen
-          builder: (_) => SplashScreen(),
+        // todo settings screen
+        return CustomPageRouteTransiton.fadeOut(
+          page: SplashScreen(),
         );
       case AppRouterNames.rCustomerServicesRoute:
-        return MaterialPageRoute(
-          builder: (_) => CustomerService(),
+        return CustomPageRouteTransiton.fadeOut(
+          page: CustomerService(),
         );
       case AppRouterNames.rContactUsRoute:
-        return MaterialPageRoute(
-          // todo contact us screen or chat screen
-          builder: (_) => EditProfile(),
+        // todo contact us screen or chat screen
+        return CustomPageRouteTransiton.fadeOut(
+          page: EditProfile(),
         );
       case AppRouterNames.rTermsAndConditionsRoute:
-        return MaterialPageRoute(
-          // todo Terms and conditions
-        builder: (_) => EditProfile(),
+        // todo Terms and conditions
+        return CustomPageRouteTransiton.fadeOut(
+          page: EditProfile(),
         );
       case AppRouterNames.rFAQRoute:
-        return MaterialPageRoute(
-        builder: (_) => FAQScreen(),
-        );
+        return CustomPageRouteTransiton.fadeOut(page: FAQScreen());
     }
   }
 }

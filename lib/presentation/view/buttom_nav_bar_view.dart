@@ -43,6 +43,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
             child: Icon(Icons.home_rounded)), label: 'Home'),
         BottomNavigationBarItem(icon: InkWell(
             onTap: (){
+              print('go to favorite screen');
               Navigator.pushNamed(context, AppRouterNames.rFavoriteRoute);
             },
             child: Icon(Icons.favorite)), label: 'Fav'),
