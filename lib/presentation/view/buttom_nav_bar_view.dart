@@ -33,11 +33,13 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
       selectedFontSize: 16.sp,
       unselectedFontSize: 16.sp,
       items: [
+
         BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: 'Home'),
         BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Fav'),
         BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_outlined), label: 'Cart'),
         BottomNavigationBarItem(icon: Icon(Icons.local_offer_rounded), label: 'Offers'),
         BottomNavigationBarItem(icon: Icon(Icons.more_horiz), label: 'More'),
+
       ],
     );
   }
