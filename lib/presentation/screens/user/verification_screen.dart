@@ -8,6 +8,9 @@ import 'package:h_m/constants/assets_manager.dart';
 import 'package:h_m/presentation/widget/default_button.dart';
 import 'package:h_m/presentation/widget/otp.dart';
 
+import '../../router/app_animation.dart';
+import 'home_screen.dart';
+
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({Key? key}) : super(key: key);
 
@@ -150,7 +153,9 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     ),
                     DefaultButton(
                       label: 'Verify',
-                      onPressed: () {},
+                      onPressed: () => Navigator.of(context).push(
+                          CustomPageRouteTransiton.topToBottom(
+                              page: SecondScreen())),
                       isExpanded: false,
                       context: context,
                     ),
@@ -162,6 +167,19 @@ class _VerificationScreenState extends State<VerificationScreen> {
             ),
           );
         },
+      ),
+    );
+  }
+}
+
+class SecondScreen extends StatelessWidget {
+  const SecondScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Text('Second Screen'),
       ),
     );
   }
