@@ -26,6 +26,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
         Scaffold(
           appBar: CustomAppBar(
               leadingIcon: Icons.arrow_back_ios,
+              leadingIconOnPressed: (){
+                Navigator.pop(context);
+              },
               centerWidget: HeadLineText(
                 text: 'Payment',
                 fontFamily: 'Roboto',
@@ -75,13 +78,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
             ],
           ),
         ),
-        Positioned(child: Image.asset(AssetsManager.sidePic), right: 0),
+        Positioned(child: Image.asset(AssetsManager.sidePicTop), right: 0),
         // FIXME: rotate the image to fit the design
         Positioned(
           child: Transform(
               transform: Matrix4.identity()..rotateY(0.2),
               child: Image.asset(
-                AssetsManager.sidePic,
+                AssetsManager.sidePicBottom,
               )),
           left: 0,
           bottom: 0,

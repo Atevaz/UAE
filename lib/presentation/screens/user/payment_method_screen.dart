@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/constants/assets_manager.dart';
+import 'package:h_m/presentation/router/app_router_names.dart';
 
 import '../../widget/custom_app_bar.dart';
 import '../../widget/headline_text.dart';
@@ -22,7 +23,9 @@ class PaymentMethodScreen extends StatelessWidget {
         leadingIcon: Icons.arrow_back_ios,
 
         /// routing
-        leadingIconOnPressed: () {},
+        leadingIconOnPressed: () {
+          Navigator.pop(context);
+        },
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 20),
@@ -50,7 +53,10 @@ class PaymentMethodScreen extends StatelessWidget {
               text: 'Balance details',
 
               /// routing
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, AppRouterNames.rBalanceDetailsRoute);
+
+              },
               isIcon: true,
             ),
             PaymentMethodComponent(
