@@ -9,12 +9,14 @@ class ListTileItem extends StatelessWidget {
   final String title;
   final Color iconColor;
   final Color textColor;
+  final Function() onPress;
 
-  ListTileItem({required this.iconPath, required this.title, this.iconColor = AppColor.teal, this.textColor = AppColor.black});
+  ListTileItem({required this.iconPath, required this.title, this.iconColor = AppColor.teal, this.textColor = AppColor.black, required this.onPress});
 
   @override
   Widget build(BuildContext context) {
     return  ListTile(
+      onTap: onPress,
       contentPadding: EdgeInsetsDirectional.zero,
       leading: IconComponent(
           imageName: iconPath,
