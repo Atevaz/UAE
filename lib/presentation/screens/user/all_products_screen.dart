@@ -86,7 +86,7 @@ class AllProductsScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavBarView(),
+      bottomNavigationBar: BottomNavBarView(index: 0),
     );
   }
 

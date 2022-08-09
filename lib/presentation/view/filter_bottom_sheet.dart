@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:h_m/presentation/styles/colors.dart';
+
 import 'package:h_m/presentation/widget/category_chip.dart';
 import 'package:h_m/presentation/widget/default_button.dart';
 import 'package:h_m/presentation/widget/dropdown_component.dart';
@@ -21,7 +23,15 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Icon(Icons.close),
+      
+      child: Container(
+        height: 40.h,
+          width: 40.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.r),
+            color: AppColor.teal
+          ),
+          child: Center(child: Icon(Icons.add_road,color: AppColor.white,))),
       onTap: () async {
         await filterBottomSheet(context);
       },

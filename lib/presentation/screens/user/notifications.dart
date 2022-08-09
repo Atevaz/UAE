@@ -6,14 +6,14 @@ import 'package:h_m/presentation/widget/custom_app_bar.dart';
 import 'package:h_m/presentation/widget/regular_text.dart';
 
 
-class HomeWidget extends StatefulWidget {
-  HomeWidget({Key? key}) : super(key: key);
+class NotificationsScreen extends StatefulWidget {
+  NotificationsScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeWidget> createState() => _HomeWidgetState();
+  State<NotificationsScreen> createState() => _NotificationsScreenState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _NotificationsScreenState extends State<NotificationsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +31,7 @@ class _HomeWidgetState extends State<HomeWidget> {
         itemBuilder: (context, index) => NotificationItem(),
         itemCount: 5,
       ),
-      bottomNavigationBar: BottomNavBarView(),
+      bottomNavigationBar: BottomNavBarView(index: 0),
     );
   }
 }
