@@ -2,8 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:h_m/presentation/screens/shared/splash_screen.dart';
 import 'package:h_m/presentation/screens/user/all_products_screen.dart';
+import 'package:h_m/presentation/screens/user/brands_screen.dart';
 import 'package:h_m/presentation/screens/user/cart_screen.dart';
+import 'package:h_m/presentation/screens/user/customer_service_screen.dart';
 import 'package:h_m/presentation/screens/user/edit_profile.dart';
+import 'package:h_m/presentation/screens/user/faq_screen.dart';
 import 'package:h_m/presentation/screens/user/favorite_screen.dart';
 import 'package:h_m/presentation/screens/user/home_screen.dart';
 import 'package:h_m/presentation/screens/user/location_screen.dart';
@@ -11,10 +14,13 @@ import 'package:h_m/presentation/screens/user/login_screen.dart';
 import 'package:h_m/presentation/screens/user/more_screen.dart';
 import 'package:h_m/presentation/screens/user/notifications.dart';
 import 'package:h_m/presentation/screens/user/offers_screen.dart';
+import 'package:h_m/presentation/screens/user/payment_method_screen.dart';
 import 'package:h_m/presentation/screens/user/payment_screen.dart';
 import 'package:h_m/presentation/screens/user/signup_screen.dart';
+import 'package:h_m/presentation/screens/user/verification_screen.dart';
 
 import '../../component.dart';
+import '../screens/user/ballance_details_screen.dart';
 import 'app_router_names.dart';
 
 class AppRouter {
@@ -22,7 +28,7 @@ class AppRouter {
     switch (settings.name) {
       case AppRouterNames.rSplashRoute:
         return MaterialPageRoute(
-          builder: (_) => SplashScreen(),
+          builder: (_) => HomeScreen(),
         );
       case AppRouterNames.rLocationRoute:
         return MaterialPageRoute(
@@ -38,8 +44,7 @@ class AppRouter {
         );
       case AppRouterNames.rVerificationRoute:
         return MaterialPageRoute(
-          // todo verifications screen
-          builder: (_) => SplashScreen(),
+          builder: (_) => VerificationScreen(),
         );
       case AppRouterNames.rHomeRoute:
         return MaterialPageRoute(
@@ -51,8 +56,7 @@ class AppRouter {
         );
       case AppRouterNames.rAllBrandsRoute:
         return MaterialPageRoute(
-          // todo all brands screen
-          builder: (_) => SplashScreen(),
+          builder: (_) => BrandsScreen(),
         );
       case AppRouterNames.rFavoriteRoute:
         return MaterialPageRoute(
@@ -89,13 +93,11 @@ class AppRouter {
         );
       case AppRouterNames.rPaymentMethodRoute:
         return MaterialPageRoute(
-          // todo payment method or wallet screen
-          builder: (_) => SplashScreen(),
+          builder: (_) => PaymentMethodScreen(),
         );
       case AppRouterNames.rBalanceDetailsRoute:
         return MaterialPageRoute(
-          // todo ballence details screen
-          builder: (_) => SplashScreen(),
+          builder: (_) => BalanceDetailsScreen(),
         );
       case AppRouterNames.rCreditRoute:
         // todo credit screen
@@ -109,8 +111,7 @@ class AppRouter {
         );
       case AppRouterNames.rCustomerServicesRoute:
         return MaterialPageRoute(
-          // todo customer services screen
-          builder: (_) => SplashScreen(),
+          builder: (_) => CustomerService(),
         );
       case AppRouterNames.rContactUsRoute:
         return MaterialPageRoute(
@@ -124,8 +125,7 @@ class AppRouter {
         );
       case AppRouterNames.rFAQRoute:
         return MaterialPageRoute(
-          // todo FAQ
-        builder: (_) => EditProfile(),
+        builder: (_) => FAQScreen(),
         );
     }
   }
