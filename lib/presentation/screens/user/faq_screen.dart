@@ -54,6 +54,10 @@ class FAQScreen extends StatelessWidget {
               fontWeight: FontWeight.w600,
               fontFamily: 'Roboto',
             ),
+            leadingIconOnPressed: (){
+              Navigator.pop(context);
+
+            },
           ),
           body: ListView.builder(
               itemCount: faqList.length,
