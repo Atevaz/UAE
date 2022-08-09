@@ -33,7 +33,7 @@ class FavoriteScreen extends StatelessWidget {
           },
         ),
       ),
-      bottomNavigationBar: BottomNavBarView(index: 1),
+
     );
   }
 }

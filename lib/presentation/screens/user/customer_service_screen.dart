@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:h_m/presentation/router/app_router_names.dart';
 import 'package:h_m/presentation/styles/colors.dart';
 import 'package:h_m/presentation/widget/custom_app_bar.dart';
 import 'package:h_m/presentation/widget/headline_text.dart';
@@ -26,7 +27,9 @@ class CustomerService extends StatelessWidget {
             leadingIcon: Icons.arrow_back_ios,
 
             /// routing
-            leadingIconOnPressed: () {},
+            leadingIconOnPressed: () {
+              Navigator.pop(context);
+            },
           ),
           body: Column(
             children: [
@@ -46,10 +49,9 @@ class CustomerService extends StatelessWidget {
               ),
               PaymentMethodComponent(
                 text: 'FAQ',
-
-                /// routing
-
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, AppRouterNames.rFAQRoute);
+                },
                 isIcon: true,
               ),
             ],

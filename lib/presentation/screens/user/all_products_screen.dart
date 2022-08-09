@@ -7,6 +7,7 @@ import 'package:h_m/presentation/widget/custom_app_bar.dart';
 import 'package:h_m/presentation/widget/headline_text.dart';
 
 import '../../styles/colors.dart';
+import '../../view/filter_bottom_sheet.dart';
 import '../../widget/default_form_field.dart';
 import '../../widget/filtter_button.dart';
 
@@ -18,7 +19,9 @@ class AllProductsScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         leadingIcon: Icons.arrow_back_ios,
-        leadingIconOnPressed: () {},
+        leadingIconOnPressed: () {
+          Navigator.pop(context);
+        },
         trailingWidget: Icon(Icons.notifications_active_sharp),
         centerWidget: HeadLineText(text: 'Fruits'),
       ),
@@ -45,7 +48,7 @@ class AllProductsScreen extends StatelessWidget {
                           fillColor: AppColor.offWhite,
                         )),
                     Spacer(),
-                    Expanded(flex: 2, child: FilterButton()),
+                    Expanded(flex: 2, child: FilterBottomSheet()),
                   ],
                 ),
               ),
@@ -86,7 +89,7 @@ class AllProductsScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavBarView(index: 0),
+
     );
   }
 

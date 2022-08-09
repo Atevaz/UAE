@@ -95,33 +95,29 @@ class PopularBanner extends StatelessWidget {
               ),
             ],
           ),
-          if(isOffer)
-            Stack(
-            children: [
-              Transform.translate(
-                offset: Offset.fromDirection(45,-100),
-                child: Transform.rotate(
-                  angle: - math.pi / 4,
-                  child: Center(
-                    child: Container(
-                      color: AppColor.teal,
-                      width: 114.w,
-                      height: 26.h,
-                      child: Center(
-                        child: RegularText(
-                          text: 'Best Seller',
-                          fontSize: 11,
-                          fontFamily: 'Roboto',
-                          fontWeight: FontWeight.w700,
-                          color: AppColor.white,
-                        ),
+          //if(isOffer)
+            Transform.translate(
+              offset: Offset.fromDirection(45,-100),
+              child: Transform.rotate(
+                angle: - math.pi / 4,
+                child: Center(
+                  child: Container(
+                    color: AppColor.teal,
+                    width: 114.w,
+                    height: 26.h,
+                    child: Center(
+                      child: RegularText(
+                        text: 'Best Seller',
+                        fontSize: 11,
+                        fontFamily: 'Roboto',
+                        fontWeight: FontWeight.w700,
+                        color: AppColor.white,
                       ),
                     ),
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
         ],
       ),
     );

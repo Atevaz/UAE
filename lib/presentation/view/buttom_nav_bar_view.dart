@@ -7,21 +7,18 @@ import '../../constants/constants.dart';
 import '../router/app_router_names.dart';
 
 class BottomNavBarView extends StatefulWidget {
-  const BottomNavBarView({Key? key , required this.index}) : super(key: key);
-  final int index ;
+  const BottomNavBarView({Key? key}) : super(key: key);
 
   @override
-  State<BottomNavBarView> createState() => _BottomNavBarViewState(index: this.index);
+  State<BottomNavBarView> createState() => _BottomNavBarViewState();
 }
 
 class _BottomNavBarViewState extends State<BottomNavBarView> {
-  _BottomNavBarViewState({required this.index});
-  final int index ;
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      currentIndex: index,
+      currentIndex: currentPageIndex,
       onTap: (index) {
         setState(() {
           currentPageIndex = index;
@@ -36,35 +33,13 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
       selectedFontSize: 16.sp,
       unselectedFontSize: 16.sp,
       items: [
-        BottomNavigationBarItem(icon: InkWell(
-            onTap: (){
-              Navigator.pushNamed(context, AppRouterNames.rHomeRoute);
-            },
-            child: Icon(Icons.home_rounded)), label: 'Home'),
-        BottomNavigationBarItem(icon: InkWell(
-            onTap: (){
-              print('go to favorite screen');
-              Navigator.pushNamed(context, AppRouterNames.rFavoriteRoute);
-            },
-            child: Icon(Icons.favorite)), label: 'Fav'),
-        BottomNavigationBarItem(
-            icon: InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, AppRouterNames.rCartRoute);
-                },
-                child: Icon(Icons.shopping_cart_outlined)),
-            label: 'Cart'),
-        BottomNavigationBarItem(
-            icon: InkWell(
-                onTap: (){
-                  Navigator.pushNamed(context, AppRouterNames.rOfferRoute);
-                },
-                child: Icon(Icons.local_offer_rounded)), label: 'Offers'),
-        BottomNavigationBarItem(icon: InkWell(
-            onTap: (){
-              Navigator.pushNamed(context, AppRouterNames.rMoreRoute);
-            },
-            child: Icon(Icons.more_horiz)), label: 'More'),
+
+        BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: 'Home'),
+        BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Fav'),
+        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_outlined), label: 'Cart'),
+        BottomNavigationBarItem(icon: Icon(Icons.local_offer_rounded), label: 'Offers'),
+        BottomNavigationBarItem(icon: Icon(Icons.more_horiz), label: 'More'),
+
       ],
     );
   }
