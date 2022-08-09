@@ -12,10 +12,9 @@ class FavoriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        centerWidget: HeadLineText(text: 'Favorite'),
-        leadingIcon: Icons.arrow_back_ios,
-        leadingIconOnPressed: (){}
-      ),
+          centerWidget: HeadLineText(text: 'Favorite'),
+          leadingIcon: Icons.arrow_back_ios,
+          leadingIconOnPressed: () {}),
       body: Padding(
         padding: EdgeInsets.all(20.0.r),
         child: GridView.builder(
