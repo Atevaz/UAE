@@ -8,10 +8,10 @@ import 'headline_text.dart';
 
 class ProductDescription extends StatelessWidget {
   final String productName;
-  final int productPrice;
+  final String productPrice;
   final String productDescription;
   final int orderCount;
-  final int numOfReview;
+  final String numOfReview;
   final int starReviewCount;
   const ProductDescription({Key? key, required this.productName, required this.productPrice, required this.productDescription, required this.orderCount, required this.numOfReview, required this.starReviewCount}) : super(key: key);
 
@@ -79,7 +79,7 @@ class ProductDescription extends StatelessWidget {
                       ),
                       Container(
                         height: 30,
-                        //width: 47,
+                        width: 45,
                         decoration: BoxDecoration(
                             color: AppColor.white,
                             borderRadius: BorderRadius.circular(10.0),
@@ -144,11 +144,12 @@ class ProductDescription extends StatelessWidget {
               Expanded(
                 flex: 5,
                 child: RegularText(
-                  text: '$numOfReview',
-                  color: AppColor.teal,
+                  text: '($numOfReview)',
+                  color: AppColor.black,
                   fontFamily: 'Roboto',
                   fontWeight: FontWeight.w500,
                   fontSize: 15,
+                  decoration: TextDecoration.underline,
                 ),
               )
             ],

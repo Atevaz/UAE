@@ -13,7 +13,7 @@ import 'presentation/screens/user/contact_us_screen.dart';
 import 'presentation/styles/app_theme.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  await WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
 
   BlocOverrides.runZoned(
@@ -68,7 +68,7 @@ class _MyAppState extends State<MyApp> {
                     onGenerateRoute: widget.appRouter.onGenerateRoute,
                     initialRoute: AppRouterNames.rSplashRoute,
                     theme: AppTheme.appTheme,
-                    home: ContactUsScreen(),
+                    home: Component(),
                   );
                 },
               );

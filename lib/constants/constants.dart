@@ -60,8 +60,6 @@ List<dynamic> Screens = [
   MoreScreen(),
 ];
 
-
-
 List<String> itemNames = [
   'Berries',
   'Citrus Fruits',
@@ -71,49 +69,50 @@ List<String> itemNames = [
   'Melons',
 ];
 
-PreferredSizeWidget? appBars(BuildContext context){
-  if(currentPageIndex == 0){
+PreferredSizeWidget? appBars(BuildContext context) {
+  if (currentPageIndex == 0) {
     return CustomAppBar(
-      centerWidget:Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          MediumText(text: 'Location'),
-          Icon(
-            Icons.arrow_drop_down_rounded,
-            color: AppColor.black,
-          ),
-        ],
+      centerWidget: InkWell(
+        onTap: () {
+          Navigator.pushNamed(context, AppRouterNames.rLocationRoute);
+        },
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            MediumText(text: 'Location'),
+            Icon(
+              Icons.arrow_drop_down_rounded,
+              color: AppColor.black,
+            ),
+          ],
+        ),
       ),
       trailingWidget: InkWell(
-        onTap: (){
+        onTap: () {
           Navigator.pushNamed(context, AppRouterNames.rNotificationRoute);
         },
         child: NotificationIcon(
           thereNewNotification: true,
         ),
       ),
-
     );
-  }
-  else if(currentPageIndex == 1){
+  } else if (currentPageIndex == 1) {
     return CustomAppBar(
-        centerWidget: HeadLineText(text: 'Favorite'),
+      centerWidget: HeadLineText(text: 'Favorite'),
     );
-  }
-  else if(currentPageIndex == 2){
+  } else if (currentPageIndex == 2) {
     return CustomAppBar(
         centerWidget: HeadLineText(
-          text: 'Cart',
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.w600,
-          fontSize: 20,
-        ));
-  }
-  else if(currentPageIndex == 3){
+      text: 'Cart',
+      fontFamily: 'Roboto',
+      fontWeight: FontWeight.w600,
+      fontSize: 20,
+    ));
+  } else if (currentPageIndex == 3) {
     return CustomAppBar(
       centerWidget: HeadLineText(text: 'Offers'),
       trailingWidget: InkWell(
-        onTap: (){
+        onTap: () {
           Navigator.pushNamed(context, AppRouterNames.rNotificationRoute);
         },
         child: NotificationIcon(
@@ -121,8 +120,7 @@ PreferredSizeWidget? appBars(BuildContext context){
         ),
       ),
     );
-  }
-  else{
+  } else {
     return null;
   }
 }

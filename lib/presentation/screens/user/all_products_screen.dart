@@ -25,68 +25,70 @@ class AllProductsScreen extends StatelessWidget {
         trailingWidget: Icon(Icons.notifications_active_sharp),
         centerWidget: HeadLineText(text: 'Fruits'),
       ),
-      body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
-        child: Padding(
-          padding: EdgeInsets.all(18.0.r),
-          child: Column(
-            children: [
-              Container(
-                height: 43.h,
-                child: Row(
-                  children: [
-                    Expanded(
-                        flex: 15,
-                        child: DefaultFormField(
-                          controller: TextEditingController(),
-                          keyboard: TextInputType.text,
-                          prefixIcon: Icon(Icons.search),
-                          suffixIcon: Icon(Icons.photo_camera_outlined),
-                          borderColor: AppColor.white,
-                          focusedBorderColor: AppColor.white,
-                          hintText: 'Search',
-                          fillColor: AppColor.offWhite,
-                        )),
-                    Spacer(),
-                    Expanded(flex: 2, child: FilterBottomSheet()),
-                  ],
+      body: Padding(
+        padding: EdgeInsets.all(18.0.r),
+        child: Column(
+          children: [
+            Container(
+              height: 43.h,
+              child: Row(
+                children: [
+                  Expanded(
+                      flex: 15,
+                      child: DefaultFormField(
+                        controller: TextEditingController(),
+                        keyboard: TextInputType.text,
+                        prefixIcon: Icon(Icons.search),
+                        suffixIcon: Icon(Icons.photo_camera_outlined),
+                        borderColor: AppColor.white,
+                        focusedBorderColor: AppColor.white,
+                        hintText: 'Search',
+                        fillColor: AppColor.offWhite,
+                      )),
+                  Spacer(),
+                  Expanded(flex: 2, child: FilterBottomSheet()),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            Container(
+              height: 55.h,
+              child: ListView.separated(
+                  physics: BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) =>
+                      itemName(title: itemNames[index]),
+                  separatorBuilder: (context, index) => SizedBox(
+                        width: 10.w,
+                      ),
+                  itemCount: 6),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 168.w / 235.h,
+                    crossAxisSpacing: 16.h,
+                    mainAxisSpacing: 14.w,
+                  ),
+                  shrinkWrap: true,
+                  physics: const ClampingScrollPhysics(),
+                  padding: EdgeInsets.zero,
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return PopularBanner();
+                  },
                 ),
               ),
-              SizedBox(
-                height: 10.h,
-              ),
-              Container(
-                height: 55.h,
-                child: ListView.separated(
-                    physics: BouncingScrollPhysics(),
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) =>
-                        itemName(title: itemNames[index]),
-                    separatorBuilder: (context, index) => SizedBox(
-                          width: 10.w,
-                        ),
-                    itemCount: 6),
-              ),
-              SizedBox(
-                height: 10.h,
-              ),
-              GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio: 168.w / 235.h,
-                  crossAxisSpacing: 16.h,
-                  mainAxisSpacing: 14.w,
-                ),
-                shrinkWrap: true,
-                physics: const ClampingScrollPhysics(),
-                padding: EdgeInsets.zero,
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return PopularBanner();
-                },
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
 

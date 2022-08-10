@@ -20,7 +20,7 @@ class DefaultFormField extends StatelessWidget {
   Color? borderColor;
   Color? errorBorderColor;
   String? validateText;
-  VoidCallback? onChanged;
+  Function(String)? onChanged;
   VoidCallback? onSubmitted;
   bool? isPassword;
   bool? noInput;
@@ -63,9 +63,7 @@ class DefaultFormField extends StatelessWidget {
           textDirection: textDirection,
           style: formFieldStyle ?? TextStyle(color: Colors.black),
           cursorColor: cursorColor ?? Colors.black,
-          onChanged: (value) {
-            return onChanged ?? print('no changed Function');
-          },
+          onChanged: onChanged,
           onFieldSubmitted: (value) {
             if (formKey!.currentState!.validate()) {
               return onSubmitted ?? print('no Submitted Function');
