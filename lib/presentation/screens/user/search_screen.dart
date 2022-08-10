@@ -33,115 +33,116 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Padding(
-          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              /// search bar - camera and filter
-              Container(
-                height: 43.h,
-                child: Row(
-                  children: [
-                    Expanded(
-                        flex: 15,
-                        child: DefaultFormField(
-                          controller: TextEditingController(),
-                          keyboard: TextInputType.text,
-                          prefixIcon: Icon(Icons.search),
-                          suffixIcon: Icon(Icons.photo_camera_outlined),
-                          borderColor: AppColor.white,
-                          focusedBorderColor: AppColor.white,
-                          hintText: 'Search',
-                          fillColor: AppColor.offWhite,
-                        )),
-                    Spacer(),
-                    Expanded(flex: 2, child: FilterBottomSheet()),
-                  ],
-                ),
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.only(top: 100.r, left: 10,right: 10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            /// search bar - camera and filter
+            Container(
+              height: 43.h,
+              child: Row(
+                children: [
+                  Expanded(
+                      flex: 15,
+                      child: DefaultFormField(
+                        controller: TextEditingController(),
+                        keyboard: TextInputType.text,
+                        prefixIcon: Icon(Icons.search),
+                        suffixIcon: Icon(Icons.photo_camera_outlined),
+                        borderColor: AppColor.white,
+                        focusedBorderColor: AppColor.white,
+                        hintText: 'Search',
+                        fillColor: AppColor.offWhite,
+                      )),
+                  Spacer(),
+                  Expanded(flex: 2, child: FilterBottomSheet()),
+                ],
               ),
-              SizedBox(
-                height: 10,
-              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
 
-              /// Similar product
-              Text(
-                'Similar Product',
-                style: TextStyle(
-                    fontSize: 16.sp,
-                    fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w600),
-              ),
-              Container(
-                height: 150.h,
-                child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    shrinkWrap: true,
-                    itemCount: brandList.length,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-                        child: brandList[index],
-                      );
-                    }),
-              ),
-
-              /// recent search
-              Text(
-                'Recent search',
-                style: TextStyle(
+            /// Similar product
+            Text(
+              'Similar Product',
+              style: TextStyle(
                   fontSize: 16.sp,
                   fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w600,
-                ),
+                  fontWeight: FontWeight.w600),
+            ),
+            Container(
+              height: 150.h,
+              child: ListView.builder(
+                  physics: BouncingScrollPhysics(),
+
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  itemCount: brandList.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                      child: brandList[index],
+                    );
+                  }),
+            ),
+
+            /// recent search
+            Text(
+              'Recent search',
+              style: TextStyle(
+                fontSize: 16.sp,
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.w600,
               ),
-              Expanded(
-                child: ListView.separated(
-                    scrollDirection: Axis.vertical,
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        leading: Icon(
-                          Icons.access_time_rounded,
-                        ),
-                        title: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'vegetables',
-                              style: TextStyle(
-                                fontSize: 16.sp,
+            ),
+            Expanded(
+              child: ListView.separated(
+                physics: BouncingScrollPhysics(),
+                  scrollDirection: Axis.vertical,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      leading: Icon(
+                        Icons.access_time_rounded,
+                      ),
+                      title: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'vegetables',
+                            style: TextStyle(
+                              fontSize: 16.sp,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            'cucumber, tomato, lettuce.',
+                            style: TextStyle(
+                                fontSize: 13.sp,
                                 fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              'cucumber, tomato, lettuce.',
-                              style: TextStyle(
-                                  fontSize: 13.sp,
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.w400,
-                                  color: AppColor.black.withOpacity(.46)),
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                    separatorBuilder: (context, index) {
-                      return Container(
-                        height: 1,
-                        color: AppColor.black.withOpacity(.1),
-                      );
-                    },
-                    itemCount: 15),
-              )
-            ],
-          ),
+                                fontWeight: FontWeight.w400,
+                                color: AppColor.black.withOpacity(.46)),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                  separatorBuilder: (context, index) {
+                    return Container(
+                      height: 1,
+                      color: AppColor.black.withOpacity(.1),
+                    );
+                  },
+                  itemCount: 15),
+            )
+          ],
         ),
       ),
     );

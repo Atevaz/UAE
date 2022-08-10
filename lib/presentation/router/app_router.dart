@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:h_m/presentation/router/app_animation.dart';
 import 'package:h_m/presentation/screens/shared/splash_screen.dart';
+import 'package:h_m/presentation/screens/user/about_us_screen.dart';
 import 'package:h_m/presentation/screens/user/all_products_screen.dart';
 import 'package:h_m/presentation/screens/user/brands_screen.dart';
 import 'package:h_m/presentation/screens/user/cart_screen.dart';
@@ -70,13 +71,21 @@ class AppRouter {
         return CustomPageRouteTransiton.fadeOut(
           page: FavoriteScreen(),
         );
-      case AppRouterNames.rCartRoute:
+      case AppRouterNames.rStackOverRoute:
         return MaterialPageRoute(
           builder: (_) => StackOver(),
+        );
+      case AppRouterNames.rCartRoute:
+        return MaterialPageRoute(
+          builder: (_) => CartScreen(showAppBar: true, showSideImage: true),
         );
       case AppRouterNames.rOfferRoute:
         return CustomPageRouteTransiton.fadeOut(
           page: OffersScreen(),
+        );
+      case AppRouterNames.rAboutUsRoute:
+        return CustomPageRouteTransiton.fadeOut(
+          page: AboutUsScreen(),
         );
       case AppRouterNames.rMoreRoute:
         return CustomPageRouteTransiton.fadeOut(
@@ -87,9 +96,9 @@ class AppRouter {
           page: NotificationsScreen(),
         );
       case AppRouterNames.rProductDetailsRoute:
-        return MaterialPageRoute(
+        return CustomPageRouteTransiton.fadeOut(
 
-          builder: (_) => ProductDetailsScreen(),
+          page: ProductDetailsScreen(),
         );
       case AppRouterNames.rPaymentRoute:
         return CustomPageRouteTransiton.fadeOut(
@@ -130,6 +139,10 @@ class AppRouter {
         // todo Terms and conditions
         return CustomPageRouteTransiton.fadeOut(
           page: EditProfile(),
+        );
+      case AppRouterNames.rSearchRoute:
+        return CustomPageRouteTransiton.fadeOut(
+          page: SearchScreen(),
         );
       case AppRouterNames.rFAQRoute:
         return CustomPageRouteTransiton.fadeOut(page: FAQScreen());

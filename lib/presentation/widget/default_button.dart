@@ -25,7 +25,7 @@ class DefaultButton extends StatelessWidget {
       this.color = AppColor.teal,
       required this.context,
       this.fontFamily = 'Roboto',
-      this.fontWeight,
+      this.fontWeight= FontWeight.bold,
       this.borderRadius,
       this.fontSize = 20});
 
@@ -50,7 +50,7 @@ class DefaultButton extends StatelessWidget {
           text: label,
           fontSize: fontSize,
           color: AppColor.white,
-          fontWeight: FontWeight.bold,
+          fontWeight: fontWeight! ,
         ),
       ),
     );

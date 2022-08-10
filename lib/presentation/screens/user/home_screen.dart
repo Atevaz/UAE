@@ -37,6 +37,7 @@ class HomeScreen extends StatelessWidget {
                     Expanded(
                         flex: 15,
                         child: DefaultFormField(
+                          noInput: true,
                           controller: TextEditingController(),
                           keyboard: TextInputType.text,
                           prefixIcon: Icon(Icons.search),
@@ -45,6 +46,9 @@ class HomeScreen extends StatelessWidget {
                           focusedBorderColor: AppColor.white,
                           hintText: 'Search',
                           fillColor: AppColor.offWhite,
+                          onTap: (){
+                            Navigator.pushNamed(context,AppRouterNames.rSearchRoute);
+                          },
                         )),
                     Spacer(),
                     Expanded(flex: 2, child: FilterBottomSheet()),
@@ -140,7 +144,11 @@ class HomeScreen extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) =>
-                      PopularBanner(isOffer: true),
+                      InkWell(
+                          onTap: (){
+                            Navigator.pushNamed(context, AppRouterNames.rProductDetailsRoute);
+                          },
+                          child: PopularBanner(isOffer: true)),
                   separatorBuilder: (context, index) => SizedBox(
                     width: 5.w,
                   ),

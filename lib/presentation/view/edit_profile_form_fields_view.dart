@@ -82,6 +82,7 @@ class EditProfileFormFieldsView extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 10.r),
                 child: DefaultButton(
                   context: context,
+                  fontWeight: FontWeight.normal,
                   label: 'Update',
                   onPressed: () {},
                   isExpanded: false,

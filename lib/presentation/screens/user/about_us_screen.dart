@@ -25,7 +25,9 @@ class AboutUsScreen extends StatelessWidget {
             leadingIcon: Icons.arrow_back_ios,
 
             /// routing
-            leadingIconOnPressed: () {},
+            leadingIconOnPressed: () {
+              Navigator.pop(context);
+            },
           ),
           body: Column(
             children: [

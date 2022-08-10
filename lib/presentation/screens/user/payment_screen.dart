@@ -36,49 +36,52 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 fontWeight: FontWeight.w600,
                 fontSize: 20,
               )),
-          body: Column(
-            children: [
-              SizedBox(
-                height: 50.h,
-              ),
-              PaymentOptions(),
-              SizedBox(
-                height: 25.h,
-              ),
-              SizedBox(
-                width: 350.w,
-                height: 60.h,
-                child: CreditCardTextField(),
-              ),
-              SizedBox(
-                height: 50.h,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  SizedBox(width: 165.w, child: DateTextField()),
-                  SizedBox(width: 165.w, child: CvvNumberTextField()),
-                ],
-              ),
-              SizedBox(
-                height: 50.h,
-              ),
-              SwitchButton.withoutIcon(
-                text: 'Save card data for future payment',
-                textColor: AppColor.teal,
-                textSize: 16,
-              ),
-              SizedBox(
-                height: 100.h
-              ),
-              DefaultButton(
-                  label: 'Pay',
-                  onPressed: () {
-                    ShowSuccessfulPaymentDialog(context);
-                  },
-                  isExpanded: false,
-                  context: context)
-            ],
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 50.h,
+                ),
+                PaymentOptions(),
+                SizedBox(
+                  height: 25.h,
+                ),
+                SizedBox(
+                  width: 350.w,
+                  height: 60.h,
+                  child: CreditCardTextField(),
+                ),
+                SizedBox(
+                  height: 50.h,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SizedBox(width: 165.w, child: DateTextField()),
+                    SizedBox(width: 165.w, child: CvvNumberTextField()),
+                  ],
+                ),
+                SizedBox(
+                  height: 50.h,
+                ),
+                SwitchButton.withoutIcon(
+                  text: 'Save card data for future payment',
+                  textColor: AppColor.teal,
+                  textSize: 16,
+                ),
+                SizedBox(
+                  height: 100.h
+                ),
+                DefaultButton(
+                    label: 'Pay',
+                    onPressed: () {
+                      ShowSuccessfulPaymentDialog(context);
+                    },
+                    isExpanded: false,
+                    fontWeight: FontWeight.normal,
+                    context: context)
+              ],
+            ),
           ),
         ),
         Positioned(child: Image.asset(AssetsManager.sidePicTop), right: 0),
