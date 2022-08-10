@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/constants/assets_manager.dart';
-import 'package:h_m/presentation/screens/user/cart_screen.dart';
 import 'package:h_m/presentation/styles/colors.dart';
 import 'package:h_m/presentation/view/payment_options.dart';
 import 'package:h_m/presentation/view/successful_payment.dart';
 import 'package:h_m/presentation/widget/custom_app_bar.dart';
 import 'package:h_m/presentation/widget/default_button.dart';
 import 'package:h_m/presentation/widget/headline_text.dart';
-import 'package:h_m/presentation/widget/payment_item_component.dart';
 import 'package:h_m/presentation/widget/payment_text_field.dart';
 import 'package:h_m/presentation/widget/switch_button.dart';
 

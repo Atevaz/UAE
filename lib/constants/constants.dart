@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:h_m/presentation/router/app_router_names.dart';
-import 'package:h_m/presentation/screens/user/cart_screen.dart';
 import 'package:h_m/presentation/screens/user/home_screen.dart';
 import 'package:h_m/presentation/widget/switch_tab_bar.dart';
 

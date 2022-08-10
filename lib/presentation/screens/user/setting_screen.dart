@@ -7,7 +7,6 @@ import 'package:h_m/presentation/widget/setting_language_expansion_tile.dart';
 
 import '../../../constants/assets_manager.dart';
 import '../../widget/setting_switch_button.dart';
-import '../../widget/switch_button.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({Key? key}) : super(key: key);
