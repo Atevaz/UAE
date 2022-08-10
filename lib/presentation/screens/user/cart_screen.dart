@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/constants/assets_manager.dart';
+import 'package:h_m/presentation/router/app_router_names.dart';
 import 'package:h_m/presentation/styles/colors.dart';
 import 'package:h_m/presentation/view/cart_view.dart';
 import 'package:h_m/presentation/widget/add_another_location.dart';
@@ -33,6 +34,7 @@ class CartScreen extends StatelessWidget {
         productName: 'Red Grapes',
         imageName: AssetsManager.grape),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -46,7 +48,11 @@ class CartScreen extends StatelessWidget {
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w600,
                     fontSize: 20.sp,
-                  ))
+                  ),
+            leadingIconOnPressed: (){
+                    Navigator.pop(context);
+            }
+                )
               : null,
           body: Container(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -143,7 +149,9 @@ class CartScreen extends StatelessWidget {
                   child: DefaultButton(
                       height: 50.h,
                       label: 'Check out',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, AppRouterNames.rPaymentRoute);
+                      },
                       fontSize: 20.sp,
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w700,

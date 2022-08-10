@@ -98,7 +98,7 @@ class MoreScreen extends StatelessWidget {
                 ),
                 ListTileItem(
                   onPress: (){
-                    Navigator.pushNamed(context, AppRouterNames.rCustomerServicesRoute);
+                    Navigator.pushNamed(context, AppRouterNames.rAboutUsRoute);
                   },
                   iconPath: "assets/icons/about.png",
                   title: "About",

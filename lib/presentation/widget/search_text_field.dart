@@ -13,7 +13,6 @@ class SearchTextField extends StatelessWidget {
       // TODO: push into a search sceen
       onTap: () => print('tapped'),
       decoration: InputDecoration(
-        enabled: false,
         filled: true,
         fillColor: AppColor.fillTextField,
         prefixIcon: Icon(Icons.search),

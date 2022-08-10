@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/constants/assets_manager.dart';
+import 'package:h_m/presentation/router/app_router_names.dart';
 import 'package:h_m/presentation/styles/colors.dart';
 import 'package:h_m/presentation/view/cart_view.dart';
 import 'package:h_m/presentation/view/popular_banner.dart';
@@ -19,8 +20,13 @@ class ProductDetailsScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         leadingIcon: Icons.arrow_back_ios,
+        leadingIconOnPressed: (){
+          Navigator.pop(context);
+        },
         trailingWidget: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, AppRouterNames.rCartRoute);
+          },
           icon: Icon(
             Icons.shopping_cart,
             color: AppColor.teal,
@@ -105,7 +111,7 @@ class ProductDetailsScreen extends StatelessWidget {
                       height: 15.0,
                     ),
                     Container(
-                      height: 200.0,
+                      height: 240.0.h,
                       width: double.infinity,
                       child: ListView.separated(
                         scrollDirection: Axis.horizontal,

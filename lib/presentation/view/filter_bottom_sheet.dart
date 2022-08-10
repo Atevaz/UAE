@@ -144,9 +144,12 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               SizedBox(height: 15.h),
               DefaultButton(
                   label: 'Apply Filter',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   fontSize: 22.sp,
                   context: context,
+                  fontWeight: FontWeight.normal,
                   isExpanded: false),
             ],
           ),

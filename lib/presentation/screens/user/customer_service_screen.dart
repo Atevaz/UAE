@@ -41,10 +41,13 @@ class CustomerService extends StatelessWidget {
                 isIcon: true,
               ),
               PaymentMethodComponent(
-                text: 'Terms and conditions',
+                text: 'About us',
 
                 /// routing
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, AppRouterNames.rAboutUsRoute);
+
+                },
                 isIcon: true,
               ),
               PaymentMethodComponent(

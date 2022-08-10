@@ -47,7 +47,7 @@ class DefaultPhoneNumFormField extends StatelessWidget {
               label,
             ),
             labelStyle:
-                TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                TextStyle(color: Colors.black,),
             enabled: true,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(19),

@@ -27,6 +27,8 @@ class AppRouterNames {
   static const rTermsAndConditionsRoute = '/terms_and_conditions_screen';
   static const rFAQRoute = '/faq_screen';
   static const rSearchRoute = '/search_screen';
+  static const rStackOverRoute = '/stack_over_screen';
+  static const rAboutUsRoute = '/about_us_screen';
 
 
 }

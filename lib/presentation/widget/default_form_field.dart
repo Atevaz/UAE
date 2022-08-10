@@ -10,6 +10,7 @@ class DefaultFormField extends StatelessWidget {
   Icon? prefixIcon;
   Icon? suffixIcon;
   VoidCallback? suffixPressed;
+  VoidCallback? onTap;
   TextStyle? labelStyle;
   TextStyle? hintStyle;
   TextStyle? formFieldStyle;
@@ -50,6 +51,7 @@ class DefaultFormField extends StatelessWidget {
     this.isPassword,
     this.noInput,
     this.textDirection,
+    this.onTap
   });
 
   @override
@@ -100,7 +102,6 @@ class DefaultFormField extends StatelessWidget {
                 TextStyle(
                   color: Colors.black,
                   fontSize: 20.sp,
-                  fontWeight: FontWeight.bold,
                 ),
             prefixStyle: TextStyle(color: Colors.black),
             prefixIcon: prefixIcon,
@@ -117,6 +118,7 @@ class DefaultFormField extends StatelessWidget {
           ),
           keyboardType: keyboard,
           obscureText: isPassword ?? false,
+          onTap: onTap,
         ),
       ),
     );
