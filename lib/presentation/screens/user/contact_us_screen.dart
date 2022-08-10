@@ -7,8 +7,8 @@ import '../../styles/colors.dart';
 import '../../widget/chat_message.dart';
 import '../../widget/regular_text.dart';
 
-class ContactUs extends StatelessWidget {
-  const ContactUs({Key? key}) : super(key: key);
+class ContactUsScreen extends StatelessWidget {
+  const ContactUsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +29,23 @@ class ContactUs extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
+                SizedBox(
+                  width: double.infinity,
+                ),
                 ChatMessage.reciever(
-                  content: 'contentcontentcontentcontentcontentcontentcontentcontentcontent',
-                  imageAddress: 'assets/images/girlCircle.png',
-                  time: '${TimeOfDay.fromDateTime(DateTime.now()).format(context)}',
+                  // imageAddress: '',
+                  content: 'بقول مترفعش علي الماستر',
+                  time:
+                      '${TimeOfDay.fromDateTime(DateTime.now()).format(context)}',
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                ChatMessage.sender(
+                  imageAddress: 'https://i.ibb.co/5hGs5t3/90469564-v-4.jpg',
+                  content: 'لا رفعت ',
+                  time:
+                      '${TimeOfDay.fromDateTime(DateTime.now()).format(context)}',
                 ),
               ],
             ),
