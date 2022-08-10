@@ -9,16 +9,16 @@ class ProductDetailsStatus extends StatelessWidget {
   final String newPrice;
   final String oldPrice;
   final String productCount;
-  const ProductDetailsStatus({Key? key, required this.newPrice, required this.oldPrice, required this.productCount}) : super(key: key);
+  final Color backGroundColor;
+  const ProductDetailsStatus({Key? key, required this.newPrice, required this.oldPrice, required this.productCount, required this.backGroundColor}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 78,
-      //width: 105,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.0),
-        color: AppColor.white,
+        color: backGroundColor,
         border: Border.all(
           color: AppColor.teal,
           width: 0.5,

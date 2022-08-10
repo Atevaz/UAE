@@ -18,6 +18,8 @@ import 'package:h_m/presentation/screens/user/notifications.dart';
 import 'package:h_m/presentation/screens/user/offers_screen.dart';
 import 'package:h_m/presentation/screens/user/payment_method_screen.dart';
 import 'package:h_m/presentation/screens/user/payment_screen.dart';
+import 'package:h_m/presentation/screens/user/product_details_screen.dart';
+import 'package:h_m/presentation/screens/user/search_screen.dart';
 import 'package:h_m/presentation/screens/user/signup_screen.dart';
 import 'package:h_m/presentation/screens/user/verification_screen.dart';
 
@@ -83,8 +85,8 @@ class AppRouter {
         );
       case AppRouterNames.rProductDetailsRoute:
         return MaterialPageRoute(
-          // todo product details screen
-          builder: (_) => SplashScreen(),
+
+          builder: (_) => ProductDetailsScreen(),
         );
       case AppRouterNames.rPaymentRoute:
         return CustomPageRouteTransiton.fadeOut(

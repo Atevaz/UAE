@@ -64,6 +64,7 @@ class MoreScreen extends StatelessWidget {
                 thickness: 1.5,
               ),
               ListTileItem(
+
                 onPress: (){
                   Navigator.pushNamed(context, AppRouterNames.rPaymentRoute);
                 },
