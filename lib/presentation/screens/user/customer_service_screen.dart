@@ -37,7 +37,9 @@ class CustomerService extends StatelessWidget {
                 text: 'Contact Us',
 
                 /// routing
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, AppRouterNames.rContactUsRoute);
+                },
                 isIcon: true,
               ),
               PaymentMethodComponent(

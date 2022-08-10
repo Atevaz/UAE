@@ -5,6 +5,7 @@ import 'package:h_m/presentation/screens/shared/splash_screen.dart';
 import 'package:h_m/presentation/screens/user/all_products_screen.dart';
 import 'package:h_m/presentation/screens/user/brands_screen.dart';
 import 'package:h_m/presentation/screens/user/cart_screen.dart';
+import 'package:h_m/presentation/screens/user/contact_us_screen.dart';
 import 'package:h_m/presentation/screens/user/customer_service_screen.dart';
 import 'package:h_m/presentation/screens/user/edit_profile.dart';
 import 'package:h_m/presentation/screens/user/faq_screen.dart';
@@ -88,7 +89,6 @@ class AppRouter {
         );
       case AppRouterNames.rProductDetailsRoute:
         return MaterialPageRoute(
-
           builder: (_) => ProductDetailsScreen(),
         );
       case AppRouterNames.rPaymentRoute:
@@ -113,7 +113,6 @@ class AppRouter {
           page: SplashScreen(),
         );
       case AppRouterNames.rSettingsRoute:
-
         return CustomPageRouteTransiton.fadeOut(
           page: SettingScreen(),
         );
@@ -124,7 +123,7 @@ class AppRouter {
       case AppRouterNames.rContactUsRoute:
         // todo contact us screen or chat screen
         return CustomPageRouteTransiton.fadeOut(
-          page: EditProfile(),
+          page: ContactUsScreen(),
         );
       case AppRouterNames.rTermsAndConditionsRoute:
         // todo Terms and conditions
