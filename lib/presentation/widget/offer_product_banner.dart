@@ -28,7 +28,6 @@ class OffersProductsBanner extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 15.r),
                     child: Image.asset(
@@ -55,7 +54,9 @@ class OffersProductsBanner extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 30.r,),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 30.r,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -78,18 +79,20 @@ class OffersProductsBanner extends StatelessWidget {
                   ),
                   Align(
                     alignment: AlignmentDirectional.bottomEnd,
-                    child: SizedBox(
-                      height: 30.h,
-                      width: 50.w,
-                      child: MaterialButton(
-                        onPressed: () {},
-                        minWidth: 1,
-                        padding: EdgeInsets.zero,
-                        child: RegularText(
-                          text: 'Get',
-                          fontSize: 16.sp,
-                          fontWeight: FontWeight.w700,
-                          color: AppColor.blue,
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.only(top: 5.r, end: 10),
+                      child: SizedBox(
+                        width: 30.w,
+                        height: 25.h,
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: RegularText(
+                            text: 'Get',
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w700,
+                            color: AppColor.blue,
+                          ),
+                          padding: EdgeInsets.zero,
                         ),
                       ),
                     ),

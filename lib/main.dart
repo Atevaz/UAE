@@ -66,7 +66,6 @@ class _MyAppState extends State<MyApp> {
                   onGenerateRoute: widget.appRouter.onGenerateRoute,
                   initialRoute: AppRouterNames.rSplashRoute,
                   theme: AppTheme.appTheme,
-                  home: Component(),
                 );
               },
             );
