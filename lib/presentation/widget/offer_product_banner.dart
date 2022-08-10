@@ -28,7 +28,6 @@ class OffersProductsBanner extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 15.r),
                     child: Image.asset(
@@ -55,7 +54,9 @@ class OffersProductsBanner extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 30.r,),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 30.r,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -79,7 +80,7 @@ class OffersProductsBanner extends StatelessWidget {
                   Align(
                     alignment: AlignmentDirectional.bottomEnd,
                     child: Padding(
-                      padding: EdgeInsetsDirectional.only(top: 5.r,end: 10),
+                      padding: EdgeInsetsDirectional.only(top: 5.r, end: 10),
                       child: SizedBox(
                         width: 30.w,
                         height: 25.h,

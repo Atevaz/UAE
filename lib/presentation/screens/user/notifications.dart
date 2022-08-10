@@ -26,12 +26,15 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
           fontFamily: 'Roboto',
           color: AppColor.black,
         ),
+        leadingIconOnPressed: (){
+          Navigator.pop(context);
+        }
       ),
       body: ListView.builder(
         itemBuilder: (context, index) => NotificationItem(),
         itemCount: 5,
       ),
-      bottomNavigationBar: BottomNavBarView(index: 0),
+
     );
   }
 }

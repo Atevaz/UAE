@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:h_m/presentation/router/app_router_names.dart';
 import 'package:h_m/presentation/view/buttom_nav_bar_view.dart';
 import 'package:h_m/presentation/widget/more_header.dart';
 
@@ -22,17 +23,24 @@ class MoreScreen extends StatelessWidget {
                 imagePath: "assets/images/brand1.png",
                   name: "Ahmad Mohamed",
                   phone: "01101001011",
-                  editOnPress: () {}),
+                  editOnPress: () {
+                  Navigator.pushNamed(context, AppRouterNames.rEditProfileRoute);
+                  }),
               const SizedBox(
                 height: 30.0,
               ),
               Row(
                 children: [
                   const Spacer(),
-                  BalanceItem(
-                      iconPath: "assets/icons/wallet.png",
-                      title: "Wallet",
-                      numOfCoin: "500 LE"),
+                  InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(context, AppRouterNames.rPaymentMethodRoute);
+                    },
+                    child: BalanceItem(
+                        iconPath: "assets/icons/wallet.png",
+                        title: "Wallet",
+                        numOfCoin: "500 LE",),
+                  ),
                   const Spacer(),
                   BalanceItem(
                       iconPath: "assets/icons/point.png",
@@ -45,7 +53,9 @@ class MoreScreen extends StatelessWidget {
                 height: 30,
               ),
               ListTileItem(
-                onPress: (){},
+                onPress: (){
+                  // todo navigate to settings screen
+                },
                 iconPath: "assets/icons/setting.png",
                 title: "Settings",
               ),
@@ -54,16 +64,10 @@ class MoreScreen extends StatelessWidget {
                 thickness: 1.5,
               ),
               ListTileItem(
-                onPress: (){},
-                iconPath: "assets/icons/order.png",
-                title: "My Order",
-              ),
-              DividerWidget(
-                height: 2,
-                thickness: 1.5,
-              ),
-              ListTileItem(
-                onPress: (){},
+
+                onPress: (){
+                  Navigator.pushNamed(context, AppRouterNames.rPaymentRoute);
+                },
                 iconPath: "assets/icons/payment.png",
                 title: "Payment",
               ),
@@ -72,7 +76,9 @@ class MoreScreen extends StatelessWidget {
                 thickness: 1.5,
               ),
               ListTileItem(
-                onPress: (){},
+                onPress: (){
+                  Navigator.pushNamed(context, AppRouterNames.rCustomerServicesRoute);
+                },
                 iconPath: "assets/icons/customer.png",
                 title: "Customer service",
               ),
@@ -90,7 +96,9 @@ class MoreScreen extends StatelessWidget {
                 thickness: 1.5,
               ),
               ListTileItem(
-                onPress: (){},
+                onPress: (){
+                  Navigator.pushNamed(context, AppRouterNames.rCustomerServicesRoute);
+                },
                 iconPath: "assets/icons/about.png",
                 title: "About",
               ),
@@ -109,7 +117,7 @@ class MoreScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavBarView(index: 4),
+
     );
   }
 }

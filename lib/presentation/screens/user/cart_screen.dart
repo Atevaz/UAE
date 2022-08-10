@@ -45,7 +45,7 @@ class CartScreen extends StatelessWidget {
                     text: 'Cart',
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w600,
-                    fontSize: 20,
+                    fontSize: 20.sp,
                   ))
               : null,
           body: Container(
@@ -144,7 +144,7 @@ class CartScreen extends StatelessWidget {
                       height: 50.h,
                       label: 'Check out',
                       onPressed: () {},
-                      fontSize: 20,
+                      fontSize: 20.sp,
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w700,
                       context: context,

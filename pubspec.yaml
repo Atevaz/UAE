@@ -19,7 +19,6 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   fluttertoast: ^8.0.9
-  sizer: ^2.0.15
   flutter_svg_provider: ^1.0.3
   dropdown_formfield: ^0.1.4
   easy_localization: ^3.0.0
@@ -72,5 +71,8 @@ flutter:
     - family: Roboto
       fonts:
         - asset: assets/font/Roboto-Regular.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/font/Poppins-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

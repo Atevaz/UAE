@@ -21,207 +21,180 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Scaffold(
-          appBar: CustomAppBar(
-            centerWidget: InkWell(
-              onTap: (){
-                Navigator.pushNamed(context, AppRouterNames.rLocationRoute);
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+    return Scaffold(
+
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Padding(
+          padding: EdgeInsets.all(18.r),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                height: 43.h,
+                child: Row(
+                  children: [
+                    Expanded(
+                        flex: 15,
+                        child: DefaultFormField(
+                          controller: TextEditingController(),
+                          keyboard: TextInputType.text,
+                          prefixIcon: Icon(Icons.search),
+                          suffixIcon: Icon(Icons.photo_camera_outlined),
+                          borderColor: AppColor.white,
+                          focusedBorderColor: AppColor.white,
+                          hintText: 'Search',
+                          fillColor: AppColor.offWhite,
+                        )),
+                    Spacer(),
+                    Expanded(flex: 2, child: FilterBottomSheet()),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              MediumText(
+                text: 'All Category',
+                fontSize: 16.sp,
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              Row(
                 children: [
-                  MediumText(text: 'Location'),
-                  Icon(
-                    Icons.arrow_drop_down_rounded,
-                    color: AppColor.black,
+                  Expanded(
+                      child: mainCategory(
+                          categoryText: 'Fruits',
+                          imageName: 'assets/images/fruit.png')),
+                  SizedBox(
+                    width: 10.w,
                   ),
+                  Expanded(
+                      child: mainCategory(
+                          categoryText: 'Beans',
+                          imageName: 'assets/images/beans.png')),
+                  SizedBox(
+                    width: 10.w,
+                  ),
+                  Expanded(
+                      child: mainCategory(
+                          categoryText: 'Drinks',
+                          imageName: 'assets/images/drinks.png')),
                 ],
               ),
-            ),
-
-            trailingWidget: IconButton(icon: Icon(Icons.notifications_active_sharp,color: AppColor.teal,) , onPressed: (){
-              Navigator.pushNamed(context, AppRouterNames.rNotificationRoute);
-            }),
-
-          ),
-          body: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
-            child: Padding(
-              padding: EdgeInsets.all(18.r),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              SizedBox(
+                height: 10.h,
+              ),
+              Row(
                 children: [
-                  Container(
-                    height: 43.h,
-                    child: Row(
-                      children: [
-                        Expanded(
-                            flex: 15,
-                            child: DefaultFormField(
-                              controller: TextEditingController(),
-                              keyboard: TextInputType.text,
-                              prefixIcon: Icon(Icons.search),
-                              suffixIcon: Icon(Icons.photo_camera_outlined),
-                              borderColor: AppColor.white,
-                              focusedBorderColor: AppColor.white,
-                              hintText: 'Search',
-                              fillColor: AppColor.offWhite,
-                            )),
-                        Spacer(),
-                        Expanded(flex: 2, child: FilterBottomSheet()),
-                      ],
-                    ),
-                  ),
+                  Expanded(
+                      child: mainCategory(
+                          categoryText: 'Vegetables',
+                          imageName: 'assets/images/vegetables.png')),
                   SizedBox(
-                    height: 10.h,
+                    width: 10.w,
                   ),
+                  Expanded(
+                      child: mainCategory(
+                          categoryText: 'Clothes',
+                          imageName: 'assets/images/clothes.png')),
+                ],
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              CarouselView(),
+              Row(
+                children: [
                   MediumText(
-                    text: 'All Category',
+                    text: 'Popular',
                     fontSize: 16.sp,
                   ),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                          child: mainCategory(
-                              categoryText: 'Fruits',
-                              imageName: 'assets/images/fruit.png')),
-                      SizedBox(
-                        width: 10.w,
-                      ),
-                      Expanded(
-                          child: mainCategory(
-                              categoryText: 'Beans',
-                              imageName: 'assets/images/beans.png')),
-                      SizedBox(
-                        width: 10.w,
-                      ),
-                      Expanded(
-                          child: mainCategory(
-                              categoryText: 'Drinks',
-                              imageName: 'assets/images/drinks.png')),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                          child: mainCategory(
-                              categoryText: 'Vegetables',
-                              imageName: 'assets/images/vegetables.png')),
-                      SizedBox(
-                        width: 10.w,
-                      ),
-                      Expanded(
-                          child: mainCategory(
-                              categoryText: 'Clothes',
-                              imageName: 'assets/images/clothes.png')),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  CarouselView(),
-                  Row(
-                    children: [
-                      MediumText(
-                        text: 'Popular',
-                        fontSize: 16.sp,
-                      ),
-                      Spacer(),
-                      TextButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, AppRouterNames.rAllProductRoute);
-                          },
-                          child: Row(
-                            children: [
-                              RegularText(
-                                  text: 'See all',
-                                  color: AppColor.teal,
-                                  fontSize: 14.sp),
-                              Icon(
-                                Icons.arrow_forward_ios_rounded,
-                                color: AppColor.teal,
-                                size: 16.sp,
-                              )
-                            ],
-                          ))
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  Container(
-                    height: 240.h,
-                    child: ListView.separated(
-                      physics: BouncingScrollPhysics(),
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) =>
-                          PopularBanner(isOffer: true),
-                      separatorBuilder: (context, index) => SizedBox(
-                        width: 5.w,
-                      ),
-                      itemCount: 10,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  Row(
-                    children: [
-                      MediumText(
-                        text: 'Popular Brands',
-                        fontSize: 16.sp,
-                      ),
-                      Spacer(),
-                      TextButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, AppRouterNames.rAllBrandsRoute);
-                          },
-                          child: Row(
-                            children: [
-                              RegularText(
-                                  text: 'See all',
-                                  color: AppColor.teal,
-                                  fontSize: 14.sp),
-                              Icon(
-                                Icons.arrow_forward_ios_rounded,
-                                color: AppColor.teal,
-                                size: 16.sp,
-                              )
-                            ],
-                          ))
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  Container(
-                    height: 100.h,
-                    child: ListView.separated(
-                      physics: BouncingScrollPhysics(),
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) => BrandComponent(),
-                      separatorBuilder: (context, index) => SizedBox(
-                        width: 5.w,
-                      ),
-                      itemCount: 10,
-                    ),
-                  ),
+                  Spacer(),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, AppRouterNames.rAllProductRoute);
+                      },
+                      child: Row(
+                        children: [
+                          RegularText(
+                              text: 'See all',
+                              color: AppColor.teal,
+                              fontSize: 14.sp),
+                          Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            color: AppColor.teal,
+                            size: 16.sp,
+                          )
+                        ],
+                      ))
                 ],
               ),
-            ),
+              SizedBox(
+                height: 10.h,
+              ),
+              Container(
+                height: 240.h,
+                child: ListView.separated(
+                  physics: BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) =>
+                      PopularBanner(isOffer: true),
+                  separatorBuilder: (context, index) => SizedBox(
+                    width: 5.w,
+                  ),
+                  itemCount: 10,
+                ),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              Row(
+                children: [
+                  MediumText(
+                    text: 'Popular Brands',
+                    fontSize: 16.sp,
+                  ),
+                  Spacer(),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, AppRouterNames.rAllBrandsRoute);
+                      },
+                      child: Row(
+                        children: [
+                          RegularText(
+                              text: 'See all',
+                              color: AppColor.teal,
+                              fontSize: 14.sp),
+                          Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            color: AppColor.teal,
+                            size: 16.sp,
+                          )
+                        ],
+                      ))
+                ],
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              Container(
+                height: 100.h,
+                child: ListView.separated(
+                  physics: BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => BrandComponent(),
+                  separatorBuilder: (context, index) => SizedBox(
+                    width: 5.w,
+                  ),
+                  itemCount: 10,
+                ),
+              ),
+            ],
           ),
-          bottomNavigationBar: BottomNavBarView(index: 0),
         ),
-        Positioned(child: Image.asset(AssetsManager.sidePic2), left: 0),
-      ],
+      ),
     );
   }
 }
