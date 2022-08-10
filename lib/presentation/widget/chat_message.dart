@@ -59,6 +59,19 @@ class ChatMessage extends StatelessWidget {
               )
             : Container(),
         Container(
+          margin: EdgeInsets.only(
+            left: isSender ? 10.w : 0,
+            right: isSender ? 0 : 10.w,
+          ),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.25),
+                blurRadius: 10,
+                offset: Offset(0, 3.h),
+              ),
+            ],
+          ),
           constraints: BoxConstraints(
             maxWidth: ScreenUtil().setWidth(270),
           ),

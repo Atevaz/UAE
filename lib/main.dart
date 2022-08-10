@@ -9,6 +9,7 @@ import 'component.dart';
 import 'data/data_provider/local/cache_helper.dart';
 import 'presentation/router/app_router.dart';
 import 'presentation/router/app_router_names.dart';
+import 'presentation/screens/user/contact_us_screen.dart';
 import 'presentation/styles/app_theme.dart';
 
 Future<void> main() async {
@@ -67,6 +68,7 @@ class _MyAppState extends State<MyApp> {
                     onGenerateRoute: widget.appRouter.onGenerateRoute,
                     initialRoute: AppRouterNames.rSplashRoute,
                     theme: AppTheme.appTheme,
+                    home: ContactUsScreen(),
                   );
                 },
               );

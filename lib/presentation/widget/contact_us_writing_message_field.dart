@@ -27,7 +27,6 @@ class WritingMessageField extends StatelessWidget {
             ),
           ),
           Expanded(
-
             child: DefaultFormField(
               controller: messageController,
               keyboard: TextInputType.text,
@@ -35,15 +34,14 @@ class WritingMessageField extends StatelessWidget {
               borderColor: AppColor.white,
               fillColor: AppColor.white,
               focusedBorderColor: AppColor.white,
-
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.only(bottom: 15.h,start: 10.w,end: 10.w),
+            padding: EdgeInsetsDirectional.only(
+                bottom: 15.h, start: 10.w, end: 10.w),
             child: CircleAvatar(
               radius: 20.r,
               backgroundColor: AppColor.lightBlue,
-
               child: IconButton(
                 padding: EdgeInsetsDirectional.only(start: 5.w),
                 onPressed: () {},
@@ -52,7 +50,6 @@ class WritingMessageField extends StatelessWidget {
               ),
             ),
           ),
-
         ],
       ),
     );

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
-class DefaultFormField extends StatelessWidget {
+class DefaultFormField extends StatefulWidget {
   final TextEditingController? controller;
   String? label;
   String? hintText;
@@ -26,7 +26,6 @@ class DefaultFormField extends StatelessWidget {
   bool? isPassword;
   bool? noInput;
   TextDirection? textDirection;
-  GlobalKey<FormState>? formKey = GlobalKey<FormState>();
 
   DefaultFormField({
     required this.controller,
@@ -55,6 +54,13 @@ class DefaultFormField extends StatelessWidget {
   });
 
   @override
+  State<DefaultFormField> createState() => _DefaultFormFieldState();
+}
+
+class _DefaultFormFieldState extends State<DefaultFormField> {
+  GlobalKey<FormState>? formKey = GlobalKey<FormState>();
+
+  @override
   Widget build(BuildContext context) {
     return Form(
       key: formKey,
@@ -62,63 +68,65 @@ class DefaultFormField extends StatelessWidget {
         height: 60.h,
         width: 350.w,
         child: TextFormField(
-          textDirection: textDirection,
-          style: formFieldStyle ?? TextStyle(color: Colors.black),
-          cursorColor: cursorColor ?? Colors.black,
-          onChanged: onChanged,
+          textDirection: widget.textDirection,
+          style: widget.formFieldStyle ?? TextStyle(color: Colors.black),
+          cursorColor: widget.cursorColor ?? Colors.black,
+          onChanged: widget.onChanged,
           onFieldSubmitted: (value) {
             if (formKey!.currentState!.validate()) {
-              return onSubmitted ?? print('no Submitted Function');
+              return widget.onSubmitted ?? print('no Submitted Function');
             }
           },
-          readOnly: noInput ?? false,
+          readOnly: widget.noInput ?? false,
           validator: (String? value) {
             if (value!.isEmpty) {
-              return validateText;
+              return widget.validateText;
             }
             return null;
           },
-          controller: controller,
+          controller: widget.controller,
           decoration: InputDecoration(
             enabled: true,
             contentPadding: EdgeInsets.all(15.r),
             filled: true,
-            fillColor: fillColor ?? Colors.white,
+            fillColor: widget.fillColor ?? Colors.white,
             focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: focusedBorderColor ?? Colors.black),
+              borderSide: BorderSide(color: widget.focusedBorderColor ?? Colors.black),
               borderRadius: BorderRadius.circular(19.r),
             ),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: borderColor ?? Colors.black),
+              borderSide: BorderSide(color: widget.borderColor ?? Colors.black),
               borderRadius: BorderRadius.circular(19.r),
             ),
             errorBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: errorBorderColor ?? Colors.red),
+              borderSide: BorderSide(color: widget.errorBorderColor ?? Colors.red),
               borderRadius: BorderRadius.circular(19.r),
             ),
-            errorStyle: errorStyle,
-            labelText: label,
-            labelStyle: labelStyle ??
+            errorStyle: widget.errorStyle,
+            labelText: widget.label,
+            labelStyle: widget.labelStyle ??
                 TextStyle(
                   color: Colors.black,
                   fontSize: 20.sp,
                 ),
             prefixStyle: TextStyle(color: Colors.black),
-            prefixIcon: prefixIcon,
+            prefixIcon: widget.prefixIcon,
             suffixIcon: IconButton(
-              icon: suffixIcon ?? SizedBox(),
-              onPressed: suffixPressed,
+              icon: widget.suffixIcon ?? SizedBox(),
+              onPressed: widget.suffixPressed,
             ),
-            hintText: hintText,
-            hintStyle: hintStyle ??
+            hintText: widget.hintText,
+            hintStyle: widget.hintStyle ??
                 TextStyle(
                   fontSize: 16.sp,
                   color: Colors.grey,
                 ),
           ),
+
           keyboardType: keyboard,
           obscureText: isPassword ?? false,
           onTap: onTap,
+
         ),
       ),
     );
