@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:h_m/presentation/router/app_router_names.dart';
 import 'package:h_m/presentation/styles/colors.dart';
-import 'package:h_m/presentation/widget/custom_app_bar.dart';
-import 'package:h_m/presentation/widget/headline_text.dart';
 import 'package:h_m/presentation/widget/regular_text.dart';
 
-import '../../view/buttom_nav_bar_view.dart';
 import '../../view/carousel_view.dart';
+import '../../view/filter_bottom_sheet.dart';
 import '../../view/offer_product_banner_builder.dart';
-import '../../widget/offer_product_banner.dart';
-import '../../view/popular_banner.dart';
-import '../../widget/app_bar_notifications_icon.dart';
 import '../../widget/default_form_field.dart';
-import '../../widget/filtter_button.dart';
 
 class OffersScreen extends StatelessWidget {
 
@@ -40,6 +35,10 @@ class OffersScreen extends StatelessWidget {
                         Icons.search,
                         color: AppColor.black,
                       ),
+                      noInput: true,
+                      onTap: (){
+                        Navigator.pushNamed(context, AppRouterNames.rSearchRoute);
+                      },
                       suffixIcon: Icon(
                         Icons.photo_camera_outlined,
                         color: AppColor.black,
@@ -51,7 +50,7 @@ class OffersScreen extends StatelessWidget {
                     )),
                     Padding(
                       padding: EdgeInsetsDirectional.only(start: 10.r),
-                      child: FilterButton(),
+                      child: FilterBottomSheet(),
                     ),
                   ],
                 ),
@@ -65,7 +64,6 @@ class OffersScreen extends StatelessWidget {
                 child: RegularText(
                   text: 'All Offers',
                   color: AppColor.black,
-                  fontWeight: FontWeight.w700,
                   fontSize: 16.sp,
                 ),
               ),

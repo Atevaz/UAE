@@ -4,9 +4,7 @@ import 'package:h_m/presentation/widget/contact_us_writing_message_field.dart';
 import 'package:h_m/presentation/widget/custom_app_bar.dart';
 import 'package:h_m/presentation/widget/headline_text.dart';
 
-import '../../styles/colors.dart';
 import '../../widget/chat_message.dart';
-import '../../widget/regular_text.dart';
 
 class ContactUsScreen extends StatefulWidget {
   const ContactUsScreen({Key? key}) : super(key: key);

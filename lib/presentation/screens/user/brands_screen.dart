@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/constants/assets_manager.dart';
+import 'package:h_m/presentation/router/app_router_names.dart';
 import 'package:h_m/presentation/styles/colors.dart';
+import 'package:h_m/presentation/view/filter_bottom_sheet.dart';
 import 'package:h_m/presentation/widget/brand_componant.dart';
 import 'package:h_m/presentation/widget/custom_app_bar.dart';
-import 'package:h_m/presentation/widget/filtter_button.dart';
 import 'package:h_m/presentation/widget/medium_text.dart';
 
 import '../../widget/default_form_field.dart';
@@ -39,7 +40,9 @@ class BrandsScreen extends StatelessWidget {
           centerWidget: MediumText(text: 'All companies'),
           trailingWidget: IconButton(
             /// routing
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context,AppRouterNames.rNotificationRoute);
+            },
             icon: Icon(
               Icons.notifications_active_sharp,
               color: AppColor.teal,
@@ -48,7 +51,7 @@ class BrandsScreen extends StatelessWidget {
           leadingIcon: Icons.arrow_back_ios,
           leadingIconOnPressed: () {
             Navigator.pop(context);
-          }),
+          },),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Padding(
@@ -66,6 +69,11 @@ class BrandsScreen extends StatelessWidget {
                       Expanded(
                           flex: 15,
                           child: DefaultFormField(
+                            noInput: true,
+                            onTap: (){
+                              Navigator.pushNamed(context,AppRouterNames.rSearchRoute);
+
+                            },
                             controller: TextEditingController(),
                             keyboard: TextInputType.text,
                             prefixIcon: Icon(Icons.search),
@@ -76,7 +84,7 @@ class BrandsScreen extends StatelessWidget {
                             fillColor: AppColor.containerBG,
                           )),
                       Spacer(),
-                      Expanded(flex: 2, child: FilterButton()),
+                      Expanded(flex: 2, child: FilterBottomSheet()),
                     ],
                   ),
                 ),

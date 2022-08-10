@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/presentation/styles/colors.dart';
-import 'package:h_m/presentation/widget/headline_text.dart';
 import 'package:h_m/presentation/widget/regular_text.dart';
 
 class PaymentMethodComponent extends StatelessWidget {

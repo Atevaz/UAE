@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
 class DefaultFormField extends StatefulWidget {
   final TextEditingController? controller;
@@ -10,6 +9,7 @@ class DefaultFormField extends StatefulWidget {
   Icon? prefixIcon;
   Icon? suffixIcon;
   VoidCallback? suffixPressed;
+  VoidCallback? onTap;
   TextStyle? labelStyle;
   TextStyle? hintStyle;
   TextStyle? formFieldStyle;
@@ -49,6 +49,7 @@ class DefaultFormField extends StatefulWidget {
     this.isPassword,
     this.noInput,
     this.textDirection,
+    this.onTap
   });
 
   @override
@@ -106,7 +107,6 @@ class _DefaultFormFieldState extends State<DefaultFormField> {
                 TextStyle(
                   color: Colors.black,
                   fontSize: 20.sp,
-                  fontWeight: FontWeight.bold,
                 ),
             prefixStyle: TextStyle(color: Colors.black),
             prefixIcon: widget.prefixIcon,
@@ -121,8 +121,11 @@ class _DefaultFormFieldState extends State<DefaultFormField> {
                   color: Colors.grey,
                 ),
           ),
+
           keyboardType: widget.keyboard,
           obscureText: widget.isPassword ?? false,
+onTap: widget.onTap,
+
         ),
       ),
     );

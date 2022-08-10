@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:h_m/constants/constants.dart';
 import 'package:h_m/presentation/router/app_router_names.dart';
-import 'package:h_m/presentation/view/buttom_nav_bar_view.dart';
 import 'package:h_m/presentation/widget/more_header.dart';
 
 import '../../styles/colors.dart';
@@ -98,7 +97,7 @@ class MoreScreen extends StatelessWidget {
                 ),
                 ListTileItem(
                   onPress: (){
-                    Navigator.pushNamed(context, AppRouterNames.rCustomerServicesRoute);
+                    Navigator.pushNamed(context, AppRouterNames.rAboutUsRoute);
                   },
                   iconPath: "assets/icons/about.png",
                   title: "About",

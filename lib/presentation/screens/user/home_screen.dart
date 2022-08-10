@@ -2,17 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/presentation/router/app_router_names.dart';
 import 'package:h_m/presentation/styles/colors.dart';
-import 'package:h_m/presentation/view/buttom_nav_bar_view.dart';
 import 'package:h_m/presentation/view/carousel_view.dart';
 import 'package:h_m/presentation/view/popular_banner.dart';
 import 'package:h_m/presentation/widget/brand_componant.dart';
-import 'package:h_m/presentation/widget/custom_app_bar.dart';
-import 'package:h_m/presentation/widget/filtter_button.dart';
 import 'package:h_m/presentation/widget/main_category.dart';
 import 'package:h_m/presentation/widget/medium_text.dart';
 import 'package:h_m/presentation/widget/regular_text.dart';
 
-import '../../../constants/assets_manager.dart';
 import '../../view/filter_bottom_sheet.dart';
 import '../../widget/default_form_field.dart';
 
@@ -37,6 +33,7 @@ class HomeScreen extends StatelessWidget {
                     Expanded(
                         flex: 15,
                         child: DefaultFormField(
+                          noInput: true,
                           controller: TextEditingController(),
                           keyboard: TextInputType.text,
                           prefixIcon: Icon(Icons.search),
@@ -45,6 +42,9 @@ class HomeScreen extends StatelessWidget {
                           focusedBorderColor: AppColor.white,
                           hintText: 'Search',
                           fillColor: AppColor.offWhite,
+                          onTap: (){
+                            Navigator.pushNamed(context,AppRouterNames.rSearchRoute);
+                          },
                         )),
                     Spacer(),
                     Expanded(flex: 2, child: FilterBottomSheet()),
@@ -140,7 +140,11 @@ class HomeScreen extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) =>
-                      PopularBanner(isOffer: true),
+                      InkWell(
+                          onTap: (){
+                            Navigator.pushNamed(context, AppRouterNames.rProductDetailsRoute);
+                          },
+                          child: PopularBanner(isOffer: true)),
                   separatorBuilder: (context, index) => SizedBox(
                     width: 5.w,
                   ),

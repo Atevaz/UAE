@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/constants/constants.dart';
-import 'package:h_m/presentation/view/buttom_nav_bar_view.dart';
 import 'package:h_m/presentation/view/popular_banner.dart';
 import 'package:h_m/presentation/widget/custom_app_bar.dart';
 import 'package:h_m/presentation/widget/headline_text.dart';
@@ -9,7 +8,6 @@ import 'package:h_m/presentation/widget/headline_text.dart';
 import '../../styles/colors.dart';
 import '../../view/filter_bottom_sheet.dart';
 import '../../widget/default_form_field.dart';
-import '../../widget/filtter_button.dart';
 
 class AllProductsScreen extends StatelessWidget {
   const AllProductsScreen({Key? key}) : super(key: key);

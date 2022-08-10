@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:h_m/presentation/router/app_animation.dart';
 import 'package:h_m/presentation/screens/shared/splash_screen.dart';
+import 'package:h_m/presentation/screens/user/about_us_screen.dart';
 import 'package:h_m/presentation/screens/user/all_products_screen.dart';
 import 'package:h_m/presentation/screens/user/brands_screen.dart';
 import 'package:h_m/presentation/screens/user/cart_screen.dart';
@@ -11,7 +12,6 @@ import 'package:h_m/presentation/screens/user/edit_profile.dart';
 import 'package:h_m/presentation/screens/user/faq_screen.dart';
 import 'package:h_m/presentation/screens/user/favorite_screen.dart';
 import 'package:h_m/presentation/screens/user/home_layout.dart';
-import 'package:h_m/presentation/screens/user/home_screen.dart';
 import 'package:h_m/presentation/screens/user/location_screen.dart';
 import 'package:h_m/presentation/screens/user/login_screen.dart';
 import 'package:h_m/presentation/screens/user/more_screen.dart';
@@ -19,15 +19,12 @@ import 'package:h_m/presentation/screens/user/notifications.dart';
 import 'package:h_m/presentation/screens/user/offers_screen.dart';
 import 'package:h_m/presentation/screens/user/payment_method_screen.dart';
 import 'package:h_m/presentation/screens/user/payment_screen.dart';
-
-import 'package:h_m/presentation/screens/user/setting_screen.dart';
-
 import 'package:h_m/presentation/screens/user/product_details_screen.dart';
 import 'package:h_m/presentation/screens/user/search_screen.dart';
+import 'package:h_m/presentation/screens/user/setting_screen.dart';
 import 'package:h_m/presentation/screens/user/signup_screen.dart';
 import 'package:h_m/presentation/screens/user/verification_screen.dart';
 
-import '../../component.dart';
 import '../screens/user/ballance_details_screen.dart';
 import '../widget/switch_tab_bar.dart';
 import 'app_router_names.dart';
@@ -71,13 +68,21 @@ class AppRouter {
         return CustomPageRouteTransiton.fadeOut(
           page: FavoriteScreen(),
         );
-      case AppRouterNames.rCartRoute:
+      case AppRouterNames.rStackOverRoute:
         return MaterialPageRoute(
           builder: (_) => StackOver(),
+        );
+      case AppRouterNames.rCartRoute:
+        return MaterialPageRoute(
+          builder: (_) => CartScreen(showAppBar: true, showSideImage: true),
         );
       case AppRouterNames.rOfferRoute:
         return CustomPageRouteTransiton.fadeOut(
           page: OffersScreen(),
+        );
+      case AppRouterNames.rAboutUsRoute:
+        return CustomPageRouteTransiton.fadeOut(
+          page: AboutUsScreen(),
         );
       case AppRouterNames.rMoreRoute:
         return CustomPageRouteTransiton.fadeOut(
@@ -89,6 +94,7 @@ class AppRouter {
         );
       case AppRouterNames.rProductDetailsRoute:
         return MaterialPageRoute(
+
           builder: (_) => ProductDetailsScreen(),
         );
       case AppRouterNames.rPaymentRoute:
@@ -129,6 +135,10 @@ class AppRouter {
         // todo Terms and conditions
         return CustomPageRouteTransiton.fadeOut(
           page: EditProfile(),
+        );
+      case AppRouterNames.rSearchRoute:
+        return CustomPageRouteTransiton.fadeOut(
+          page: SearchScreen(),
         );
       case AppRouterNames.rFAQRoute:
         return CustomPageRouteTransiton.fadeOut(page: FAQScreen());

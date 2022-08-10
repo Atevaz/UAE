@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../styles/colors.dart';
 
 PreferredSizeWidget? CustomAppBar({
   IconData? leadingIcon,
