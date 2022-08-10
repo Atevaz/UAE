@@ -47,6 +47,33 @@ class ContactUsScreen extends StatelessWidget {
                   time:
                       '${TimeOfDay.fromDateTime(DateTime.now()).format(context)}',
                 ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                ChatMessage.sender(
+                  imageAddress: 'https://i.ibb.co/5hGs5t3/90469564-v-4.jpg',
+                  content: 'لا رفعت ',
+                  time:
+                      '${TimeOfDay.fromDateTime(DateTime.now()).format(context)}',
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                ChatMessage.sender(
+                  imageAddress: 'https://i.ibb.co/5hGs5t3/90469564-v-4.jpg',
+                  content: 'لا رفعت ',
+                  time:
+                      '${TimeOfDay.fromDateTime(DateTime.now()).format(context)}',
+                ),
+                ChatMessage.reciever(
+                  // imageAddress: '',
+                  content: 'خلاص ماشي ',
+                  time:
+                      '${TimeOfDay.fromDateTime(DateTime.now()).format(context)}',
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
               ],
             ),
           ),
