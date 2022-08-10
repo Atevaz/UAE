@@ -26,7 +26,7 @@ class MoreScreen extends StatelessWidget {
                     name: "Ahmad Mohamed",
                     phone: "01101001011",
                     editOnPress: () {
-                    Navigator.pushNamed(context, AppRouterNames.rEditProfileRoute);
+                     Navigator.pushNamed(context, AppRouterNames.rEditProfileRoute);
                     }),
                 const SizedBox(
                   height: 30.0,

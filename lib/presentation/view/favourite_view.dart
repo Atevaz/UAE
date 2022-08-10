@@ -5,12 +5,22 @@ import 'package:h_m/presentation/styles/colors.dart';
 import 'package:h_m/presentation/widget/headline_text.dart';
 import 'package:h_m/presentation/widget/regular_text.dart';
 
-class FavouriteView extends StatelessWidget {
+class FavouriteView extends StatefulWidget {
   FavouriteView({Key? key}) : super(key: key);
 
+  @override
+  State<FavouriteView> createState() => _FavouriteViewState();
+}
+
+class _FavouriteViewState extends State<FavouriteView> {
   final String name = 'Carton of Grapes';
+
   final double price = 200;
+
   final int starCount = 3;
+
+  bool isFavorite = false ;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -37,18 +47,29 @@ class FavouriteView extends StatelessWidget {
                 // ],
               ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Expanded(
+                    flex: 3,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.favorite,
+                            onPressed: () {
+                              setState(() {
+                                isFavorite = !isFavorite ;
+                                print('isFavorite $isFavorite');
+                              });
+                            },
+                            icon:!isFavorite ? Icon(
+                              Icons.favorite_border_outlined ,
                               color: AppColor.red,
-                            ))
+                              size: 25.r,
+                            ) : Icon(
+                              Icons.favorite ,
+                              color: AppColor.red,
+                              size: 25.r,
+                            ),)
                       ],
                     ),
                   ),
@@ -57,7 +78,7 @@ class FavouriteView extends StatelessWidget {
                     child: Image.asset(AssetsManager.grapes),
                   ),
                   Expanded(
-                    flex: 1,
+                    flex: 2,
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: HeadLineText(
@@ -75,7 +96,7 @@ class FavouriteView extends StatelessWidget {
                       child: Row(
                         children: [
                           Expanded(
-                            flex: 4,
+                            flex: 3,
                             child: ListView.builder(
                                 scrollDirection: Axis.horizontal,
                                 shrinkWrap: true,
@@ -86,7 +107,7 @@ class FavouriteView extends StatelessWidget {
                                     color: starCount > index
                                         ? AppColor.yellow
                                         : AppColor.grey,
-                                    size: 18,
+                                    size: 15,
                                   );
                                 }),
                           ),

@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:h_m/presentation/styles/colors.dart';
 
 import 'headline_text.dart';
 import 'icon.dart';
@@ -43,14 +44,14 @@ class MoreHeader extends StatelessWidget {
           ),
         ),
         const Spacer(),
-        InkWell(
-          onTap: editOnPress,
-          child: IconComponent(
-            imageName: "assets/icons/edit.png",
-            color: Color(0xff1F747E),
-            containerWidth: 12.0,
-            containerHeight: 14.96,
-          ),
+        IconButton(
+          onPressed: editOnPress,
+          icon: Icon(Icons.edit),
+          // imageName: "assets/icons/edit.png",
+          color: AppColor.teal,
+          iconSize: 25.r,
+          // containerWidth: 25.r,
+          // containerHeight: 25.r,
         ),
       ],
     );
