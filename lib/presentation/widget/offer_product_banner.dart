@@ -5,10 +5,18 @@ import '../../constants/assets_manager.dart';
 import '../styles/colors.dart';
 import 'regular_text.dart';
 
-class OffersProductsBanner extends StatelessWidget {
+class OffersProductsBanner extends StatefulWidget {
   const OffersProductsBanner({
     Key? key,
   }) : super(key: key);
+
+  @override
+  State<OffersProductsBanner> createState() => _OffersProductsBannerState();
+}
+
+class _OffersProductsBannerState extends State<OffersProductsBanner> {
+
+  bool isFavorite = false ;
 
   @override
   Widget build(BuildContext context) {
@@ -104,12 +112,20 @@ class OffersProductsBanner extends StatelessWidget {
               alignment: AlignmentDirectional.topEnd,
               child: IconButton(
                 padding: EdgeInsets.zero,
-                onPressed: () {},
-                icon: Icon(
-                  Icons.favorite,
+                onPressed: () {
+                  setState(() {
+                    isFavorite = !isFavorite ;
+                  });
+                },
+                icon:!isFavorite ? Icon(
+                  Icons.favorite_border_rounded,
                   size: 26.r,
                   color: Color(0xfffb0505),
-                ),
+                ) :Icon(
+                Icons.favorite,
+                size: 26.r,
+                color: Color(0xfffb0505),
+              ),
               ),
             ),
             Transform.translate(
@@ -121,15 +137,18 @@ class OffersProductsBanner extends StatelessWidget {
                     padding: EdgeInsetsDirectional.only(end: 14.r),
                     child: Container(
                       color: AppColor.teal,
-                      width: 107.33.w,
+                      width: 130.w,
                       height: 26.h,
                       child: Center(
-                        child: RegularText(
-                          text: 'Best Seller',
-                          fontSize: 11.sp,
-                          fontFamily: 'Roboto',
-                          fontWeight: FontWeight.w700,
-                          color: AppColor.white,
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 25.r),
+                          child: RegularText(
+                            text: 'Best Seller',
+                            fontSize: 11.sp,
+                            fontFamily: 'Roboto',
+                            fontWeight: FontWeight.w700,
+                            color: AppColor.white,
+                          ),
                         ),
                       ),
                     ),
