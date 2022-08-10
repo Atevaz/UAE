@@ -31,7 +31,7 @@ class AppRouter {
     switch (settings.name) {
       case AppRouterNames.rSplashRoute:
         return CustomPageRouteTransiton.fadeOut(
-          page: HomeScreen(),
+          page: HomeLayout(),
         );
       case AppRouterNames.rLocationRoute:
         return CustomPageRouteTransiton.fadeOut(
