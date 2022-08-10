@@ -55,6 +55,15 @@ class MoreScreen extends StatelessWidget {
               ),
               ListTileItem(
                 onPress: (){},
+                iconPath: "assets/icons/order.png",
+                title: "My Order",
+              ),
+              DividerWidget(
+                height: 2,
+                thickness: 1.5,
+              ),
+              ListTileItem(
+                onPress: (){},
                 iconPath: "assets/icons/payment.png",
                 title: "Payment",
               ),

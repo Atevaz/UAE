@@ -9,9 +9,11 @@ class PopularBanner extends StatelessWidget {
   PopularBanner({
     Key? key,
     this.isOffer = false ,
+    this.isFavourite = true
   }) : super(key: key);
 
   final bool isOffer;
+  final bool isFavourite;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,6 +28,7 @@ class PopularBanner extends StatelessWidget {
         children: [
           Column(
             children: [
+              if(isFavourite)
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
