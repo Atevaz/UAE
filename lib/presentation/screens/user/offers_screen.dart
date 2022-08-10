@@ -21,19 +21,8 @@ class OffersScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
-        centerWidget: HeadLineText(text: 'Offers'),
-        leadingIcon: Icons.arrow_back_ios,
-        leadingIconOnPressed: () {
-          Navigator.pop(context);
-        },
-        trailingWidget: NotificationIcon(
-          thereNewNotification: true,
-        ),
-      ),
-      bottomNavigationBar: BottomNavBarView(
-        index: 3,
-      ),
+
+
       body: Padding(
         padding: EdgeInsets.all(20.0.r),
         child: SingleChildScrollView(

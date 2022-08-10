@@ -32,77 +32,62 @@ class _StackOverState extends State<StackOver>
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Scaffold(
-          appBar: CustomAppBar(
-              leadingIcon: Icons.arrow_back_ios,
-              centerWidget: HeadLineText(
-                text: 'Cart',
-                fontFamily: 'Roboto',
-                fontWeight: FontWeight.w600,
-                fontSize: 20,
-              )),
-          body: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: [
-                // give the tab bar a height [can change height to preferred height]
-                Container(
-                  height: 50.h,
-                  width: 320.w,
-                  decoration: BoxDecoration(
-                    color: AppColor.offWhite,
-                    borderRadius: BorderRadius.circular(
-                      25.0,
-                    ),
-                  ),
-                  child: TabBar(
-                    controller: _tabController,
-                    indicator: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        25.0.r,
-                      ),
-                      color: AppColor.teal,
-                    ),
-                    labelColor: Colors.white,
-                    unselectedLabelColor: Colors.black,
-                    tabs: [
-                      Tab(
-                        text: 'Current order',
-                      ),
-                      Tab(
-                        text: 'Old Order',
-                      ),
-                    ],
-                  ),
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            // give the tab bar a height [can change height to preferred height]
+            Container(
+              height: 50.h,
+              width: 320.w,
+              decoration: BoxDecoration(
+                color: AppColor.offWhite,
+                borderRadius: BorderRadius.circular(
+                  25.0,
                 ),
-                Expanded(
-                  child: TabBarView(
-                    controller: _tabController,
-                    children: [
-                      /// cart screen tab bar
-                      Center(
-                        child:
-                            CartScreen(showAppBar: false, showSideImage: false),
-                      ),
-
-                      /// old orders tab bar
-                      Center(
-                        child:
-                            OldOrders(showSideImage: false, showAppBar: false),
-                      ),
-                    ],
+              ),
+              child: TabBar(
+                controller: _tabController,
+                indicator: BoxDecoration(
+                  borderRadius: BorderRadius.circular(
+                    25.0.r,
                   ),
+                  color: AppColor.teal,
                 ),
-              ],
+                labelColor: Colors.white,
+                unselectedLabelColor: Colors.black,
+                tabs: [
+                  Tab(
+                    text: 'Current order',
+                  ),
+                  Tab(
+                    text: 'Old Order',
+                  ),
+                ],
+              ),
             ),
-          ),
-        ),
+            Expanded(
+              child: TabBarView(
+                controller: _tabController,
+                children: [
+                  /// cart screen tab bar
+                  Center(
+                    child:
+                        CartScreen(showAppBar: false, showSideImage: false),
+                  ),
 
-        /// top side image
-        Positioned(child: Image.asset(AssetsManager.sidePic), right: 0),
-      ],
+                  /// old orders tab bar
+                  Center(
+                    child:
+                        OldOrders(showSideImage: false, showAppBar: false),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

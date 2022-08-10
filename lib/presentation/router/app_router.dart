@@ -9,6 +9,7 @@ import 'package:h_m/presentation/screens/user/customer_service_screen.dart';
 import 'package:h_m/presentation/screens/user/edit_profile.dart';
 import 'package:h_m/presentation/screens/user/faq_screen.dart';
 import 'package:h_m/presentation/screens/user/favorite_screen.dart';
+import 'package:h_m/presentation/screens/user/home_layout.dart';
 import 'package:h_m/presentation/screens/user/home_screen.dart';
 import 'package:h_m/presentation/screens/user/location_screen.dart';
 import 'package:h_m/presentation/screens/user/login_screen.dart';
@@ -22,6 +23,7 @@ import 'package:h_m/presentation/screens/user/verification_screen.dart';
 
 import '../../component.dart';
 import '../screens/user/ballance_details_screen.dart';
+import '../widget/switch_tab_bar.dart';
 import 'app_router_names.dart';
 
 class AppRouter {
@@ -65,7 +67,7 @@ class AppRouter {
         );
       case AppRouterNames.rCartRoute:
         return MaterialPageRoute(
-          builder: (_) => CartScreen(showAppBar: true, showSideImage: true),
+          builder: (_) => StackOver(),
         );
       case AppRouterNames.rOfferRoute:
         return CustomPageRouteTransiton.fadeOut(
