@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/presentation/styles/colors.dart';
 
 import 'headline_text.dart';
-import 'icon.dart';
 import 'regular_text.dart';
 
 class MoreHeader extends StatelessWidget {

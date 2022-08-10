@@ -1,13 +1,8 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/presentation/screens/user/cart_screen.dart';
 import 'package:h_m/presentation/styles/colors.dart';
 import 'package:h_m/presentation/view/old_orders.dart';
-
-import '../../constants/assets_manager.dart';
-import 'custom_app_bar.dart';
-import 'headline_text.dart';
 
 class StackOver extends StatefulWidget {
   @override

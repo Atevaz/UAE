@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+
 import '../../../constants/assets_manager.dart';
-import '../../widget/custom_app_bar.dart';
-import '../../widget/headline_text.dart';
 import '../../widget/switch_tab_bar.dart';
 
 class OldOrderScreen extends StatelessWidget {

@@ -3,12 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/constants/assets_manager.dart';
 import 'package:h_m/presentation/router/app_router_names.dart';
 import 'package:h_m/presentation/styles/colors.dart';
-import 'package:h_m/presentation/view/cart_view.dart';
 import 'package:h_m/presentation/view/popular_banner.dart';
 import 'package:h_m/presentation/widget/custom_app_bar.dart';
 import 'package:h_m/presentation/widget/default_button.dart';
 import 'package:h_m/presentation/widget/headline_text.dart';
-import 'package:h_m/presentation/widget/icon.dart';
 import 'package:h_m/presentation/widget/product_description.dart';
 import 'package:h_m/presentation/widget/product_details_status.dart';
 
@@ -51,7 +49,6 @@ class ProductDetailsScreen extends StatelessWidget {
                           width: double.infinity,
                           margin: const EdgeInsetsDirectional.only(start: 40.0),
                           decoration: BoxDecoration(
-                              color: AppColor.pink,
                               borderRadius: BorderRadius.circular(20.0)),
                           child: Align(
                               alignment: AlignmentDirectional.topEnd,
@@ -64,7 +61,7 @@ class ProductDetailsScreen extends StatelessWidget {
                         Image.asset(
                           AssetsManager.grape,
                           fit: BoxFit.cover,
-                          height: 250,
+                          height: 300.h,
                         ),
                       ],
                     ),

@@ -11,7 +11,6 @@ import 'package:h_m/presentation/screens/user/edit_profile.dart';
 import 'package:h_m/presentation/screens/user/faq_screen.dart';
 import 'package:h_m/presentation/screens/user/favorite_screen.dart';
 import 'package:h_m/presentation/screens/user/home_layout.dart';
-import 'package:h_m/presentation/screens/user/home_screen.dart';
 import 'package:h_m/presentation/screens/user/location_screen.dart';
 import 'package:h_m/presentation/screens/user/login_screen.dart';
 import 'package:h_m/presentation/screens/user/more_screen.dart';
@@ -19,15 +18,12 @@ import 'package:h_m/presentation/screens/user/notifications.dart';
 import 'package:h_m/presentation/screens/user/offers_screen.dart';
 import 'package:h_m/presentation/screens/user/payment_method_screen.dart';
 import 'package:h_m/presentation/screens/user/payment_screen.dart';
-
-import 'package:h_m/presentation/screens/user/setting_screen.dart';
-
 import 'package:h_m/presentation/screens/user/product_details_screen.dart';
 import 'package:h_m/presentation/screens/user/search_screen.dart';
+import 'package:h_m/presentation/screens/user/setting_screen.dart';
 import 'package:h_m/presentation/screens/user/signup_screen.dart';
 import 'package:h_m/presentation/screens/user/verification_screen.dart';
 
-import '../../component.dart';
 import '../screens/user/ballance_details_screen.dart';
 import '../widget/switch_tab_bar.dart';
 import 'app_router_names.dart';

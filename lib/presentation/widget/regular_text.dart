@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../styles/colors.dart';
 
 class RegularText extends StatelessWidget {
   final String text;

@@ -2,17 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/presentation/router/app_router_names.dart';
 import 'package:h_m/presentation/styles/colors.dart';
-import 'package:h_m/presentation/view/buttom_nav_bar_view.dart';
 import 'package:h_m/presentation/view/carousel_view.dart';
 import 'package:h_m/presentation/view/popular_banner.dart';
 import 'package:h_m/presentation/widget/brand_componant.dart';
-import 'package:h_m/presentation/widget/custom_app_bar.dart';
-import 'package:h_m/presentation/widget/filtter_button.dart';
 import 'package:h_m/presentation/widget/main_category.dart';
 import 'package:h_m/presentation/widget/medium_text.dart';
 import 'package:h_m/presentation/widget/regular_text.dart';
 
-import '../../../constants/assets_manager.dart';
 import '../../view/filter_bottom_sheet.dart';
 import '../../widget/default_form_field.dart';
 

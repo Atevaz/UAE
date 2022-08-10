@@ -1,6 +1,8 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'dart:math' as math;
+
 import '../../constants/assets_manager.dart';
 import '../styles/colors.dart';
 import 'regular_text.dart';

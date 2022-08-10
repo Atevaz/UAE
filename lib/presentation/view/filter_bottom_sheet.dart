@@ -6,7 +6,6 @@ import 'package:h_m/presentation/styles/colors.dart';
 import 'package:h_m/presentation/widget/category_chip.dart';
 import 'package:h_m/presentation/widget/default_button.dart';
 import 'package:h_m/presentation/widget/dropdown_component.dart';
-import 'package:h_m/presentation/widget/main_category.dart';
 import 'package:h_m/presentation/widget/medium_text.dart';
 import 'package:h_m/presentation/widget/regular_text.dart';
 import 'package:h_m/presentation/widget/search_text_field.dart';

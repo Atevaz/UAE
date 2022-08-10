@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
 class DefaultFormField extends StatefulWidget {
   final TextEditingController? controller;
@@ -123,9 +122,9 @@ class _DefaultFormFieldState extends State<DefaultFormField> {
                 ),
           ),
 
-          keyboardType: keyboard,
-          obscureText: isPassword ?? false,
-          onTap: onTap,
+          keyboardType: widget.keyboard,
+          obscureText: widget.isPassword ?? false,
+onTap: widget.onTap,
 
         ),
       ),

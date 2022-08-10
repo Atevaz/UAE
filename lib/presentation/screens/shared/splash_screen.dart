@@ -1,11 +1,11 @@
 import 'dart:async';
-import 'package:flutter/material.dart';
+
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/constants/assets_manager.dart';
 import 'package:h_m/presentation/screens/user/location_screen.dart';
 import 'package:h_m/presentation/styles/colors.dart';
-import 'package:h_m/presentation/view/carousel_view.dart';
 import 'package:h_m/presentation/widget/headline_text.dart';
 import 'package:h_m/presentation/widget/regular_text.dart';
 import 'package:page_transition/page_transition.dart';
