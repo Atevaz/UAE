@@ -26,6 +26,7 @@ class AppRouterNames {
   static const rContactUsRoute = '/contact_us_screen';
   static const rTermsAndConditionsRoute = '/terms_and_conditions_screen';
   static const rFAQRoute = '/faq_screen';
+  static const rSearchRoute = '/search_screen';
 
 
 }
