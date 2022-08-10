@@ -5,6 +5,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h_m/constants/assets_manager.dart';
+import 'package:h_m/presentation/router/app_router.dart';
+import 'package:h_m/presentation/router/app_router_names.dart';
 import 'package:h_m/presentation/widget/default_button.dart';
 import 'package:h_m/presentation/widget/otp.dart';
 
@@ -153,9 +155,9 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     ),
                     DefaultButton(
                       label: 'Verify',
-                      onPressed: () => Navigator.of(context).push(
-                          CustomPageRouteTransiton.topToBottom(
-                              page: SecondScreen())),
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, AppRouterNames.rHomeRoute);
+                      },
                       isExpanded: false,
                       context: context,
                     ),

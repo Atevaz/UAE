@@ -18,6 +18,9 @@ import 'package:h_m/presentation/screens/user/notifications.dart';
 import 'package:h_m/presentation/screens/user/offers_screen.dart';
 import 'package:h_m/presentation/screens/user/payment_method_screen.dart';
 import 'package:h_m/presentation/screens/user/payment_screen.dart';
+
+import 'package:h_m/presentation/screens/user/setting_screen.dart';
+
 import 'package:h_m/presentation/screens/user/product_details_screen.dart';
 import 'package:h_m/presentation/screens/user/search_screen.dart';
 import 'package:h_m/presentation/screens/user/signup_screen.dart';
@@ -33,7 +36,7 @@ class AppRouter {
     switch (settings.name) {
       case AppRouterNames.rSplashRoute:
         return CustomPageRouteTransiton.fadeOut(
-          page: HomeLayout(),
+          page: LogInScreen(),
         );
       case AppRouterNames.rLocationRoute:
         return CustomPageRouteTransiton.fadeOut(
@@ -53,7 +56,7 @@ class AppRouter {
         );
       case AppRouterNames.rHomeRoute:
         return CustomPageRouteTransiton.fadeOut(
-          page: HomeScreen(),
+          page: HomeLayout(),
         );
       case AppRouterNames.rAllProductRoute:
         return CustomPageRouteTransiton.fadeOut(
@@ -110,9 +113,9 @@ class AppRouter {
           page: SplashScreen(),
         );
       case AppRouterNames.rSettingsRoute:
-        // todo settings screen
+
         return CustomPageRouteTransiton.fadeOut(
-          page: SplashScreen(),
+          page: SettingScreen(),
         );
       case AppRouterNames.rCustomerServicesRoute:
         return CustomPageRouteTransiton.fadeOut(

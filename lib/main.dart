@@ -12,7 +12,7 @@ import 'presentation/router/app_router_names.dart';
 import 'presentation/styles/app_theme.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  await WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
 
   BlocOverrides.runZoned(

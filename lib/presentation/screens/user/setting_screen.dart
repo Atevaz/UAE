@@ -27,7 +27,9 @@ class SettingScreen extends StatelessWidget {
             leadingIcon: Icons.arrow_back_ios,
 
             /// routing
-            leadingIconOnPressed: () {},
+            leadingIconOnPressed: () {
+              Navigator.pop(context);
+            },
           ),
           body: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
