@@ -15,4 +15,5 @@ class AppColor {
   static const Color containerBG = Color(0xFFD9D9D9);
   static const Color yellow = Color(0xFFFFC122);
   static const Color surface = Color(0xFFF9F9F9);
+  static const Color pink = Color(0xFFFFF3F1);
 }

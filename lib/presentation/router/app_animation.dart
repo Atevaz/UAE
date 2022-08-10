@@ -11,7 +11,7 @@ class CustomPageRouteTransiton extends PageRouteBuilder {
     required this.dy,
     this.isFade = false,
   }) : super(
-            transitionDuration: Duration(milliseconds: 800),
+            transitionDuration: Duration(milliseconds: 500),
             pageBuilder: (context, animation, secondaryAnimation) => page);
   factory CustomPageRouteTransiton.fadeOut({
     required Widget page,
