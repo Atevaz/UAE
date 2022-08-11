@@ -32,7 +32,7 @@ class PaymentMethodScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image(image: AssetImage(AssetsManager.creditCard)),
+            Center(child: Image(image: AssetImage(AssetsManager.creditCard))),
             Padding(
               padding: const EdgeInsets.only(left: 20, top: 20),
               child: HeadLineText(
