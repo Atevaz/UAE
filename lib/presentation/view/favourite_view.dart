@@ -19,7 +19,7 @@ class _FavouriteViewState extends State<FavouriteView> {
 
   final int starCount = 3;
 
-  bool isFavorite = false ;
+  bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class _FavouriteViewState extends State<FavouriteView> {
               height: 225.h,
               width: 168.w,
               decoration: BoxDecoration(
-                color: AppColor.white,
+                color: Colors.transparent,
                 borderRadius: BorderRadius.circular(6.0),
               ),
               child: Column(
@@ -48,21 +48,24 @@ class _FavouriteViewState extends State<FavouriteView> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         IconButton(
-                            onPressed: () {
-                              setState(() {
-                                isFavorite = !isFavorite ;
-                                print('isFavorite $isFavorite');
-                              });
-                            },
-                            icon:!isFavorite ? Icon(
-                              Icons.favorite_border_outlined ,
-                              color: AppColor.red,
-                              size: 25.r,
-                            ) : Icon(
-                              Icons.favorite ,
-                              color: AppColor.red,
-                              size: 25.r,
-                            ),)
+                          onPressed: () {
+                            setState(() {
+                              isFavorite = !isFavorite;
+                              print('isFavorite $isFavorite');
+                            });
+                          },
+                          icon: !isFavorite
+                              ? Icon(
+                                  Icons.favorite_border_outlined,
+                                  color: AppColor.red,
+                                  size: 25.r,
+                                )
+                              : Icon(
+                                  Icons.favorite,
+                                  color: AppColor.red,
+                                  size: 25.r,
+                                ),
+                        )
                       ],
                     ),
                   ),
