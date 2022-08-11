@@ -20,11 +20,12 @@ class PopularBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.antiAliasWithSaveLayer,
+      padding: EdgeInsets.all(8.r),
       width: 168.w,
       height: 229.h,
       decoration: BoxDecoration(
         color: Color(0x26c06c7f),
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(6.r),
       ),
       child: Stack(
         children: [
@@ -35,15 +36,15 @@ class PopularBanner extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(
-                      top: 15,
-                      right: 15,
+                    padding: EdgeInsets.only(
+                      top: 15.h,
+                      right: 15.w,
                     ),
                     child: InkWell(
                       onTap: () {},
                       child: Icon(
                         Icons.favorite,
-                        size: 14,
+                        size: 14.sp,
                         color: Color(0xfffb0505),
                       ),
                     ),
@@ -58,14 +59,14 @@ class PopularBanner extends StatelessWidget {
                     text: 'Carton of Grapes',
                     color: AppColor.black,
                     fontFamily: 'Roboto',
-                    fontSize: 13.0,
+                    fontSize: 13.0.sp,
                     fontWeight: FontWeight.w600,
                   ),
                   RegularText(
                     text: '240 EGP',
                     color: AppColor.teal,
                     fontFamily: 'Roboto',
-                    fontSize: 11.0,
+                    fontSize: 11.0.sp,
                     fontWeight: FontWeight.w600,
                   ),
                 ],
@@ -73,14 +74,14 @@ class PopularBanner extends StatelessWidget {
               Row(
                 children: [
                   SizedBox(
-                    width: 11.0,
+                    width: 11.0.w,
                   ),
                   Expanded(
                     child: RegularText(
                       text: 'Every carton has 15 k of red grapes',
                       color: AppColor.black,
                       fontFamily: 'Roboto',
-                      fontSize: 11.0,
+                      fontSize: 11.0.sp,
                       fontWeight: FontWeight.w400,
                       overflow: TextOverflow.fade,
                     ),
