@@ -124,21 +124,46 @@ class LogInScreen extends StatelessWidget {
                         )),
                   ],
                 ),
-                Padding(
-                  padding: EdgeInsets.only(right: 80.w, top: 114.h),
-                  child: Align(
-                    alignment: Alignment.topCenter,
-                    child: Image(image: AssetImage(AssetsManager.sadGirl)),
-                  ),
-                ),
+
+                /// girl image
+                Positioned(
+                    child: Column(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: Padding(
+                        padding: EdgeInsets.only(bottom: 20.h, left: 20.h),
+                        child: Align(
+                            alignment: Alignment.bottomLeft,
+                            child: Image(
+                                image: AssetImage(AssetsManager.sadGirl))),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(),
+                      flex: 3,
+                    )
+                  ],
+                ))
               ],
             ),
           ),
         ));
   }
 }
+
+/// not responsive
 // Positioned(
 // right: MediaQuery.of(context).size.width / 3.w,
 // top: MediaQuery.of(context).size.height / 7.h,
 // child: Image(image: AssetImage(AssetsManager.sadGirl)),
+// ),
+
+/// not responsive
+// Padding(
+// padding: EdgeInsets.only(right: 80.w, top: 114.h),
+// child: Align(
+// alignment: Alignment.topCenter,
+// child: Image(image: AssetImage(AssetsManager.sadGirl)),
+// ),
 // ),

@@ -25,12 +25,12 @@ class CartScreen extends StatelessWidget {
 
   final List<CartModel> cartList = [
     CartModel(
-        quantity: 100,
+        quantity: 10,
         price: 100,
         productName: 'Red Grapes',
         imageName: AssetsManager.grape),
     CartModel(
-        quantity: 100,
+        quantity: 10,
         price: 100,
         productName: 'Red Grapes',
         imageName: AssetsManager.grape),

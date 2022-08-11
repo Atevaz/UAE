@@ -44,7 +44,8 @@ class CartView extends StatelessWidget {
                 Expanded(
                     flex: 2,
                     child: Container(
-                      padding: EdgeInsets.only(top: 10.h, right: 10.w, bottom: 10.h),
+                      padding:
+                          EdgeInsets.only(top: 10.h, right: 10.w, bottom: 10.h),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -141,7 +142,7 @@ class CartView extends StatelessWidget {
                           text: quantity.toString(),
                           textAlign: TextAlign.center,
                           color: AppColor.white,
-                          fontSize: 14.sp,
+                          fontSize: quantity! > 99 ? 10.sp : 14.sp,
                         )),
                         Expanded(
                             child: IconButton(

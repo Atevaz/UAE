@@ -89,7 +89,6 @@ class AllProductsScreen extends StatelessWidget {
           ],
         ),
       ),
-
     );
   }
 
