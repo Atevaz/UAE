@@ -89,7 +89,7 @@ class _OffersProductsBannerState extends State<OffersProductsBanner> {
                   Align(
                     alignment: AlignmentDirectional.bottomEnd,
                     child: Padding(
-                      padding: EdgeInsetsDirectional.only(top: 5.r, end: 10.r),
+                      padding: EdgeInsetsDirectional.only(top: 5.r, end: 20.r),
                       child: SizedBox(
                         width: 30.w,
                         height: 25.h,
@@ -97,7 +97,7 @@ class _OffersProductsBannerState extends State<OffersProductsBanner> {
                           onPressed: () {},
                           icon: RegularText(
                             text: 'Get',
-                            fontSize: 16.sp,
+                            fontSize: 14.sp,
                             fontWeight: FontWeight.w700,
                             color: AppColor.blue,
                           ),

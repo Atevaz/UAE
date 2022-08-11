@@ -20,13 +20,13 @@ class CartView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 5),
+      padding: EdgeInsets.symmetric(vertical: 5.r),
       child: Container(
         height: 108.h,
         width: 350.w,
         decoration: BoxDecoration(
             color: Colors.grey.withOpacity(.1),
-            borderRadius: BorderRadius.circular(10)),
+            borderRadius: BorderRadius.circular(10.r)),
         child: Stack(
           children: [
             Row(
@@ -44,7 +44,7 @@ class CartView extends StatelessWidget {
                 Expanded(
                     flex: 2,
                     child: Container(
-                      padding: EdgeInsets.only(top: 10, right: 10, bottom: 10),
+                      padding: EdgeInsets.only(top: 10.h, right: 10.w, bottom: 10.h),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -109,52 +109,54 @@ class CartView extends StatelessWidget {
                     ))
               ],
             ),
-            Positioned(
-                right: 10,
-                bottom: 5,
-                child: Container(
-                  width: 79,
-                  height: 33,
-                  decoration: BoxDecoration(
-                    color: AppColor.teal,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: IconButton(
-                          padding: EdgeInsets.all(0),
-                          onPressed: () {
-                            quantity = quantity! - 1;
-                            print(quantity);
-                          },
-                          iconSize: 14,
-                          color: AppColor.white,
-                          icon: Icon(
-                            Icons.remove,
+            Align(
+                alignment: AlignmentDirectional.bottomEnd,
+                child: Padding(
+                  padding: EdgeInsetsDirectional.only(bottom: 5.r),
+                  child: Container(
+                    width: 79.w,
+                    height: 33.h,
+                    decoration: BoxDecoration(
+                      color: AppColor.teal,
+                      borderRadius: BorderRadius.circular(10.r),
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: IconButton(
+                            padding: EdgeInsets.zero,
+                            onPressed: () {
+                              quantity = quantity! - 1;
+                              print(quantity);
+                            },
+                            iconSize: 14,
+                            color: AppColor.white,
+                            icon: Icon(
+                              Icons.remove,
+                            ),
                           ),
                         ),
-                      ),
-                      Expanded(
-                          child: MediumText(
-                        text: quantity.toString(),
-                        textAlign: TextAlign.center,
-                        color: AppColor.white,
-                        fontSize: 14.sp,
-                      )),
-                      Expanded(
-                          child: IconButton(
-                        padding: EdgeInsets.all(0),
-                        onPressed: () {
-                          quantity = quantity! + 1;
-                        },
-                        iconSize: 14.sp,
-                        color: AppColor.white,
-                        icon: Icon(
-                          Icons.add,
-                        ),
-                      )),
-                    ],
+                        Expanded(
+                            child: MediumText(
+                          text: quantity.toString(),
+                          textAlign: TextAlign.center,
+                          color: AppColor.white,
+                          fontSize: 14.sp,
+                        )),
+                        Expanded(
+                            child: IconButton(
+                          padding: EdgeInsets.zero,
+                          onPressed: () {
+                            quantity = quantity! + 1;
+                          },
+                          iconSize: 14.sp,
+                          color: AppColor.white,
+                          icon: Icon(
+                            Icons.add,
+                          ),
+                        )),
+                      ],
+                    ),
                   ),
                 ))
           ],

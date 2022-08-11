@@ -27,7 +27,9 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
               fontFamily: 'Roboto',
             ),
             leadingIcon: Icons.arrow_back_ios,
-            leadingIconOnPressed: () {},
+            leadingIconOnPressed: () {
+              Navigator.pop(context);
+            },
           ),
           body: GestureDetector(
             onTap: () => FocusScope.of(context).unfocus(),
@@ -175,11 +177,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
           alignment: AlignmentDirectional.topEnd,
           child: SizedBox(child: Image.asset('assets/images/sidePicTop.png')),
         ),
-        Align(
-          alignment: AlignmentDirectional.bottomStart,
-          child:
-              SizedBox(child: Image.asset('assets/images/sidePicBottom.png')),
-        ),
+
       ],
     );
   }

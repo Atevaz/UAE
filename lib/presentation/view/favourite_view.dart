@@ -26,7 +26,8 @@ class _FavouriteViewState extends State<FavouriteView> {
     return SafeArea(
       child: Scaffold(
         body: Center(
-          child: Card(
+          child: Material(
+            elevation: 2,
             child: Container(
               padding: EdgeInsets.only(
                 bottom: 20,
@@ -37,14 +38,6 @@ class _FavouriteViewState extends State<FavouriteView> {
               decoration: BoxDecoration(
                 color: AppColor.white,
                 borderRadius: BorderRadius.circular(6.0),
-                // boxShadow: [
-                //   BoxShadow(
-                //     color: Colors.black26,
-                //     blurRadius: 5.0,
-                //     spreadRadius: 1.0,
-                //     offset: Offset(0.0, 1.0), // shadow direction: bottom right
-                //   )
-                // ],
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
