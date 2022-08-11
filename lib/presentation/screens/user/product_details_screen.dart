@@ -18,7 +18,7 @@ class ProductDetailsScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         leadingIcon: Icons.arrow_back_ios,
-        leadingIconOnPressed: (){
+        leadingIconOnPressed: () {
           Navigator.pop(context);
         },
         trailingWidget: IconButton(
@@ -85,9 +85,9 @@ class ProductDetailsScreen extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         physics: const BouncingScrollPhysics(),
                         itemBuilder: (context, index) => ProductDetailsStatus(
-                            newPrice: "200 LE",
-                            oldPrice: "300 LE",
-                            productCount: "1000 - 2000 pieces",
+                          newPrice: "200 LE",
+                          oldPrice: "300 LE",
+                          productCount: "1000 - 2000 pieces",
                           backGroundColor: AppColor.white,
                         ),
                         separatorBuilder: (context, index) => const SizedBox(
@@ -113,7 +113,8 @@ class ProductDetailsScreen extends StatelessWidget {
                       child: ListView.separated(
                         scrollDirection: Axis.horizontal,
                         physics: const BouncingScrollPhysics(),
-                        itemBuilder: (context, index) =>  PopularBanner(isFavourite: false),
+                        itemBuilder: (context, index) =>
+                            PopularBanner(isFavourite: false),
                         separatorBuilder: (context, index) => const SizedBox(
                           width: 10,
                         ),
@@ -157,6 +158,7 @@ class ProductDetailsScreen extends StatelessWidget {
                         context: context,
                         height: 60.0,
                         fontSize: 20,
+                        fontWeight: FontWeight.normal,
                         fontFamily: "Roboto",
                       ))
                 ],

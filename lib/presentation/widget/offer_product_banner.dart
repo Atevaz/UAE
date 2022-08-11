@@ -17,8 +17,7 @@ class OffersProductsBanner extends StatefulWidget {
 }
 
 class _OffersProductsBannerState extends State<OffersProductsBanner> {
-
-  bool isFavorite = false ;
+  bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +89,7 @@ class _OffersProductsBannerState extends State<OffersProductsBanner> {
                   Align(
                     alignment: AlignmentDirectional.bottomEnd,
                     child: Padding(
-                      padding: EdgeInsetsDirectional.only(top: 5.r, end: 10),
+                      padding: EdgeInsetsDirectional.only(top: 5.r, end: 10.r),
                       child: SizedBox(
                         width: 30.w,
                         height: 25.h,
@@ -116,18 +115,20 @@ class _OffersProductsBannerState extends State<OffersProductsBanner> {
                 padding: EdgeInsets.zero,
                 onPressed: () {
                   setState(() {
-                    isFavorite = !isFavorite ;
+                    isFavorite = !isFavorite;
                   });
                 },
-                icon:!isFavorite ? Icon(
-                  Icons.favorite_border_rounded,
-                  size: 26.r,
-                  color: Color(0xfffb0505),
-                ) :Icon(
-                Icons.favorite,
-                size: 26.r,
-                color: Color(0xfffb0505),
-              ),
+                icon: !isFavorite
+                    ? Icon(
+                        Icons.favorite_border_rounded,
+                        size: 26.r,
+                        color: Color(0xfffb0505),
+                      )
+                    : Icon(
+                        Icons.favorite,
+                        size: 26.r,
+                        color: Color(0xfffb0505),
+                      ),
               ),
             ),
             Transform.translate(

@@ -15,108 +15,130 @@ class LogInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: AppColor.teal,
-        body: Stack(
-          children: [
-            Column(
+        body: SingleChildScrollView(
+          physics: NeverScrollableScrollPhysics(),
+          child: Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: Stack(
               children: [
-                Expanded(
-                    flex: 2,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Image(
-                          image: AssetImage(AssetsManager.girlCircle),
-                        )
-                      ],
-                    )),
-                Expanded(
-                    flex: 3,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: AppColor.white,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(40),
-                          topRight: Radius.circular(40),
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          Expanded(
-                            child: DefaultPhoneNumFormField(
-                                controller: controller, label: 'Number'),
-                          ),
-                          Expanded(
-                            child: Column(
-                              children: [
-                                DefaultButton(
-                                    label: 'Login',
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 22,
-                                    onPressed: () {
-                                      Navigator.pushReplacementNamed(context, AppRouterNames.rVerificationRoute);
-                                    },
-                                    isExpanded: false,
-                                    context: context),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    RegularText(
-                                      text: 'Don\'t have account?',
-                                      fontSize: 16.sp,
-                                      fontWeight: FontWeight.w400,
-                                      fontFamily: 'Roboto',
-                                    ),
-                                    TextButton(
-                                        onPressed: () {
-                                          Navigator.pushReplacementNamed(context, AppRouterNames.rRegisterRoute);
-                                        },
-                                        child: RegularText(
-                                          text: 'Sign up',
-                                          fontSize: 16.sp,
-                                          color: AppColor.teal,
-                                          fontWeight: FontWeight.w700,
-                                          fontFamily: 'Roboto',
-                                        ))
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    IconComponent(
-                                      imageName: AssetsManager.gmail,
-                                      containerWidth: 50,
-                                      containerHeight: 50,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 15),
-                                      child: IconComponent(
-                                        imageName: AssetsManager.facebook,
-                                        containerWidth: 50,
-                                        containerHeight: 50,
-                                      ),
-                                    ),
-                                    IconComponent(
-                                      imageName: AssetsManager.apple,
-                                      containerWidth: 50,
-                                      containerHeight: 50,
-                                    ),
-                                  ],
-                                ),
-                              ],
+                Column(
+                  children: [
+                    Expanded(
+                        flex: 2,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Image(
+                              image: AssetImage(AssetsManager.girlCircle),
+                            )
+                          ],
+                        )),
+                    Expanded(
+                        flex: 3,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: AppColor.white,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(40),
+                              topRight: Radius.circular(40),
                             ),
-                          )
-                        ],
-                      ),
-                    )),
+                          ),
+                          child: Column(
+                            children: [
+                              Expanded(
+                                child: DefaultPhoneNumFormField(
+                                    controller: controller, label: 'Number'),
+                              ),
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    DefaultButton(
+                                        label: 'Login',
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 22.sp,
+                                        onPressed: () {
+                                          Navigator.pushReplacementNamed(
+                                              context,
+                                              AppRouterNames
+                                                  .rVerificationRoute);
+                                        },
+                                        isExpanded: false,
+                                        context: context),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        RegularText(
+                                          text: 'Don\'t have account?',
+                                          fontSize: 16.sp,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily: 'Roboto',
+                                        ),
+                                        TextButton(
+                                            onPressed: () {
+                                              Navigator.pushReplacementNamed(
+                                                  context,
+                                                  AppRouterNames
+                                                      .rRegisterRoute);
+                                            },
+                                            child: RegularText(
+                                              text: 'Sign up',
+                                              fontSize: 16.sp,
+                                              color: AppColor.teal,
+                                              fontWeight: FontWeight.w700,
+                                              fontFamily: 'Roboto',
+                                            ))
+                                      ],
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        IconComponent(
+                                          imageName: AssetsManager.gmail,
+                                          containerWidth: 50,
+                                          containerHeight: 50,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 15),
+                                          child: IconComponent(
+                                            imageName: AssetsManager.facebook,
+                                            containerWidth: 50,
+                                            containerHeight: 50,
+                                          ),
+                                        ),
+                                        IconComponent(
+                                          imageName: AssetsManager.apple,
+                                          containerWidth: 50,
+                                          containerHeight: 50,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        )),
+                  ],
+                ),
+                Padding(
+                  padding: EdgeInsets.only(right: 80.w, top: 114.h),
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: Image(image: AssetImage(AssetsManager.sadGirl)),
+                  ),
+                ),
               ],
             ),
-            Positioned(
-              right: MediaQuery.of(context).size.width / 3.w,
-              top: MediaQuery.of(context).size.height / 7.h,
-              child: Image(image: AssetImage(AssetsManager.sadGirl)),
-            )
-          ],
+          ),
         ));
   }
 }
+// Positioned(
+// right: MediaQuery.of(context).size.width / 3.w,
+// top: MediaQuery.of(context).size.height / 7.h,
+// child: Image(image: AssetImage(AssetsManager.sadGirl)),
+// ),
