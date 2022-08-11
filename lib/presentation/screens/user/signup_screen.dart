@@ -63,8 +63,7 @@ class SignUpScreen extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 10.0),
+                                      padding: EdgeInsets.only(bottom: 10.0.h),
                                       child: DefaultFormField(
                                         controller: nameController,
                                         keyboard: TextInputType.text,
@@ -72,15 +71,13 @@ class SignUpScreen extends StatelessWidget {
                                       ),
                                     ),
                                     Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 10.0),
+                                      padding: EdgeInsets.only(bottom: 10.0.h),
                                       child: DefaultPhoneNumFormField(
                                           controller: numberOneController,
                                           label: 'Number1'),
                                     ),
                                     Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 10.0),
+                                      padding: EdgeInsets.only(bottom: 10.0.h),
                                       child: DefaultPhoneNumFormField(
                                           controller: numberTwoController,
                                           label: 'Number2'),
@@ -102,9 +99,10 @@ class SignUpScreen extends StatelessWidget {
                                     DefaultButton(
                                         label: 'Sign Up',
                                         fontWeight: FontWeight.w700,
-                                        fontSize: 22,
+                                        fontSize: 22.sp,
                                         onPressed: () {
-                                          Navigator.pushNamed(context, AppRouterNames.rHomeRoute);
+                                          Navigator.pushNamed(context,
+                                              AppRouterNames.rHomeRoute);
                                         },
                                         isExpanded: false,
                                         context: context),
@@ -123,7 +121,8 @@ class SignUpScreen extends StatelessWidget {
                                         ),
                                         TextButton(
                                             onPressed: () {
-                                              Navigator.pushNamed(context, AppRouterNames.rLoginRoute);
+                                              Navigator.pushNamed(context,
+                                                  AppRouterNames.rLoginRoute);
                                             },
                                             child: RegularText(
                                               text: 'Log in',
@@ -144,10 +143,13 @@ class SignUpScreen extends StatelessWidget {
                         )),
                   ],
                 ),
-                Positioned(
-                  right: MediaQuery.of(context).size.width / 1.8.w,
-                  top: MediaQuery.of(context).size.height / 13.h,
-                  child: Image(image: AssetImage(AssetsManager.sadGirlSignUp)),
+                Padding(
+                  padding: EdgeInsets.only(right: 140.w, top: 70.h),
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child:
+                        Image(image: AssetImage(AssetsManager.sadGirlSignUp)),
+                  ),
                 )
               ],
             ),

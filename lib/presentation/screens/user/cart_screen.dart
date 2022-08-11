@@ -50,10 +50,9 @@ class CartScreen extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     fontSize: 20.sp,
                   ),
-            leadingIconOnPressed: (){
+                  leadingIconOnPressed: () {
                     Navigator.pop(context);
-            }
-                )
+                  })
               : null,
           body: Container(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -113,7 +112,10 @@ class CartScreen extends StatelessWidget {
                           /// add another location
                           Padding(
                             padding: const EdgeInsets.only(bottom: 10),
-                            child: AddAnotherLocation(),
+                            child: AddAnotherLocation(onPress: () {
+                              Navigator.pushNamed(
+                                  context, AppRouterNames.rLocationRoute);
+                            }),
                           ),
 
                           /// subtotal
@@ -151,7 +153,8 @@ class CartScreen extends StatelessWidget {
                       height: 50.h,
                       label: 'Check out',
                       onPressed: () {
-                        Navigator.pushNamed(context, AppRouterNames.rPaymentRoute);
+                        Navigator.pushNamed(
+                            context, AppRouterNames.rPaymentRoute);
                       },
                       fontSize: 20.sp,
                       fontFamily: 'Roboto',

@@ -2,11 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
-class DefaultPhoneNumFormField extends StatelessWidget {
+class DefaultPhoneNumFormField extends StatefulWidget {
   final TextEditingController? controller;
-  var formKey = GlobalKey<FormState>();
   String label;
   DefaultPhoneNumFormField({required this.controller, required this.label});
+
+  @override
+  State<DefaultPhoneNumFormField> createState() =>
+      _DefaultPhoneNumFormFieldState();
+}
+
+class _DefaultPhoneNumFormFieldState extends State<DefaultPhoneNumFormField> {
+  var formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -38,16 +46,17 @@ class DefaultPhoneNumFormField extends StatelessWidget {
             fontSize: 18,
           ),
           initialValue: PhoneNumber(isoCode: 'EG'),
-          textFieldController: controller,
+          textFieldController: widget.controller,
           formatInput: false,
           inputDecoration: InputDecoration(
             isDense: true,
             hintText: '00000',
             label: Text(
-              label,
+              widget.label,
             ),
-            labelStyle:
-                TextStyle(color: Colors.black,),
+            labelStyle: TextStyle(
+              color: Colors.black,
+            ),
             enabled: true,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(19),
